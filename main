@@ -3,15 +3,21 @@
 # Banner
 printf "\033[31m"
 cat << "EOF"
-  &&&&&&&
- &&(*.*)&&
- ___\ /___
-(|_     _|)
-   )___(
-  /     \
- /       \
- `~//~~~\\'
-  /_)   (_\
+	               /\ o 
+	        o     /_ /~~/
+	         \      /\/
+	          \    /   
+	           \  / 
+                .{{}}}}}}.
+               {{{{{}}}}}}}.
+              {{{{    {}{{}}}}
+             }}}}} _   _ {{{{{
+             }}}}  a   a  }}}&
+            {{{{{    ^    {{{&
+           }}}}}}\  .=.  /}}&&&
+           {{{{{{{;.___.;}}&&&&
+            '{{{{{{)   (}}$$$$&
+             `""'"':   :'"'"'`
 EOF
 shopt -s nocasematch
 printf "\033[0m"
@@ -63,7 +69,7 @@ __vul(){
 	echo "Benning attack using diferents user agents ;)"
 	cd pagodo/
 	echo "It will to delay..."
-	python3 pagodo.py -d $target -l 5 -g google_dorks.txt
+	python3 pagodo.py -d $target -g google_dorks.txt -l 100 -s -e 1.0
 	cd ../
 	echo "Finalized attack to $target, see in reports/$target.txt"
 }

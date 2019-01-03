@@ -122,7 +122,7 @@ class Pagodo:
 
                 # Only save links with valid results to an output file.
                 if self.save_links and (self.links):
-                    with open(self.log_file, "a") as fh:
+                    with open(args.domain+".txt", "a") as fh:
                         for link in self.links:
                             fh.write(f"{link}\n")
 
