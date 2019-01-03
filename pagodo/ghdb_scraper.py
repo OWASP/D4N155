@@ -38,7 +38,7 @@ def retrieve_google_dorks():
     total_records = json_response["recordsTotal"]
     json_dorks = json_response["data"]
 
-    google_dork_file = f"google_dorks.txt"
+    google_dork_file = f"pagodo/google_dorks.txt"
     with open(google_dork_file, "w") as fh:
         for dork in json_dorks:
             soup = BeautifulSoup(dork["url_title"], "html.parser")

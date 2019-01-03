@@ -13,6 +13,7 @@ cat << "EOF"
  `~//~~~\\'
   /_)   (_\
 EOF
+shopt -s nocasematch
 printf "\033[0m"
 # Vars
 help="""
@@ -31,6 +32,37 @@ help="""
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155"""
+# Functions
+#
+#
+
+__vul(){
+	if [ "$1" ]
+	then
+		echo "Attacking $1"
+	else
+		printf "Target is: "; read target
+	fi
+	echo -e "\033[33mYou want update the list Google hacking? (y/n)\033[32m"
+	read typed
+	case $typed in
+		"Yes" | y*)
+			echo "Updating database"
+			echo "`python3 pagodo/ghdb_scraper.py`"
+		;;
+		"No" | n*)
+			echo "OK ..."
+		;;
+	esac
+	echo "Benning attack using diferents user agents ;)"
+	echo "It will to delay..."
+	echo "`cd pagodo;python3 pagodo.py -d \"$target\" -l 50 -g google_dorks.txt;cd ..`"
+	echo "Finalized attack to $target, see in reports/$target.txt"
+}
+
+__wordlist(){
+	echo "a"
+}
 
 #	Menu
 if [ ! "$1" ]
@@ -41,10 +73,10 @@ then
 	do
 		case $option in
 			"Find vulnerabilities")
-				# big fuck script
+				__vul
 				;;
 			"Make wordlist")
-				# Fuck none
+				__wordlist
 				;;
 			*) echo -e "\033[31mRFTM\033[0m";exit ;;
 		esac
@@ -58,10 +90,12 @@ else
 			;;
 		--w* | "-w")
 			echo "Make the smart wordlist"
+			__wordlist "$2"
 			exit 0	
 			;;
 		--v* | "-v")
 			echo "find to vulners"
+			__vul
 			exit 0
 			;;
 		--a* | "-a")
