@@ -70,8 +70,17 @@ __vul(){
 	cd pagodo/
 	echo "It will to delay..."
 	python3 pagodo.py -d $target -g google_dorks.txt -l 100 -s -e 1.0
+	if [ "$?" = "0" ]
+	then
+		mv pagodo/$target.txt reports/ &&
+			echo "Finalized attack to $target, see in reports/$target.txt" || 
+			echo -e "\033[31mThe file dont has been saved\033[32m"
+	else
+		echo -e "Error: in \033[31mpagodo.py\033[32m"
+	fi
 	cd ../
-	echo "Finalized attack to $target, see in reports/$target.txt"
+
+
 }
 
 __wordlist(){
