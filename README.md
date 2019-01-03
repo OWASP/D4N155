@@ -1,2 +1,16 @@
 # D4N155
 It's a tool of security audit for smart wordlist and Google hacking attack
+
+# Manual
+    D4N155: Tool for smart audit security
+    Usage: bash main <option> <target>
+    
+    Options:
+    	-h, --help		Show this mensage.
+    	-w, --wordlist		Make the smartwordlist based in informations
+				on website.
+	-v, --vulners		Get urls that can cause attacks.
+	-a, --all		Make all features.
+     Target: http(s)://<url>
+     It's GNU/GPL version 3
+     Project page: https://github.com/Jul10l1r4/D4N155
