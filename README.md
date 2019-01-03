@@ -7,8 +7,9 @@ It's a tool of security audit for smart wordlist and Google hacking attack
     
     Options:
     	-h, --help		Show this mensage.
-    	-w, --wordlist		Make the smart wordlist based in informations
-				on website.
+    	-w, --wordlist		Make the smart wordlist 
+					based in informations on
+					website.
 	-v, --vulners		Get urls that can cause attacks.
 	-a, --all		Make all features.
      Target: http(s)://<url>
