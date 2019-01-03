@@ -34,6 +34,21 @@ def text():
                 print(p.text)
         except:
                 print("Houve um erro nesse url");
+    for span in browser.get_current_page().select('span'):
+        try:
+                print(span.text)
+        except:
+                print("Houve um erro ao pegar esse texto")
+    for strong in browser.get_current_page().select('strong'):
+        try:
+                print(strong.text)
+        except:
+                print("Houve um erro ao pegar esse texto")
+    for italic in browser.get_current_page().select('i'):
+        try:
+                print(i.text)
+        except:
+                print("Houve um erro ao pegar esse texto")
 
 def title():
     for h1 in browser.get_current_page().select('h1'):
@@ -41,6 +56,19 @@ def title():
                 print(h1.text)
         except:
                 print("Houve um erro ao pegar esse titulo")
+
+    for h2 in browser.get_current_page().select('h2'):
+        try:
+                print(h2.text)
+        except:
+                print("Houve um erro ao pegar esse titulo")
+    for h3 in browser.get_current_page().select('h3'):
+        try:
+                print(h3.text)
+        except:
+                print("Houve um erro ao pegar esse titulo")
+
+
 def links():
     for link in browser.get_current_page().select('a'):
         try:
