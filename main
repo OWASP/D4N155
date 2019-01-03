@@ -41,7 +41,7 @@ __vul(){
 	then
 		echo "Attacking $1"
 	else
-		printf "Target is: "; read target
+		printf "Target is: $1"; read target
 	fi
 	echo -e "\033[33mYou want update the list Google hacking? (y/n)\033[32m"
 	read typed
@@ -90,12 +90,12 @@ else
 			;;
 		--w* | "-w")
 			echo "Make the smart wordlist"
-			__wordlist "$2"
+			__wordlist
 			exit 0	
 			;;
 		--v* | "-v")
 			echo "find to vulners"
-			__vul
+			__vul "$2"
 			exit 0
 			;;
 		--a* | "-a")
