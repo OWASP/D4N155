@@ -1,36 +1,72 @@
 #!/usr/bin/env bash
-printf "\033[32m"
+
+# Banner
+printf "\033[31m"
 cat << "EOF"
-dmmmmdmmmddddddddddddddddddddmmdhmmmmdhhddddddds+//////+osydddddddddd
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmmNNNNmmmdmmmmmdsss+++++++osymNNNNNmdhh
-NNNNNNNNNNNNNNNNNNNNNNNNNNmNNNNNNMNNmmmNhddhdhsosddyso+++ossdNNNNNmhhh
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNMMMMNNNNNmNmmhdhhhhhysssys+++osymNNNNdhdmN
-NNNNNNNNNNNNNNNNNNNNNNNNMMMMMMMNNNNNNNmmmdyooyhdsdso+++ossshNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNMMMNNNNNNmmmmNNmmmhsso+/+osoo++/:+hdmmNMNNNNNNNNm
-MMNNNNNNNNNNNNNNNNNNNNNmmNmNNNmddmNmdhyoo+::::::::::::+sdmmNMMNNNNNNNd
-MMMMMNNNNNNNNNNNNNNNNddhddmNNdmddNmhhhso++:::::::::/+++ddNMMMNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNmmdhhhhhmmmdhdmNddho+++::::///::/:::smMMMMNNNNNNNNm
-NNNNNNNNNNNNNNNNNMNNmmdmdddmNddmmNNNmho++///::::++ss+++odMMMMMNNNNNddh
-NNNNNNNNNNNNMNNNNNMMNNNNNNNNmNNmmmmNdso++//++/::::/osssoNMMMNNNddddoyh
-NNNNNNNNNNNNmdmNNNMMMMMNNNNNNNNNdhdmdso++++++o++oooosssdMMNNNNNh+hhhhh
-NNNmdddmNNNdhhdmNNMMMMMNNmmNNNNNmNdhhys++/::/++//ohmddNMNNNNNNNmysdhhh
-NNNmhhhhmmhhhhmmNNNMMMMNNmddNMMMMMNdddyo+/:::/oooyymNNMNNNmNNNNNNNNdhh
-NNNmhhdhdNmhdmNNNNNNMNNNNmddmNMMMMMNhddhso+//:++oNNMMMNNNNmNNNNNmNNmdh
-NNNdsdmNmNmddmmmmNNNNNNNNmhhhdNMMMNNddmmNmhssssydMMMMMNMNMNNNNNNNNNmhh
-NNNmydNmdNmddmhhhddNNNNmmNmdhmNMMMNNNmmmmNMNNNNNMMMMMMMMMMMMNNNNNNNmdh
-NNNhdNNmdNNmhhmmhhdNNMMNNNNNNNNMMMMMNNmmmmNNNMMMMNNNNMMMMMMMNNNNNmmmdh
-NNNdsmNNdNNNmhmdmmNNNMMMMMNmNNMMMMMMNNmmmddhmNNNNNNNNNNNNNNNmmNNdhmNdh
-NNNdsdNNNNNNNmmmmmNNNMMMNNNmmNNMMMMNNmdhysoshmNNNNNNNNNNNNmdmNNmdmmmdh
-NNNdhmNNmNmdhhhymNNNNNNNNmmmmmmNNMMNmysoo+++oshdmmNMMMMMNNmmNNNmmNNmdh
-NNNmhmNNdysooooosdmNNmmmmmmdddmNNNmdyo++++++++ossmmNmNNNNNNNNNNmddmmdh
-NNNmddmyso++++++++osNdyhmNNNNNNmmyssy++++++++++++sydmmNNNNNNNmmdhyyddh
-NNNNddyo+++/////++++omysydmNdddds+++++++:/++++++++hossyhmNNNNmhs++osyh
-MNNNmys++/::::::::://oNdsssossy+:::/++++o-++++++++os+++oNMMMNmsoooossy
-MNNNmys++/::::::/:::::sNhoo//::::::::+++s/+++++++++++oyNMMMMMmdyssssss
-MMNNyss+++/:::::+/::::/yNddhs++/::::::/+++o++oo+syydNNMMMMMMMMNdhyssss
-MMMNyss+++/::://++/::::sNNNNNNNmddddddyyyydddmmmNMMMMMMMMMMMMMMNmddhhh
-NNNmhsoo////://+oo+///ymNNNNNNNNNNmmmmmNNNNNNNNNNNNNNNNNNNNNNNNNNNdddh
+  &&&&&&&
+ &&(*.*)&&
+ ___\ /___
+(|_     _|)
+   )___(
+  /     \
+ /       \
+ `~//~~~\\'
+  /_)   (_\
 EOF
 printf "\033[0m"
+# Vars
+help="""
+    D4N155: Tool for smart audit security
 
+    Usage: bash main <option> <target>
+    
+    Options:
+    	-h, --help		Show this mensage.
+    	-w, --wordlist		Make the smartwordlist based in informations
+				on website.
+	-v, --vulners		Get urls that can cause attacks.
+	-a, --all		Make all features.
 
+     Target: http(s)://<url>
+
+     It's GNU/GPL version 3
+     Project page: https://github.com/Jul10l1r4/D4N155"""
+
+#	Menu
+if [ ! "$1" ]
+then
+	printf "\033[32m"
+	PS3="D4N155%#~> "
+	select option in "Find vulnerabilities" "Make wordlist"
+	do
+		case $option in
+			"Find vulnerabilities")
+				# big fuck script
+				;;
+			"Make wordlist")
+				# Fuck none
+				;;
+			*) echo -e "\033[31mRFTM\033[0m";exit ;;
+		esac
+	done
+	printf "\033[0m"
+else
+	case "$1" in
+	        --h* | "-h")
+			echo "$help"
+			exit 0
+			;;
+		--w* | "-w")
+			echo "Make the smart wordlist"
+			exit 0	
+			;;
+		--v* | "-v")
+			echo "find to vulners"
+			exit 0
+			;;
+		--a* | "-a")
+			echo "full"
+			exit 0
+			;;
+	esac
+fi
