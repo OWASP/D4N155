@@ -37,12 +37,16 @@ help="""
 #
 
 __vul(){
+	# Check arguments
 	if [ "$1" ]
 	then
 		echo "Attacking $1"
+		target="$1"
 	else
 		printf "Target is: $1"; read target
 	fi
+
+	# Update db
 	echo -e "\033[33mYou want update the list Google hacking? (y/n)\033[32m"
 	read typed
 	case $typed in
@@ -54,9 +58,13 @@ __vul(){
 			echo "OK ..."
 		;;
 	esac
+
+	# Make the attack
 	echo "Benning attack using diferents user agents ;)"
+	cd pagodo/
 	echo "It will to delay..."
-	echo "`cd pagodo;python3 pagodo.py -d \"$target\" -l 50 -g google_dorks.txt;cd ..`"
+	python3 pagodo.py -d $target -l 5 -g google_dorks.txt
+	cd ../
 	echo "Finalized attack to $target, see in reports/$target.txt"
 }
 
@@ -90,7 +98,7 @@ else
 			;;
 		--w* | "-w")
 			echo "Make the smart wordlist"
-			__wordlist
+			__wordlist "$2"
 			exit 0	
 			;;
 		--v* | "-v")
