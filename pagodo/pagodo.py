@@ -125,7 +125,6 @@ class Pagodo:
                     with open(args.domain+".txt", "a") as fh:
                         for link in self.links:
                             fh.write(f"{link}\n")
-                            bjetive
 
             except KeyboardInterrupt:
                 sys.exit(0)
