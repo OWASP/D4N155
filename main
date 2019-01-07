@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+# Fix problems of directories
+cd "$(dirname "$0")"
+pwd 
+
 # Banner
 printf "\033[31m"
 cat << "EOF"
 	               /\ o 
-	        o     /_ /~~/
+	        o     /_ /~/
 	         \      /\/
 	          \    /   
 	           \  / 
@@ -77,7 +81,7 @@ __vul(){
 			echo "Finalized attack to $target, see in reports/$target.txt" || 
 			echo -e "\033[31mThe file dont has been saved\033[32m"
 	else
-		echo -e "Error: in \033[31mpagodo.py\033[32m\nTente: pip3 install -r requirements.txt"
+		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
 	fi
 	cd ../
 }
@@ -108,7 +112,7 @@ __wordlist(){
 			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.data" || 
 			echo -e "\033[31mThe file dont has been saved\033[32m"
 	else
-		echo -e "Error: in \033[31mpagodo.py\033[32m\nTente: pip3 install -r requirements.txt"
+		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
 	fi
 	cd ../
 }

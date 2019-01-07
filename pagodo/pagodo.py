@@ -12,7 +12,11 @@ import numpy
 
 # google == 2.0.1, module author changed import name to googlesearch
 # https://github.com/MarioVilas/googlesearch/commit/92309f4f23a6334a83c045f7c51f87b904e7d61d
-import googlesearch  # noqa
+try:
+    import googlesearch  # noqa
+except ModuleNotFoundError:
+    print ("\033[31mYou dont install requeriments.txt?\n → googlesearch\033[32m")
+    exit(2)
 
 # Custom Python libraries.
 
