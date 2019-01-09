@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Fix problems of directories
-cd "$(dirname "$0")"
-pwd 
+cd "$(dirname "$0")" 
 
 # Banner
 printf "\033[31m"
@@ -38,7 +37,7 @@ help="""
 	-v, --vulners		Get urls that can cause attacks.
 	-a, --all		Make all features.
 
-     Target: http(s)://<url>
+     Target: <url> or <ip>
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155"""
