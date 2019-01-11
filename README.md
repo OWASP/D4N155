@@ -12,5 +12,5 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 					website.
 		-v, --vulners		Get urls that can cause attacks.
 		-a, --all		Make all features.
-     Target: http(s)://<url>
+     Target: <url, domain or IP>
      It's GNU/GPL version 3
