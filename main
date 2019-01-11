@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Fix problems of directories
-cd "$(dirname "$0")"
-pwd 
+cd "$(dirname "$0")" 
 
 # Banner
 printf "\033[31m"
@@ -105,12 +104,33 @@ __wordlist(){
 	then
 		# Check if exists directory
 		test -d ../reports/db &&
-			echo -e "reports/db ... \033[34mok\033[32m" ||
+			echo -e "reports/db\t...\t\033[34mok\033[32m" ||
 			mkdir ../reports/db
 		# Check if be ok
-		mv $target.txt reports/db/ &&
-			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.data" || 
+		mv "$target.txt" "../reports/db/" &&
+			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt" || 
 			echo -e "\033[31mThe file dont has been saved\033[32m"
+		printf "\033[33mMake the wordlist now? (Y/N)\n\033[32m"
+		read atcknow
+		case $atcknow in
+			"Yes" | y*)
+				echo "Make the wordlist *-*"
+				cat ../reports/db/$target.txt | \
+					while read url
+					do
+						echo -ne "$url was been saved\r";
+						python3 ../objetive/objetive.py "$url" -t -txt -a >> ../reports/db/$target.blob.txt
+					done && \
+						\
+					python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" || \
+					echo -e "\033[031mError fatal\033[32m"
+
+			;;
+			"No" | n*)
+				echo "Ok, the file was saved"
+			;;
+	esac
+
 	else
 		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
 	fi
