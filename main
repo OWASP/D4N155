@@ -129,8 +129,7 @@ __wordlist(){
 						\
 					python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
 						>> ../reports/wordlist/$target.wordlist.txt || \
-					echo -e "\033[031mError fatal\033[32m"
-					exit 2
+					echo -e "\033[031mError fatal\033[32m" && exit 2
 				echo -e "\033[032mWordlist has been saved in /reports/wordlist/$target.wordlist.txt\033[0m"
 				exit 0
 			;;
