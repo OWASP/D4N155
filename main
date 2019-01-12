@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Fix problems of directories
-cd "$(dirname "$0")" 
-
+here=`dirname "$0"`
+cd "$here"
 # Banner
 printf "\033[31m"
 cat << "EOF"
@@ -21,6 +21,7 @@ cat << "EOF"
            {{{{{{{;.___.;}}&&&&
             '{{{{{{)   (}}$$$$&
              `""'"':   :'"'"'`
+	 [At Segmentation Fault]
 EOF
 shopt -s nocasematch
 printf "\033[0m"
@@ -110,34 +111,26 @@ __wordlist(){
 		mv "$target.txt" "../reports/db/" &&
 			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt" || 
 			echo -e "\033[31mThe file dont has been saved\033[32m"
-		# Generate the wordlist?
-		printf "\033[33mMake the wordlist now? (Y/N)\n\033[32m"
-		read atcknow
-		case $atcknow in
-			"Yes" | y*)
-				# If yes:
-				#	get all urls and read all text
-				#	Check for equals worlds and remove
-				#	remove characters like: , or ?
-				echo "Make the wordlist *-*"
-				cat ../reports/db/$target.txt | \
-					while read url
-					do
-						echo -ne "$url\r";
-						python3 ../objetive/objetive.py "$url" -t -txt -a >> ../reports/db/$target.blob.txt
-					done && \
-						\
-					python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
-						>> ../reports/wordlist/$target.wordlist.txt || \
-					echo -e "\033[031mError fatal\033[32m" && exit 2
-				echo -e "\033[032mWordlist has been saved in /reports/wordlist/$target.wordlist.txt\033[0m"
-				exit 0
-			;;
-			"No" | n*)
-				echo "Ok, the file was saved"
-			;;
-		esac
+		# Generate the wordlist
+		#	get all urls and read all text
+		#	Check for equals worlds and remove
+		#	remove characters like: , or ?
+		echo "Make the wordlist *-*"
+		cat ../reports/db/$target.txt | \
+			while read url
+			do
+				echo "$url";
+				python3 ../objetive/objetive.py "$url" -t -txt -a >> ../reports/db/$target.blob.txt
+			done && \
+				\
+			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
+				> ../reports/wordlist/$target.wordlist.txt || \
+				echo -e "\033[031mError fatal\033[32m"
 
+			echo -e "\033[032mWordlist has been saved in\n\033[033m$here/reports/wordlist/$target.wordlist.txt\033[0m"
+			# clear trash files
+			rm -rf ../reports/db/$target*
+			exit 0
 	else
 		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
 	fi
@@ -155,6 +148,11 @@ then
 			"Find vulnerabilities")
 				__vul
 				;;
+	do
+		case $option in
+			"Find vulnerabilities")
+				__vul
+				;;
 			"Make wordlist")
 				__wordlist
 				;;
@@ -162,6 +160,69 @@ then
 		esac
 	done
 	printf "\033[0m"
+else
+	case "$1" in
+	        --h* | "-h")
+			echo "$help"
+			exit 0
+			;;
+		--w* | "-w")
+			echo "Make the smart wordlist"
+			__wordlist "$2"
+			exit 0	
+			;;
+		--v* | "-v")
+			echo "Find to vulnerabilties"
+			__vul "$2"
+			exit 0
+			;;
+		--a* | "-a")
+			echo "full"
+			exit 0
+			;;
+	esac
+fi
+			"Make wordlist")
+				__wordlist
+				;;
+			*) echo -e "\033[31mRFTM\033[0m";exit ;;
+		esac
+	done
+	printf "\033[0m"
+	do
+		case $option in
+			"Find vulnerabilities")
+				__vul
+				;;
+			"Make wordlist")
+				__wordlist
+				;;
+			*) echo -e "\033[31mRFTM\033[0m";exit ;;
+		esac
+	done
+	printf "\033[0m"
+else
+	case "$1" in
+	        --h* | "-h")
+			echo "$help"
+			exit 0
+			;;
+		--w* | "-w")
+			echo "Make the smart wordlist"
+			__wordlist "$2"
+			exit 0	
+			;;
+		--v* | "-v")
+			echo "Find to vulnerabilties"
+			__vul "$2"
+			exit 0
+			;;
+		--a* | "-a")
+			echo "full"
+			exit 0
+			;;
+	esac
+fi
 else
 	case "$1" in
 	        --h* | "-h")
