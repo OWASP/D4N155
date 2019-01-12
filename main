@@ -110,26 +110,34 @@ __wordlist(){
 		mv "$target.txt" "../reports/db/" &&
 			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt" || 
 			echo -e "\033[31mThe file dont has been saved\033[32m"
+		# Generate the wordlist?
 		printf "\033[33mMake the wordlist now? (Y/N)\n\033[32m"
 		read atcknow
 		case $atcknow in
 			"Yes" | y*)
+				# If yes:
+				#	get all urls and read all text
+				#	Check for equals worlds and remove
+				#	remove characters like: , or ?
 				echo "Make the wordlist *-*"
 				cat ../reports/db/$target.txt | \
 					while read url
 					do
-						echo -ne "$url was been saved\r";
+						echo -ne "$url\r";
 						python3 ../objetive/objetive.py "$url" -t -txt -a >> ../reports/db/$target.blob.txt
 					done && \
 						\
-					python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" || \
+					python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
+						>> ../reports/wordlist/$target.wordlist.txt || \
 					echo -e "\033[031mError fatal\033[32m"
-
+					exit 2
+				echo -e "\033[032mWordlist has been saved in /reports/wordlist/$target.wordlist.txt\033[0m"
+				exit 0
 			;;
 			"No" | n*)
 				echo "Ok, the file was saved"
 			;;
-	esac
+		esac
 
 	else
 		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"

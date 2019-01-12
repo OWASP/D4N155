@@ -1,3 +1,6 @@
 import sys
-print('\n'.join(set(sys.argv[1].split())))
+import string
+
+texts = [texts.translate(str.maketrans('','', string.punctuation)) for texts in sys.argv[1].split()]
+print('\n'.join(set(texts)))
 
