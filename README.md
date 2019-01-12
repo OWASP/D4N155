@@ -11,7 +11,7 @@ bash main
 [![asciicast](https://asciinema.org/a/220963.svg)](https://asciinema.org/a/220963) 
 
 # Manual
-    D4N155: Tool for smart audit security
+    D4N155: Tool for smart audit security at Segmentation fault
     Usage: bash main <option> <target>
     
     Options:
