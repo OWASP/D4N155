@@ -2,7 +2,7 @@
 It's a tool of security audit for smart wordlist and Google hacking attack
 > Version in development
 
-[![asciicast](https://asciinema.org/a/220963.svg)](https://asciinema.org/a/220963)
+[![asciicast](https://asciinema.org/a/220963.svg)](https://asciinema.org/a/220963) 
 
 # Manual
     D4N155: Tool for smart audit security
