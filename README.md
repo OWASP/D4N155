@@ -23,10 +23,8 @@ bash main
 		-a, --all		Make all features.
      Target: <url, domain or IP>
      It's GNU/GPL version 3
+     
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault</h3>
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
 </p>
-
-# Use
-This exploit is free, GNU GPL version 3
