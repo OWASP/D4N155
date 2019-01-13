@@ -27,3 +27,6 @@ bash main
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
 </p>
+
+# Use
+This exploit is free, GNU GPL version 3
