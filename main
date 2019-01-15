@@ -48,7 +48,7 @@ help="""
 
 __vul(){
 	# Check arguments
-	if [ "$1" ]
+	if [ "$1" ]https://github.com/Jul10l1r4/D4N155
 	then
 		echo "Attacking $1"
 		target="$1"
@@ -160,69 +160,6 @@ then
 		esac
 	done
 	printf "\033[0m"
-else
-	case "$1" in
-	        --h* | "-h")
-			echo "$help"
-			exit 0
-			;;
-		--w* | "-w")
-			echo "Make the smart wordlist"
-			__wordlist "$2"
-			exit 0	
-			;;
-		--v* | "-v")
-			echo "Find to vulnerabilties"
-			__vul "$2"
-			exit 0
-			;;
-		--a* | "-a")
-			echo "full"
-			exit 0
-			;;
-	esac
-fi
-			"Make wordlist")
-				__wordlist
-				;;
-			*) echo -e "\033[31mRFTM\033[0m";exit ;;
-		esac
-	done
-	printf "\033[0m"
-	do
-		case $option in
-			"Find vulnerabilities")
-				__vul
-				;;
-			"Make wordlist")
-				__wordlist
-				;;
-			*) echo -e "\033[31mRFTM\033[0m";exit ;;
-		esac
-	done
-	printf "\033[0m"
-else
-	case "$1" in
-	        --h* | "-h")
-			echo "$help"
-			exit 0
-			;;
-		--w* | "-w")
-			echo "Make the smart wordlist"
-			__wordlist "$2"
-			exit 0	
-			;;
-		--v* | "-v")
-			echo "Find to vulnerabilties"
-			__vul "$2"
-			exit 0
-			;;
-		--a* | "-a")
-			echo "full"
-			exit 0
-			;;
-	esac
-fi
 else
 	case "$1" in
 	        --h* | "-h")
