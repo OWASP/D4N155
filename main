@@ -48,7 +48,7 @@ help="""
 
 __vul(){
 	# Check arguments
-	if [ "$1" ]https://github.com/Jul10l1r4/D4N155
+	if [ "$1" ]
 	then
 		echo "Attacking $1"
 		target="$1"
@@ -143,11 +143,6 @@ then
 	printf "\033[32m"
 	PS3="D4N155%#~> "
 	select option in "Find vulnerabilities" "Make wordlist"
-	do
-		case $option in
-			"Find vulnerabilities")
-				__vul
-				;;
 	do
 		case $option in
 			"Find vulnerabilities")
