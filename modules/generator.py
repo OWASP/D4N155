@@ -4,7 +4,7 @@ import string
 from anagrams.main import *  # All modules for anagrams
 
 # Root text
-texts = [texts.translate(str.maketrans('','', string.punctuation)) for texts in sys.argv[1].split()]
+texts = [texts.translate(str.maketrans('','', ',')) for texts in sys.argv[1].split()]
 
 # Main
 def make():
