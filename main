@@ -4,10 +4,13 @@
 here=`dirname "$0"`
 cd "$here"
 
+# colors art
+green='\e[32m'
+bgred='\e[41m'
+red='\e[31m'
 # Banner
-printf "\033[31m"
-cat << "EOF"
-	               /\ o 
+echo -e """
+$red	               /\ o 
 	        o     /_ /~/
 	         \      /\/
 	          \    /   
@@ -20,10 +23,10 @@ cat << "EOF"
             {{{{{    ^    {{{&
            }}}}}}\  .=.  /}}&&&
            {{{{{{{;.___.;}}&&&&
-            '{{{{{{)   (}}$$$$&
-             `""'"':   :'"'"'`
-	 [At Segmentation Fault]
-EOF
+            '{{{{{{)   (}}|//&
+             ´''''':   :''''´
+	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault\e[m $red]
+"""
 
 # ignore lower and uppercase
 shopt -s nocasematch
