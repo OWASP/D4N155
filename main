@@ -32,11 +32,14 @@ help="""
     Usage: bash main <option> <target>
     
     Options:
-    	-h, --help		Show this mensage.
-    	-w, --wordlist		Make the smartwordlist based in informations
-				on website.
-	-v, --vulners		Get urls that can cause attacks.
-	-a, --all		Make all features.
+    	-h, --help			Show this mensage.
+    	-w, --wordlist			Make the smartwordlist based in informations
+					on website.
+	-t, --targets=source.txt	Make the smartwordlist based in your passed
+					source informations in urls. 
+					{{{{FEATURE IN TEST}}}}
+	-v, --vulners			Get urls that can cause attacks.
+	-a, --all			Make all features.
 
      Target: <url> or <ip>
 
@@ -163,17 +166,26 @@ else
 			;;
 		--w* | "-w")
 			echo "Make the smart wordlist"
-			__wordlist "$2"
-			exit 0	
+			__wordlist "$2" && \
+			exit 0 || \
+			exit 1
 			;;
+#		--t* | "-t")
+#			echo "Targets"
+#			__targets "$2" && \
+#			exit 0 || \
+#			exit 1
+#			;;
 		--v* | "-v")
 			echo "Find to vulnerabilties"
-			__vul "$2"
-			exit 0
+			__vul "$2" && \
+			exit 0 || \
+			exit 1
 			;;
 		--a* | "-a")
-			echo "full"
-			exit 0
+			echo "full" && \
+			exit 0 || \
+			exit 1
 			;;
 	esac
 fi
