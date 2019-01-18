@@ -1,24 +1,7 @@
 # It module make the word list
 import sys
 import string
-
-# Functions useds in the make
-# weaks
-def counting3 (x):
-    return x+"123"
-def counting4 (x):
-    return x+"1234"
-def counting8 (x):
-    return x+"12345678"
-# Weaks year
-def year9 (x):
-    return x+"2019"
-def year8 (x):
-    return x+"2018"
-def year7 (x):
-    return x+"2017"
-def year6 (x):
-    return x+"2016"
+from anagrams.main import *  # All modules for anagrams
 
 # Root text
 texts = [texts.translate(str.maketrans('','', string.punctuation)) for texts in sys.argv[1].split()]
@@ -36,7 +19,10 @@ def make():
     blob = blob+list(map(year8,texts))
     blob = blob+list(map(year7,texts))
     blob = blob+list(map(year6,texts))
-
+    # EX
+    # YEAR : → "Y34R"
+    blob = blob+list(map(textnumber,texts))
+    
     blob = '\n'.join(set(blob))
     return blob
 
