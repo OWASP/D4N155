@@ -42,12 +42,11 @@ help="""
     	-h, --help			Show this mensage.
     	-w, --wordlist			Make the smartwordlist based in informations
 					on website.
-	-t, --targets=source.txt	Make the smartwordlist based in your passed
-					source informations in urls. 
-					{{{{FEATURE IN TEST}}}}
+	-t, --targets <source>  	Make the smart-wordlist based in your passed
+					source informations in urls.
 	-v, --vulners			Get urls that can cause attacks.
 
-     Target: <url> or <ip>
+     Target: <url | ip | source>
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155"""
@@ -93,7 +92,7 @@ else
 				;;&
 			--t* | "-t")
 				echo "Targets"
-				__targets "$narg" #&& \
+				__fwordlist "$narg" #&& \
 #				exit 0 || \
 #				exit 1
 				;;&

@@ -26,7 +26,8 @@ try:
     browser.open(sys.argv[1])
 except:
     print(heelp)
-    exit(3)
+    exit(1)
+
 # All functions for get values
 def text():
     for p in browser.get_current_page().select('p'):
@@ -41,6 +42,7 @@ def title():
                 print(h1.text)
         except:
                 print("Houve um erro ao pegar esse titulo")
+
 def links():
     for link in browser.get_current_page().select('a'):
         try:

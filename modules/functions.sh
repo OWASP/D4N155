@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# This file contains
+# Functions in order by
+# _vul
+# _wordlist
+# _fwordlist
+
 # Get expression and get all dorks of google hacking
 # All vul. pages and routers :]
 __vul(){
@@ -82,7 +88,10 @@ __wordlist(){
 			while read url
 			do
 				echo "$url";
-				python3 ../objetive/objetive.py "$url" -t -txt -a >> ../reports/db/$target.blob.txt
+				python3 ../objetive/objetive.py "$url" -t -txt -a  \
+				>> reports/db/$target.blob.txt && \
+				echo "Get informations..." || \
+				echo -e "\033[31mERROR IN GET INFORMATION TO $url\033[32m"
 			done && \
 				\
 			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
@@ -99,3 +108,34 @@ __wordlist(){
 	cd ../
 }
 
+# _fwordlist
+# means file wordlist
+# This function are main for get targets based in file
+# root directory
+__fwordlist (){
+	All="$url/$1"
+	cat "$1" | \
+		while read url
+		do
+			echo "$url";
+			python3 "objetive/objetive.py" "$url" -t -txt -a \
+				>> reports/db/wordlist.blob.txt && \
+				echo "Get informations..." || \
+				echo -e "\033[31mERROR IN GET INFORMATION TO $url\033[32m"
+		done && \
+			\
+			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
+				> "reports/wordlist/wordlist.txt" || \
+				echo -e "\033[031mError fatal\033[32m"
+	
+		if [ "$?" == "0" ]
+		then
+			echo -e "\033[032mWordlist has been saved in\n\033[033m./reports/wordlist/wordlist.txt\033[0m"
+			# clear trash files
+			rm -rf reports/db/$target*
+			exit 0
+		else
+			echo -e "\033[31mError in save the wordlist\033[32m"
+			exit 1
+		fi
+}
