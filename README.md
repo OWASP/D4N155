@@ -19,7 +19,7 @@ bash main
     	-w, --wordlist		Make the smart wordlist 
 					based in informations on
 					website.
-	-t, --target <source>	Make the smart-wordlist based in your passed
+		-t, --target <source>	Make the smart-wordlist based in your passed
 					source informations in urls.
 		-v, --vulners		Get urls that can cause attacks.
 		-a, --all		Make all features.
