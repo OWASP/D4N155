@@ -46,7 +46,6 @@ help="""
 					source informations in urls. 
 					{{{{FEATURE IN TEST}}}}
 	-v, --vulners			Get urls that can cause attacks.
-	-a, --all			Make all features.
 
      Target: <url> or <ip>
 
@@ -75,33 +74,36 @@ then
 	done
 	printf "\033[0m"
 else
-	case "$1" in
-	        --h* | "-h")
-			echo "$help"
-			exit 0
-			;;
-		--w* | "-w")
-			echo "Make the smart wordlist"
-			__wordlist "$2" && \
-			exit 0 || \
-			exit 1
-			;;
-#		--t* | "-t")
-#			echo "Targets"
-#			__targets "$2" && \
-#			exit 0 || \
-#			exit 1
-#			;;
-		--v* | "-v")
-			echo "Find to vulnerabilties"
-			__vul "$2" && \
-			exit 0 || \
-			exit 1
-			;;
-		--a* | "-a")
-			echo "full" && \
-			exit 0 || \
-			exit 1
-			;;
-	esac
+	i=1
+	while [ "$i" -le "$#" ];do
+		# arg for argument
+		# narg means next argument
+		eval "arg=\${$i}"
+		eval "narg=\${$(($i+1))}"
+		case "$arg" in
+		        --h* | "-h")
+				echo "$help"
+				exit 0
+				;;&
+			--w* | -*w*)
+				echo "Make the smart wordlist"
+				__wordlist "$narg" #&& \
+#				exit 0 || \
+#				exit 1
+				;;&
+			--t* | "-t")
+				echo "Targets"
+				__targets "$narg" #&& \
+#				exit 0 || \
+#				exit 1
+				;;&
+			--v* | -*v*)
+				echo "Find to vulnerabilties"
+				__vul "$narg" #&& \
+#				exit 0 || \
+#				exit 1
+				;;
+		esac
+		i=$(($i+1))
+	done
 fi
