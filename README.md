@@ -19,11 +19,16 @@ bash main
     	-w, --wordlist		Make the smart wordlist 
 					based in informations on
 					website.
+		-v, --vulners		Get urls that can cause attacks.
 		-t, --target <source>	Make the smart-wordlist based in your passed
 					source informations in urls.
-		-v, --vulners		Get urls that can cause attacks.
+		-o, --output    <file>          For to store the all wordlist.
 		-a, --all		Make all features.
-     Target: <url, domain or IP>
+     Value: <url | ip | source | file>
+        URL                             URL target, example: scanme.nmap.org
+        IP                              IP address
+        SOURCE                          Source file, contains the host or ips
+        FILE                            File to store the entire wordlist
      It's GNU/GPL version 3
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault</h3>
