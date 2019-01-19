@@ -36,17 +36,22 @@ printf "\033[0m"
 help="""
     D4N155: Tool for smart audit security
 
-    Usage: bash main <option> <target>
+    Usage: bash main <option> <value>
     
     Options:
-    	-h, --help			Show this mensage.
-    	-w, --wordlist			Make the smartwordlist based in informations
+    	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
-	-t, --targets <source>  	Make the smart-wordlist based in your passed
+	-v, --vulners	<url|ip>	Get urls that can cause attacks.	
+	-t, --targets	<source>  	Make the smart-wordlist based in your passed
 					source informations in urls.
-	-v, --vulners			Get urls that can cause attacks.
+	-o, --output	<file>		For to store the all wordlist.
+    	-h, --help			Show this mensage.
 
-     Target: <url | ip | source>
+     Value: <url | ip | source | file>
+     	URL				URL target, example: scanme.nmap.org
+	IP				IP address
+	SOURCE				Source file, contains the host or ips
+	FILE				File to store the entire wordlist
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155"""
@@ -73,12 +78,41 @@ then
 	done
 	printf "\033[0m"
 else
+	# vars for iterations
 	i=1
-	while [ "$i" -le "$#" ];do
-		# arg for argument
-		# narg means next argument
+	x=1
+	save=""
+	while [ "$i" -le "$#" ]
+	do
+		# arg: argument
+		# narg: next arg.
+		# parg: primary arg.
+		# pvarg: primary value of arg.
+
 		eval "arg=\${$i}"
 		eval "narg=\${$(($i+1))}"
+		
+		# The block of code are for arguments
+		# like "-o, --output", for get the arg.
+		# when will be used.
+
+		while [ "$x" -le "$#" ]
+		do
+			# para: parameter
+			# dest: destination
+			eval "para=\${$x}"
+			eval "dest=\${$(($x+1))}"
+
+			case "$para" in
+				--o* | "-o")
+					# export the file for storaged
+					export save="$dest" 
+					;;
+			esac
+			# For work in loop
+			x=$(($x+1))
+		done
+
 		case "$arg" in
 		        --h* | "-h")
 				echo "$help"
@@ -86,22 +120,26 @@ else
 				;;&
 			--w* | -*w*)
 				echo "Make the smart wordlist"
-				__wordlist "$narg" #&& \
-#				exit 0 || \
-#				exit 1
-				;;&
-			--t* | "-t")
-				echo "Targets"
-				__fwordlist "$narg" #&& \
-#				exit 0 || \
-#				exit 1
+				if [[ $narg =~ ^- ]]
+				then
+					test "$save" == "" && \
+					       __wordlist || \
+					       __wordlist "" "$save"
+				else
+					test "$save" == "" && \
+					       __wordlist "$narg" || \
+					       __wordlist "$narg" "$save"
+				fi
 				;;&
 			--v* | -*v*)
 				echo "Find to vulnerabilties"
-				__vul "$narg" #&& \
-#				exit 0 || \
-#				exit 1
+				__vul "$narg"
+				;;&
+			--t* | "-t")
+				echo -e "Targets inputed in \e[33m$narg\e[32m"
+				__fwordlist "$narg"
 				;;
+
 		esac
 		i=$(($i+1))
 	done

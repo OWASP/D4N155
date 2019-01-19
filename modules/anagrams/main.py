@@ -25,6 +25,8 @@ def counting4 (x):
     return x+"1234"
 def counting8 (x):
     return x+"12345678"
+def counting1 (x):
+    return x+"87654321"
 # Weaks year
 def year9 (x):
     return x+"2019"
@@ -35,4 +37,24 @@ def year7 (x):
 def year6 (x):
     return x+"2016"
 
-
+# Variant, all uppercase or lowercase
+# Up, Low, and upper lower lower up
+# and inverter
+def uppall (x):
+    return x.upper()
+def lowera (x):
+    return x.lower()
+def ullual (x):
+    i=0
+    value = ""
+    for letter in x:
+        if i % 2 == 0:
+            value += letter.upper()
+        else:
+            value += letter.lower()
+        i=i+1
+    return value
+def luulal (x):
+    return ullual(x).swapcase()
+def inverter (x):
+    return x.swapcase()

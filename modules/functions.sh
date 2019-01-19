@@ -64,6 +64,11 @@ __wordlist(){
 		printf "Target is: $1"; read target
 	fi
 
+	test "$#" == "2" && \
+		export dest="$2" || \
+		export dest="reports/wordlist/$target.wordlist.txt"
+	
+	
 	# Make the attack
 	echo -e "\033[33mBenning attack, with Google indexations\033[32m"
 	cd pagodo/
@@ -91,12 +96,12 @@ __wordlist(){
 			done && \
 				\
 			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
-				> ../reports/wordlist/$target.wordlist.txt || \
+				> ../$dest || \
 				echo -e "\033[031mError fatal\033[32m"
 
-			echo -e "\033[032mWordlist has been saved in\n\033[033m$here/reports/wordlist/$target.wordlist.txt\033[0m"
+			echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m"
 			# clear trash files
-			rm -rf ../reports/db/$target*
+			rm -rf ../reports/db/$target.*
 			exit 0
 	else
 		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
