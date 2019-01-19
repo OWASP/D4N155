@@ -71,10 +71,6 @@ __wordlist(){
 	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
 	if [ "$?" = "0" ]
 	then
-		# Check if exists directory
-		test -d ../reports/db &&
-			echo -e "reports/db\t...\t\033[34mok\033[32m" ||
-			mkdir ../reports/db
 		# Check if be ok
 		mv "$target.txt" "../reports/db/" &&
 			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt" || 
@@ -114,7 +110,10 @@ __wordlist(){
 # root directory
 __fwordlist (){
 	All="$url/$1"
-	cat "$1" | \
+	cat  \
+				>> reports/db/$1.blob.txt && \
+				echo "Get informations..." || \
+				echo -e "\033[31mERROR IN GET ALL INFORMATION\033[32m""$1" | \
 		while read url
 		do
 			echo "$url";
