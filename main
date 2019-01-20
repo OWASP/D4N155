@@ -37,6 +37,7 @@ help="""
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
+    All options are optionals
     
     Options:
     	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations

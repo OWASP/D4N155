@@ -90,7 +90,7 @@ __wordlist(){
 			do
 				echo "$url";
 				python3 ../objetive/objetive.py "$url" -t -txt -a  \
-				>> reports/db/$target.blob.txt && \
+				>> ../reports/db/$target.blob.txt && \
 				echo "Get informations..." || \
 				echo -e "\033[31mERROR IN GET INFORMATION TO $url\033[32m"
 			done && \
@@ -99,7 +99,9 @@ __wordlist(){
 				> ../$dest || \
 				echo -e "\033[031mError fatal\033[32m"
 
-			echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m"
+			test "$?" == 0 && \
+				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
+				exit 1
 			# clear trash files
 			rm -rf ../reports/db/$target.*
 			exit 0
