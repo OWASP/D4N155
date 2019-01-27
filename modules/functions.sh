@@ -91,8 +91,8 @@ __wordlist(){
 				echo "$url";
 				python3 ../objetive/objetive.py "$url" -t -txt -a  \
 				>> ../reports/db/$target.blob.txt && \
-				echo "Get informations..." || \
-				echo -e "\033[31mERROR IN GET INFORMATION TO $url\033[32m"
+				echo ":.........................................[OK]" || \
+				echo -e "\033[31m:.........................................[ER]\033[32m"
 			done && \
 				\
 			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
@@ -126,8 +126,8 @@ __fwordlist (){
 			echo "$url";
 			python3 "objetive/objetive.py" "$url" -t -txt -a \
 				>> reports/db/wordlist.blob.txt && \
-				echo "Get informations..." || \
-				echo -e "\033[31mERROR IN GET INFORMATION TO $url\033[32m"
+				echo ":.........................................[OK]" || \
+				echo -e "\033[31m:.........................................[ER]\033[32m"
 		done && \
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \

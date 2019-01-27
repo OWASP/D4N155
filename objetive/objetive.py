@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import mechanicalsoup # needed
-import os
+#from func_timeout import func_timeout, FunctionTimedOut
 import sys
 
 #define man
@@ -22,8 +22,17 @@ heelp =  """
 args = 0
 # Connect to target
 browser = mechanicalsoup.StatefulBrowser()
+
 try:
-    browser.open(sys.argv[1])
+    status = browser.open(sys.argv[1]) # func_timeout(15, browser.open, args=sys.argv[1])
+
+    print (status)
+    if 'text/' in status.headers['Content-Type']:
+        pass
+    else:
+        print(heelp)
+        exit(2)
+
 except:
     print(heelp)
     exit(1)
@@ -51,6 +60,7 @@ def links():
                 print("Houve um erro ao pegar esse link")
 
 # For all arguments get in all numbers
+# argv - 1, ignoring the argument = url
 while args <= (len(sys.argv) - 1):
     if sys.argv[args] == '--text' or '-txt' == sys.argv[args]:
         text()
