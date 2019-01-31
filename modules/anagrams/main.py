@@ -1,21 +1,8 @@
 #!/usr/bin/env python3
-import re
-
-# Replace things, → lowercase or uppercase no problems
-def highlevelrplc (ex,val,var):
-    return re.sub(ex, val, var, flags=re.IGNORECASE)
 
 # Texts to numbers 
 def textnumber (x):
-    # Replace vog.
-    blob = highlevelrplc('a','4',x)
-    blob = highlevelrplc('e','3',blob)
-    blob = highlevelrplc('i','1',blob)
-    blob = highlevelrplc('o','0',blob)
-  
-    # Replace con.
-    blob = highlevelrplc('b','8',blob)
-    blob = highlevelrplc('t','7',blob)
+    blob = x.translate(str.maketrans('aeioAEIOBTbt','431043108787'))
     return blob
 
 # make the numbers

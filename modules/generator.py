@@ -6,7 +6,8 @@ from anagrams.main import *  # All modules for anagrams
 
 # Root text
 texts = [texts.translate(str.maketrans('','', ',')) for texts in sys.argv[1].split()]
-
+# Alternations
+texts = texts+list(map(inverter,texts))
 #pool = ThreadPool(2)
 
 # f → function
