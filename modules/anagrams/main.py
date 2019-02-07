@@ -45,3 +45,36 @@ def luulal (x):
     return ullual(x).swapcase()
 def inverter (x):
     return x.swapcase()
+
+# Combinatories analysis
+# comb -> mess & ssem -> parsing
+# returning all parsing strings
+def comb(allist):
+    def parsing (x):
+        final=[]
+        for i in x:
+            final = final + i
+        return final
+
+    # Normal
+    def mess (x):
+        lists = []
+        for i in allist:
+            lists.append(x+i)
+
+        return lists
+    
+    # Invert
+    def ssem (x):
+        lists = []
+        for i in allist:
+            lists.append(i+x)
+    
+        return lists
+    # Mergeds values
+    new = parsing(list(map(mess, allist)))
+    old = parsing(list(map(ssem, allist)))
+    fund = new+old
+    return fund
+
+

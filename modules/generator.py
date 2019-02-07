@@ -3,6 +3,7 @@ import sys
 import string
 from anagrams.main import *  # All modules for anagrams
 #from multiprocessing.dummy import Pool as ThreadPool
+details = False
 
 # Root text
 texts = [texts.translate(str.maketrans('','', ',')) for texts in sys.argv[1].split()]
@@ -40,6 +41,14 @@ def make():
     blob = blob + run(inverter,texts)
     blob = blob + run(uppall,texts)
     blob = blob + run(lowera,texts)
+    # EX
+    # New Yeah : → "YeahNew"
+    blob = blob + comb(texts)
+
+
+    # Are finals test details
+    if details == True:
+        blob = blob + comb(blob)
 
     return blob
 

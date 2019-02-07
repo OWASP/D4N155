@@ -3,4 +3,5 @@
 *.swp*
 *.un*
 __py*
+*.wordlist.txt
 

@@ -1,1 +1,2 @@
 site:
+filetype:html,php,asp
