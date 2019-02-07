@@ -43,9 +43,8 @@ bash main
 ## Python
 * **PYTHON 3.0 or Latter**
 
-
-     It's GNU/GPL version 3
-     Project page: https://github.com/Jul10l1r4/D4N155
+> It's GNU/GPL version 3
+  Project page: https://github.com/Jul10l1r4/D4N155
 
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault</h3>
