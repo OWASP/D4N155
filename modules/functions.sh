@@ -97,7 +97,7 @@ __wordlist(){
 				\
 			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
 				> ../$dest || \
-				echo -e "\033[031mError fatal\033[32m"
+        { echo -e "\033[031mError fatal\033[32m";exit 2 }
 
 			test "$?" == 0 && \
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
@@ -132,7 +132,7 @@ __fwordlist (){
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" || \
-				echo -e "\033[031mError fatal\033[32m"
+        { echo -e "\033[031mError fatal\033[32m";exit 2 }
 	
 		if [ "$?" == "0" ]
 		then
