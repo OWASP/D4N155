@@ -1,4 +1,4 @@
-
+README
 
 # D4N155
 It's a tool of security audit for smart wordlist and Google hacking attack
@@ -35,12 +35,14 @@ bash main
 ## CPU 
 * **Dual Core or Better**
 * **Native Support to Mull-Thread**
+
 ## MEMORY
 * **4 GB or More**
 * **Higher Clocks Are recomended**
+
 ##Python
 * **PYTHON 3.0 or Latter**
-***
+
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155
