@@ -38,7 +38,7 @@ bash main
 ## MEMORY
 * **4 GB or More**
 * **Higher Clocks Are recomended**
-##Python
+## Python
 * **PYTHON 3.0 or Latter**
 ***
 
