@@ -1,4 +1,4 @@
-
+README
 
 # D4N155
 It's a tool of security audit for smart wordlist and Google hacking attack
@@ -33,20 +33,19 @@ bash main
         FILE                            File to store the entire wordlist
 # HARDWARE REQUIREMENTS:
 ## CPU 
-* **Dual Core or Better**
-* **Native Support to Mull-Thread**
+* Dual Core or Better
+* Native Support to Mull-Thread
+
 ## MEMORY
+
 * **4 GB or More**
 * **Higher Clocks Are recomended**
 ## Python
 * **PYTHON 3.0 or Latter**
 ***
-
-     It's GNU/GPL version 3
-     Project page: https://github.com/Jul10l1r4/D4N155
-
      
-<h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault</h3>
+<h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
+<h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155</h5>
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
 </p>
