@@ -2,20 +2,20 @@
 import sys
 import string
 from anagrams.main import *  # All modules for anagrams
-#from multiprocessing.dummy import Pool as ThreadPool
+from multiprocessing.dummy import Pool as ThreadPool
 details = False
 
 # Root text
 texts = [texts.translate(str.maketrans('','', ',')) for texts in sys.argv[1].split()]
 # Alternations
 texts = texts+list(map(inverter,texts))
-#pool = ThreadPool(2)
+pool = ThreadPool(2)
 
 # f → function
 # v → value
 def run(f,v):
     # Thread will be parameter type flag
-    return list(map(f,v))
+    return list(pool.map(f,v))
 
 # Main
 def make():
@@ -48,7 +48,7 @@ def make():
 
     # Are finals test details
     if details == True:
-        blob = blob + comb(blob)
+        blob = blob + pool.comb(blob)
 
     return blob
 
