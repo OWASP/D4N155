@@ -43,11 +43,11 @@ bash main
 ## Python
 * **PYTHON 3.0 or Latter**
 
-> It's GNU/GPL version 3
-  Project page: https://github.com/Jul10l1r4/D4N155
-
      
-<h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault</h3>
+<h3 align="center">
+	This project created by @jul10l1r4 are part of Segmentation fault<br/>
+	It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155
+</h3>
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
 </p>
