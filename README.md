@@ -33,15 +33,15 @@ bash main
         FILE                            File to store the entire wordlist
 # HARDWARE REQUIREMENTS:
 ## CPU 
-* **Dual Core or Better**
-* **Native Support to Mull-Thread**
+* Dual Core or Better
+* Native Support to Mull-Thread
 
 ## MEMORY
-* **4 GB or More**
-* **Higher Clocks Are recomended**
+* 4 GB or More
+* Higher Clocks Are recomended
 
 ## Python
-* **PYTHON 3.0 or Latter**
+* PYTHON 3.0 or Latter
 
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
