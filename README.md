@@ -31,6 +31,16 @@ bash main
         IP                              IP address
         SOURCE                          Source file, contains the host or ips
         FILE                            File to store the entire wordlist
+# HARDWARE REQUIREMENTS:
+## CPU 
+* **Dual Core or Better**
+* **Native Support to Mull-Thread**
+## MEMORY
+* **4 GB or More**
+* **Higher Clocks Are recomended**
+##Python
+* **PYTHON 3.0 or Latter**
+***
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155
