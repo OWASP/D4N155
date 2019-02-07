@@ -37,12 +37,12 @@ bash main
 * Native Support to Mull-Thread
 
 ## MEMORY
-* 4 GB or More
-* Higher Clocks Are recomended
 
+* **4 GB or More**
+* **Higher Clocks Are recomended**
 ## Python
-* PYTHON 3.0 or Latter
-
+* **PYTHON 3.0 or Latter**
+***
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
 <h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155</h5>
