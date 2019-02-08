@@ -25,7 +25,7 @@ class Pagodo:
     """pagodo class object"""
 
     def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
-        """Iniitialize Pagodo class object."""
+        """Initialize Pagodo class object."""
 
         self.domain = domain
         with open(google_dorks) as self.fp:
@@ -86,7 +86,7 @@ class Pagodo:
                     if query.endswith('"'):
                         updated_query = f'{updated_query}"'
 
-                    print(f"[*] New search query: {updated_query}")
+                    print(f"[✔] New search query: {updated_query}")
 
                 pause_time = self.delay + random.choice(self.jitter)
 
@@ -97,7 +97,7 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    f"[*] Search ( {i} / {len(self.google_dorks)} ) for Google dork [ {query} ] and waiting {pause_time} seconds between searches using User-Agent '{user_agent}'"
+                    f"[✔] Search ( {i} / {len(self.google_dorks)} ) using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -117,7 +117,7 @@ class Pagodo:
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                print(f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
+                print(f"[✔] Results: {len(self.links)} sites founds")
 
                 for found_dork in self.links:
                     print(found_dork)
@@ -134,8 +134,8 @@ class Pagodo:
                 sys.exit(0)
 
             except Exception as e:
-                print(f"[-] Error with dork: {dork}")
-                print(f"[-] EXCEPTION: {e}")
+                print(f"[✘] Error")
+                print(f"[✘] EXCEPTION: {e}")
 
             i += 1
 
@@ -214,4 +214,4 @@ if __name__ == "__main__":
     pgd.go()
     print(f"[*] Completion timestamp: {get_timestamp()}")
 
-    print("[+] Done!")
+    print("[✔] Done!")
