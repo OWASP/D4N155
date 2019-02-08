@@ -141,9 +141,6 @@ class Pagodo:
 
         self.fp.close
 
-        print(f"[*] Total dorks found: {self.total_dorks}")
-
-
 def get_timestamp():
     """Retrieve a pre-formated datetimestamp."""
 
@@ -209,9 +206,6 @@ if __name__ == "__main__":
         print("[!] Delay must be greater than 0")
         sys.exit(0)
 
-    print(f"[*] Initiation timestamp: {get_timestamp()}")
     pgd = Pagodo(**vars(args))
     pgd.go()
-    print(f"[*] Completion timestamp: {get_timestamp()}")
-
     print("[✔] Done!")
