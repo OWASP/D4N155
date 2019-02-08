@@ -6,7 +6,8 @@ from multiprocessing.dummy import Pool as ThreadPool
 details = False
 
 # Root text
-texts = [texts.translate(str.maketrans('','', ',')) for texts in sys.argv[1].split()]
+texts = sys.argv[1].split()
+new = []
 # Alternations
 texts = texts+list(map(inverter,texts))
 pool = ThreadPool(2)
@@ -43,7 +44,7 @@ def make():
     blob = blob + run(lowera,texts)
     # EX
     # New Yeah : → "YeahNew"
-    blob = blob + comb(texts)
+    new = comb(texts)
 
 
     # Are finals test details
@@ -53,4 +54,4 @@ def make():
     return blob
 
 # Reduce all output for best precision
-print('\n'.join(set(texts+make())))
+print('\n'.join(set(texts+make()+new)))

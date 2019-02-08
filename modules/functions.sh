@@ -89,15 +89,15 @@ __wordlist(){
 			while read url
 			do
 				echo "$url";
-				python3 ../objetive/objetive.py "$url" -t -txt -a  \
+				python3 "../objetive/objetive.py" "$url" \
 				>> ../reports/db/$target.blob.txt && \
 				echo ":.........................................[OK]" || \
 				echo -e "\033[31m:.........................................[ER]\033[32m"
 			done && \
 				\
-			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
+			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
 				> ../$dest || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 
 			test "$?" == 0 && \
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
@@ -116,15 +116,12 @@ __wordlist(){
 # This function are main for get targets based in file
 # root directory
 __fwordlist (){
-	All="$url/$1"
-	cat  \
-				>> reports/db/$1.blob.txt && \
-				echo "Get informations..." || \
-				echo -e "\033[31mERROR IN GET ALL INFORMATION\033[32m""$1" | \
+
+	cat  $1 |\
 		while read url
 		do
 			echo "$url";
-			python3 "objetive/objetive.py" "$url" -t -txt -a \
+			python3 "objetive/objetive.py" "$url" \
 				>> reports/db/wordlist.blob.txt && \
 				echo ":.........................................[OK]" || \
 				echo -e "\033[31m:.........................................[ER]\033[32m"
@@ -132,7 +129,7 @@ __fwordlist (){
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 	
 		if [ "$?" == "0" ]
 		then
