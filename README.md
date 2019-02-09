@@ -6,6 +6,7 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 ```
 git clone https://github.com/Jul10l1r4/D4N155.git
 cd D4N155
+pip3 install -r requirements.txt
 bash main
 ```
 [![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
