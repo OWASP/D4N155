@@ -32,14 +32,15 @@ bash main
 # HARDWARE REQUIREMENTS:
 ## CPU 
 * Dual Core or Better
-* Native Support to Mull-Thread
+* Native Support to Multi-Thread
 
 ## MEMORY
 * 4 GB or More
-* Higher Clocks Are recomended
 
-## Python
-* PYTHON 3.0 or Latter
+## Dependencies
+* Python 3.6
+* Pip3
+* Bash
 
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
