@@ -1,7 +1,7 @@
 # It module make the word list
 import sys
 import string
-from anagrams.main import *  # All modules for anagrams
+from permutations.main import *  # All modules for permutations
 from multiprocessing.dummy import Pool as ThreadPool
 details = False
 

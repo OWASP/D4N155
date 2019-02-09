@@ -64,17 +64,9 @@ def comb(allist):
 
         return lists
     
-    # Invert
-    def ssem (x):
-        lists = []
-        for i in allist:
-            lists.append(i+x)
-    
-        return lists
     # Mergeds values
     new = parsing(list(map(mess, allist)))
-    old = parsing(list(map(ssem, allist)))
-    fund = new+old
+    fund = new
     return fund
 
 
