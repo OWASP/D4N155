@@ -41,4 +41,5 @@ with 4 values `"John","have","easy","pass"`, run:
 wget -qO- "https://gist.githubusercontent.com/Jul10l1r4/a5edfae6b0f206b4e491152c9f6b4347/raw/6c246b3a32db2f19fe5c68394663a1c995d8f625/mess.py" | python3
 ```
 
+![Results of calcs](script-1.png)
 
