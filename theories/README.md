@@ -1,5 +1,7 @@
 # Operation of D4N155
 The process of password speculation works based on the execution of several functions of theories mathematics.
+
+All footwear is made following the recursion λ→(η) = Op.
 ## Combinatorial analysis
 
 The code follow the combinatorial analysis during the process of speculation
