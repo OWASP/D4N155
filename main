@@ -137,12 +137,17 @@ else
 			--v* | -*v*)
         # Exists $narg? Then ok,  go go
 				echo "Find to vulnerabilties"
-			  [ -e "$narg" ] && __vul "$narg" || ( echo "→ bash main --help";exit 2 )
+			  [ -e "$narg" ] && __vul "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
 				;;&
       --b* | -*b*)
         echo "Make custom wordlist"
-        __cus "$narg"
-        ;;&
+        if [ $save ]
+        then
+            [ -e "$narg" ] && __cus "$narg" "$save" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2)
+        else
+            [ -e "$narg" ] && __cus "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+        fi
+        ;;
 			--t* | "-t")
 				echo -e "Targets inputed in \e[33m$narg\e[32m"
 				__fwordlist "$narg"

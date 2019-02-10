@@ -146,12 +146,15 @@ __fwordlist (){
 # 1 - Get text
 # 2 - send to generator.py
 # 3 - save
-__cus(){
+__cus() {
   # $1 → file base
-
+  # $2 → file to output
+  echo "$2"
+  [ $2 ] && export save="$2" || export save="_wordlist.txt"
+  echo "$save"
   echo "Processing all data..."
-  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }' " >> "_wordlist.txt" && \
-    ( echo "[✔] Wordlist been created in _wordlist.txt"; exit 0 ) || \
-    ( echo "[✘] Error fatal, don\'t create file"; exit 2 )
+  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
+    ( echo "[✔] Wordlist been created in $save"; exit 0 ) || \
+    ( echo -e "\e[31m[✘] Error fatal, don\'t create file\e[m"; exit 2 )
 
 }
