@@ -76,7 +76,7 @@ class Pagodo:
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
                     print(
-                        f"[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
+                        f"[\033[31m✘\033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
                     )
 
                     # Update query variable.
@@ -133,8 +133,8 @@ class Pagodo:
                 sys.exit(0)
 
             except Exception as e:
-                print(f"[✘] Error")
-                print(f"[✘] EXCEPTION: {e}")
+                print(f"[\033[31m✘\033[m] Error")
+                print(f"[\033[31m✘\033[m] EXCEPTION: {e}")
 
             i += 1
 
