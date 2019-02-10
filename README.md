@@ -26,7 +26,7 @@ bash main
 	-b, --based	<file>		Analyze texts to generate the
 					custom wordlist
 	-o, --output	<file>		For to store the all wordlist.
-		-h, --help			Show this mensage.
+	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file>
 		URL				URL target, example: scanme.nmap.org
