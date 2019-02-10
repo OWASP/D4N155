@@ -18,7 +18,6 @@ bash main
     All options are optionals
 
     Options:
-	Options:
 	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
 	-v, --vulners	<url|ip>	Get urls that can cause attacks.
@@ -29,7 +28,7 @@ bash main
 	-o, --output	<file>		For to store the all wordlist.
 		-h, --help			Show this mensage.
 
-	Value: <url | ip | source | file>
+     Value: <url | ip | source | file>
 		URL				URL target, example: scanme.nmap.org
 	IP				IP address
 	SOURCE				Source file, contains the host or ips
