@@ -17,7 +17,6 @@ try:
         exit(2)
 
 except:
-    print(heelp)
     exit(1)
 
 # All functions for get values
@@ -35,7 +34,6 @@ def all():
         value = value + link.text
 
     if value:
-#        return [texts.translate(str.maketrans('','', '–,')) for texts in value.split()]
         return value.translate(str.maketrans('','','–,'))
     else:
         exit(2)

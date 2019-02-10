@@ -38,13 +38,15 @@ help="""
 
     Usage: bash main <option> <value>
     All options are optionals
-    
+
     Options:
     	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
-	-v, --vulners	<url|ip>	Get urls that can cause attacks.	
+	-v, --vulners	<url|ip>	Get urls that can cause attacks.
 	-t, --targets	<source>  	Make the smart-wordlist based in your passed
 					source informations in urls.
+	-b, --based	<file>		Analyze texts to generate the
+		                        custom wordlist
 	-o, --output	<file>		For to store the all wordlist.
     	-h, --help			Show this mensage.
 
@@ -52,7 +54,7 @@ help="""
      	URL				URL target, example: scanme.nmap.org
 	IP				IP address
 	SOURCE				Source file, contains the host or ips
-	FILE				File to store the entire wordlist
+	FILE				File, for save the result or using in wordlist
 
      It's GNU/GPL version 3
      Project page: https://github.com/Jul10l1r4/D4N155"""
@@ -133,9 +135,14 @@ else
 				fi
 				;;&
 			--v* | -*v*)
+        # Exists $narg? Then ok,  go go
 				echo "Find to vulnerabilties"
-				__vul "$narg"
+			  [ -e "$narg" ] && __vul "$narg" || ( echo "→ bash main --help";exit 2 )
 				;;&
+      --b* | -*b*)
+        echo "Make custom wordlist"
+        __cus "$narg"
+        ;;
 			--t* | "-t")
 				echo -e "Targets inputed in \e[33m$narg\e[32m"
 				__fwordlist "$narg"

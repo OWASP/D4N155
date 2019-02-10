@@ -97,7 +97,7 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    f"[✔] Search ( {i} / {len(self.google_dorks)} ) using User-Agent '{user_agent}'"
+                    f"[✔] Search using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -117,7 +117,6 @@ class Pagodo:
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                print(f"[✔] Results: {len(self.links)} sites founds")
 
                 for found_dork in self.links:
                     print(found_dork)

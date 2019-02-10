@@ -91,8 +91,8 @@ __wordlist(){
 				echo "$url";
 				python3 "../objetive/objetive.py" "$url" \
 				>> ../reports/db/$target.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
+				echo ":.........................................[✔]" || \
+				echo -e "\033[31m:.........................................[✘]\033[32m"
 			done && \
 				\
 			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
@@ -123,8 +123,8 @@ __fwordlist (){
 			echo "$url";
 			python3 "objetive/objetive.py" "$url" \
 				>> reports/db/wordlist.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
+				echo ":.........................................[✔]" || \
+				echo -e "\033[31m:.........................................[✘]\033[32m"
 		done && \
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
@@ -141,4 +141,16 @@ __fwordlist (){
 			echo -e "\033[31mError in save the wordlist\033[32m"
 			exit 1
 		fi
+}
+# Cus of custom :] | Staps
+# 1 - Get text
+# 2 - send to generator.py
+# 3 - save
+__cus(){
+  # $1 → file base
+
+  echo "Processing all data..."
+  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }' " >> "_wordlist.txt" && \
+    ( echo "[✔] Wordlist been created in _wordlist.txt"; exit 0 ) || \
+    ( echo "[✘] Error fatal, don't create file"; exit 2 )
 }

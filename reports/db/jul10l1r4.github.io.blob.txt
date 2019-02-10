@@ -1,0 +1,1084 @@
+It’s a tool of security audit for smart wordlist and Google hacking attackVersion in development
+
+D4N155UseManualImprove this page
+Artigos
+						
+Veja alguns artigos mais recentes
+Seja performático efeito scroll com seis linhas de JS (sem Jquery)
+
+Background em um texto com CSS
+
+Scroll com uma linha de CSS (E a busca continua)
+
+					← Julio Lira 
+				
+					Ir para POP image 🤘 →
+				
+   Suportado nos navegadores a partir de 2017 nativas do firefox desde as versões de 2016 veja as relações de suportes.Um chat criado com motor em php no servidor usando o socket protocol 🤘🏿 real-time 🍃 levinho.Veja um artigo que ensina detalhadamente o funcionamento aprofundadamente @rootthingsEstrutura do index.phpEstrutura do respostas.phpEstrutura do sockets.jsEstrutura do arquivi disparar.phpInstruções para usoExecute o chat WebSocket em PHPNesse arquivo tem o necessário para a conexão em javascript e estilização em css como referencia em sí vale lembrar para 
+  permitir as caracterações no arquivo no dentro do headObs.: Sinta-se livre para me mandar pull request e ajeitar esse designer 🙊.Esse arquivo possui 137 linhas de códigos comentadas e explicativas para ajudar a configurar conforme seja o desejo de sua aplicação### 🤘🏿 Disparar.php
+ Seu nome bastante descritivo precisa ser configurado conforme o servidor e  a versão do php colocando a sua      sintaxe. infelizmente esse código de disparo é compatível apenas com Unix-Likes.### 🤘🏿 Sockets.jsScript moderno usando o arrow function (segundo o padrão do codestyle airbnb. Esse script faz um tratamento de funções de socket abre conexão precisa ser configurada a porta e o endereço de onde deseja ser aberta e todas as configurações de saídas👌🏽.Atenção: Não é indicado usa-la em um servidor online antes de configura-la para usar em sua aplicação.Para rodar a aplicação você precisa navegar onde o servidor esta rodando e baixar para isso execute no seu unix-like:ouEdite os arquivos configure-os já que estais no terminal executaremos a nossa aplicaçãoE agora faça a festa abra o browser e navegue até a aplicação e abra:Edite o arquivo disparar.php para não precisar executar através do terminal para fazer isso aperte control + c (isso parará a execução do serviço de socket que foi executado nos códigos anteriores) você pode digitar os seguintes comandos:Copie a informação alí você pode marcar o texto e apertar control + shift + c agora feche o terminal e abra o arquivo disparar.php na pasta do servidor em Chat-Socket-PHP/disparar.php use o editor de sua preferência e no arquivo aberto edite a informação:Cole a informação copiada pelo terminal no lugar indicado salve e fim agora basta identificar o arquivo no seu browser que provavelmente será em http://localhost/Chat-Socket-PHP/disparar.php.Quer mais detalhes? então fiz um artigo falando detalhadamentes sobre a aplicação em sí e seu funcionamento veja em @jul10l1r4Use e abuse cite-me e estará tudo certo 😸. Leia sobre a licença GPL-3Chat-socket🐘 Chat-socket | PHP7🔧 EstruturaVeja o artigoView on GitHubveja as relações de suportes@Jul10l1r4@rootthingsEstrutura do index.phpEstrutura do respostas.phpEstrutura do sockets.jsEstrutura do arquivi disparar.phpInstruções para usoExecute o chat WebSocket em PHParrow functionairbnb@jul10l1r4GPL-3Chat-socketJul10l1r4GitHub Pages
+olá https://jul10l1r4.github.io/HTTP_-_Resposta/img/[Seu código de erro]
+				Veja as imagens de erro pode baixá-las e usar quando quiser ❤ veja como usar e conheça outra API 
+				que utiliza nossos algoritmos conheça escudo ajude-nos em nosso desenvolvimento.
+			
+				Use esta api temos um banco de imagens de resposta de erros para usá-las basta por em qualquer que seja a aplicação https://jul10l1r4.github.io/HTTP_-_Resposta/Código de erro lembre-se que não precisa usar a extensão .jpg já reduzimos isso para facilitar.
+			
+		  	Usamos imagens relacionadas a memes para substituir as mensagens de erro usamos apenas imagens para evitar o trabalho de se criar uma html apenas para uma página de erro o que poderia ser usado para capturar as informações pensando nisso fizemos imagens que você apenas "linka"
+em uma simples tag img com o atributo src="https://jul10l1r4.github.io/HTTP_-_Resposta/img/404"
+			nesse caso fizemos o erro 404 - Servidor não Encontrado.
+			dê uma olhada neste repositório com o código-fonte comentado em algumas linguagens para você usar
+			aqui e veja como configurar a sua
+			no seu próprio servidor/site acrescentando apenas algumas "linhas"
+			no .htaccess Aqui.
+			
+			Sim somos um projeto livre e colaborativo que tem seu foco para melhorar a segurança e conscientizar a outros desenvolvedores
+			a terem uma prática mais segura em qualquer coisa que vá fazer veja esta API criada por
+			
+				Nicolas Ramos
+			
+			desenvolvedor e entusiasta por software livre.
+		
+			Somos um pequeno grupo de desenvolvedores um dos que nos ajudou bastante foi 
+			
+				Kayo Oliveira
+			
+			 desenvolvedor front-end e perfeccionista por qualidade e por causa dele nossa estrutura está bonita.
+		
+			Colabore conosco também você pode nos ajudar de duas formas no desenvolvimento. Você pode fazer um fork e colaborar nesta 
+			página pelo github ou pode colaborar em nossa área de aprendizado
+			em nosso git 💙.
+		
+				Deseja ajuda em um projeto? Adoramos desenvolver alternativas livres e gratuitas fale comigo.
+				Fale comigo no telegram 🚀 @jul10l1r4.
+        Mande-me um email 📫 jul10l1r4@ufrn.edu.br.
+			API - Resposta de estatus http 😏veja como usarescudodesenvolvimentomemesaquiAquiAPI
+				Nicolas Ramos
+			
+				Kayo Oliveira
+			páginagit 💙@jul10l1r4jul10l1r4@ufrn.edu.brGNU GPL-3Veja o código-fonteVeja exemplos de uso em algumas linguagens e se souber alguma que não tenha ainda ajude-nos
+
+						Desenvolvimento Web
+					
+						Infraestrutura
+					
+						Segurança da informação
+					ContatoArtigosProjetosPOP IMAGEE-BOOK SEO sem mistériosHTTP resposta de erros em memes | HTTP meme respostaShellscript e performance psicopata 🔪  STDOUT
+						  Vulnerabilidade em balanceadores mod_jk - [CVE-2018-11759]
+						
+olá https://jul10l1r4.github.io/HTTP_-_Resposta/img/[Seu código de erro]e
+				Olá esta é uma API onde as imagens disponíveis são conformes o número de erro HTTP ❤ veja como usar.
+			
+				Use esta api temos um banco de imagens de resposta de erros para usá-las basta por em qualquer que seja a aplicação https://jul10l1r4.github.io/HTTP_-_Resposta/Código de erro + e lembre-se que não precisa usar a extensão .jpg já reduzimos isso para facilitar 
+				e também observando que tem uma string e após o código de erro pois se refere ao escudo já se não a pôr você acessará a mesma API só que baseada em memes.
+			
+		  	Usamos imagens relacionadas conforme o numero do erro para substituir as mensagens de erro usamos apenas imagens para evitar o trabalho de se criar uma html apenas para uma página de erro o que poderia ser usado para capturar as informações pensando nisso fizemos imagens que você apenas "linka"
+em uma simples tag img com o atributo src="https://jul10l1r4.github.io/HTTP_-_Resposta/img/404e"
+			nesse caso fizemos o erro 404 - Servidor não Encontrado.
+			dê uma olhada neste repositório com o código-fonte comentado em algumas linguagens para você usar
+			aqui e veja como configurar a sua
+			no seu próprio servidor/site acrescentando apenas algumas "linhas"
+			no .htaccess Aqui.
+			
+				Somos uma pequena equipe de devs e devas ajude-nos é designer? dev então fale comigo.
+			
+			Um dos que nos ajudou bastante foi 
+			
+				Kayo Oliveira
+			
+			 desenvolvedor front-end e perfeccionista por qualidade e por causa dele nossa estrutura está bonita.
+		
+			Colabore conosco também você pode nos ajudar de duas formas no desenvolvimento. Você pode fazer um fork e colaborar nesta 
+			página pelo github ou pode colaborar em nossa área de aprendizado
+			em nosso git 💙.
+		
+				Deseja ajuda em um projeto? Adoramos desenvolver alternativas livres e gratuitas fale comigo.
+				Fale comigo no telegram 🚀 @jul10l1r4.
+        Mande-me um email 📫 jul10l1r4@ufrn.edu.br.
+			🛡🤘🏿veja como usaraquiAqui
+				Kayo Oliveira
+			páginagit 💙@jul10l1r4jul10l1r4@ufrn.edu.brGNU GPL-3Veja o código-fonteVeja exemplos de uso em algumas linguagens e se souber alguma que não tenha ainda ajude-nos
+Você pode instala-lo assim.
+					Ou acrescente a âncora (caso não queira copiar manualmente):
+				Tenha fluidez ao abrir uma imagem vejo por aí muitos sites onde apertam na imagem e sim a imagem abre grande mas abre uma nova
+ aba e realmente acho um pé no saco porque tenho sempre que for abrir apertar no botão de voltar do navegador e voltar a página onde
+ eu estava mas este box faz apenas com JS puro um box que abre a imagem suspensa na mesma página(light box) a estilização fica por sua conta mas
+ se for preguiçoso já temos códigos montados é só integrar se quiser ver e criar uma sua faça você mesmo.Temos um respositório no NotABug.org onde falará sobre como integrar em sua aplicação de uma forma que se 
+der uma atualização não venha danificar sua aplicação.Usando este suporte onde se baseia em animação com JS tem suporte em todos os navegadores e cria a animação de deslize 
+até o topo.
+	O efeito é feito com usando JS poupando o máximo de processamentos necessários do lado do cliente então fizemos algo sem a utilização de biblioteca
+	mas de uma forma eficiente veja como você mesmo pode criar um botão assim com a função 
+	scroll em seis linhas
+	usando esses códigos do artigo é que montamos uma estrutura leve e performática para facilitar a utilização.
+POP-IMAGE 
+
+Direto ao ponto "."POP-image 🍺Ele criará um botão de voltar ao topo 🔝Crie um suave box para visualizar imagens porretas 🤘NotABug.orgscroll em seis linhas
+					← Ir para Julio Lira
+				
+					Ir para HTTP Meme resposta →
+				
+Uma simples formatação para texto criando uma boa aparência para caracteres emoticons entre outrasProjeto oficial não é este está em @jul10l1r4Uma simples formatação para texto criando uma boa aparência para caracteres emoticons entre outrasPara utilizar é bem simples veja os exemplos:A fonte foi toda pensada no confordo em diferentes aplicações diferentes temas diferentes lugares com também diferentes cores este é um leve CSS que tenta ser o máximo minimalista e performático ele não possui nenhuma especie de dependencia de alguma lib ou algo relacionado.Sabemos que os emoticons dão aquela mãozinha pra seu artgo chato ser um artigo chato mas interativo né?! Mas pensando nisso passei semanas fazendo buscas e qual seria a melhor forma de possibilitar o uso de emoticons os que achei mais promissores era o uso de emojis em svg PORÉM eles carregavam coordenadas que faria seu peso ser um pouco maior e também o computador leria mais e exigiria mais do cliente então considero e É DE FATO mais econômico porque são caracteres hexadecimais para você que está curioso leia como é aqui.O google chrome carrega os emoticons porém ele não usa coloração todos os emoticons até hoje saem em preto e braco mas prevejo que logo logo funcionará normamente já no Firefox funciona normamente e perfeitamente 😎.Veja essa api que a usa:
+
+
+
+
+
+
+
+Texto-farmatacaoTexto-farmatacao 🍺View On GitHubJul10l1r4mattgraham@jul10l1r4aqui
+
+
+
+
+				 Você já entrou em um site afim de comprar ler algo ou resolver algum problema como sacar dinheiro né?! E eu tenho certeza que se você 
+					estava apressado e se o site era lento você sentiu uma grande vontade de desistir de fazer o que estava fazendo não é isso? Pois é
+					eu mesmo já passei muito por sites lentos por mais util que seja ou por mais excelente que seja o serviço deles a vontade continua 
+					de sair o mais rápido possível do site.
+				
+					Nós que somos desenvolvedores sabemos o quão chato é ter que repetir códigos e mais chato ainda ter que digitar códigos longos
+					isso facilita até o erro da parte do desenvolvedor já que terá que desenvolver complexos códigos e assim a unica saida que teriamos
+					é usando algo que nos facilitasse e isso é o que chamamos de bibliotecas ou usamos frameworks para facilitar o nosso desenvolvimento
+					e isso ajuda muito no desenvolvimento em pouca fração de tempo e criar algo magnifico.
+				
+					Mas você já teve aquela esperiencia de ao desenvolver algo perfeito e ao fim de tudo notar que a sua velocidade não está boa? eu já passei por 
+					isso e basicamente eu ignorei... mas de um tempo notei a responsabilidade que tem um desenvolvedor ele é o responsável por total 
+					sucesso ou total derrota do que vá fazer seja uma empresa uma campanha ou qualquer coisa que precise de seu trebalho e então resolvi
+					mudar minhas atitudes e mesmo depois de mudar minha forma de desenvolver(Sem usar bibliotecas ou framework que tomou muito o meu tempo).
+				
+					Notei uma diferença mas eu questionava ainda assim o tempo ainda era meu grande inimigo meus sites sempre demoravam ao carregar e notei
+					que não é a quantidade de esforço que faz mas sim como os motores gráficos e JS são lidos no frontend então notei que eu era o inimigo
+					do GPU no processamento de imagens e dos diversos motores JS.
+				
+					Vamos iniciar a conhecer o gráfico o que será o motor css? como será que ele processa toda as imagens? Para a interpretação da parte gráfica
+					em sí é bastante organizado e dividido.
+				
+					Ele pega toda a estrutura e cria uma tipagem semelhante a uma arvore dividindo processos filhos e irmãos todo o HTML cria pequenos labels
+					sim e de uma forma bem simples ele transforma assim já para seu CSS atingir a página e fazer alterações este é o mesmo seletor que 
+					você usa quando quer fazer um .center(este código seleciona a classe que está no HTML) sabendo disso fica até facil entender
+					nesta semana li um artigo escrito por Brunno Pleffken Hosti onde explica de uma forma bastante detalhada sobre como é a leitura e a coloração da tela
+					para o cliente eu indico essa leitura mas resumidamente
+				
+					Para a renderização do css são usados variados motores dependendo de qual seja o browser a utiliza-la mas irei pegar o WebRender para 
+					usar aqui como exemplo. O WebRender nem se quer ainda foi lançado mas é o que será mais rápido trazendo novas tecnologias e como estamos
+					falando de modernidade eu não poderia falar de um browser antigo já que após o lançamento do WebRender creio que o Google Chrome e outros
+					grandes browsers farão refatorações nos códigos para que a renderização seja melhor.
+				
+					Ele funciona em diferentes etapas como eu já falei antes ele passa pelo processo de tipagem e entrega tudo mastigado e rápidamente para
+					que ele seja exibido na tela ele envia e é processado pelo GPU nos navegadores atuais é mapeado de uma forma triangular para que seja
+					carregado ele é calculado de uma forma de matriz inversa que seria triangulação até que a parte gráfica esteja pronta e carregue já 
+					atualmente o motor Blink do Google Chrome e o Gecko do Firefox (Cito por serem os mais usados hoje em dia no Brasil) renderizam apenas o
+					calculada pelo tamanho da resolução assim faz com que a máquina venha economizar memória e carregar outros componentes mais rápido e ao
+					descer a página ele calcula da mesma forma dentro da área de visão.
+				
+					Já o WebRender calculará na estrutura de modelo atómico criará como vários objetos como átomos em sí cada qual carregando algo como um
+					json mas levará dessa forma óbvio em valores hexadecimais para que seja processado pelo GPU e só esse processo fará com que a performance
+					dê um enorme salto já que ela não estará sujeita a mudanças de triangulações.
+				
+					Não diferente da renderização dos browsers o motor JS também possui suas singularidades dentro de todos os motores o mais performático
+					é o chamado de V8 ele funciona passando por alguns processos.
+				
+					Como vemos o JS passa por 7 processos o que faz com que seja um pouco mais dificil de fazer com que ele seja executado pelo seu relativamente
+					longo processo e ainda considerando que sua tipagem é relativamente pouca e isso termina fazendo ele não ser tão performático mas
+					tenho certeza que se você desenvolve em JS provavelmente não tenha notado diferença em sua performance já que os browsers priorizam o seu
+					processamento
+				
+					Os outros browsers que não utilizam o V8 são óbviamente menos performático vejamos qual o efeito que uma biblioteca simples causa em 
+					nosso carregamento vejamos o Jquery(Já em que iremos criar uma solução).
+				
+				No caso o processo icluirá mais um nível de abstração que ao invés de sua entrada de códigos será as várias funções contidas no Jquery
+				ficando o sucessivamente assim: 
+				
+			
+
+					(Seus códigos) → (Funções em JS do Jquery) → (Criação de tipagens) → (Arvores de sintaxes) → (Bytecode)
+					→ (Pegar feedback) → (Compilação) → Execução de código otimizado
+				 "UFFAA!!!"
+			
+				Vendo assim notamos que uma forma bastante interessante que poderiamos fazer pra melhorar a nossa performance não é?! Mas antes
+				vamos dar uma uma pequena analizada em como funciona o Jquery então.
+			
+				O Jquery é um biblioteca orientada a objetos que funciona baseada em funções responsávei por facilitar o desenvolvimento e ajuda bastante 
+				no desenvolvimento ágil eu quem o diga! E a função principal dela é invocada usando o $ todos os elementos selecionados usando
+				esta função retorna uma estrutura de objeto jquery(que é algo como um array) mas para que isso aconteça existem várias funções que são invocadas
+				funções dentro de funções fazendo assim com que o browser tenha que execer um maior trabalho para que processe o seu JS.
+			
+				Jquery é tão conhecido quando o JS quando aprendi uma das primeiras coisas foi "Javascript & Jquery" para mim era tudo a mesma coisa e seria
+				impossível largar o Jquery e o eu fiquei tao dependente quando vários outros desenvolvedores para fazer uma conexão XHR sem 
+				o Jquery para mim era algo absurdamente impossível por exemplo e ainda mais impossível fazer efeito de rolagem suave ou efeito scroll
+				mas levando tudo isso em conta vamos aos códigos.
+			
+				Publiquei um artigo onde falava de como fazer efeito scroll em uma linha de código css! Mas ao fazer vários
+				testes notei que funcionou em todos os navegadores exceto no mais usado(que é o Google Chrome com 
+				79.8% de uso no Brasil) e sim somos desenvolvedores
+				mas o nosso cliente não tem culpa de seu browser não possuir suporte a não ser que instale um complemento(o que se eu fosse acessar um site
+				que me pedisse isso eu nunca instalaria este plug só pra acessar seu site) então após muitos estudos cheguei a esse resultado eu e o 
+				Suissa tentamos por muito tempo encontrar algo me juntei com meu amigo 
+				
+				Nicolas Ramos
+			 decidimos então dedicar todo esse tempo de estudo e encontrar qual a forma o Jquery consegue fazer esse efeito.
+			
+				E pesquisando bastante cheguei a esse "rascunho" do 
+				
+					CSSWG
+				
+				que mostrava um json que existia nada  esclarecedor e após procurar bastante vi essa funcionalidade que na verdade já existia a muito tempo
+				que é o scroll porém ela de forma aprofundada é o que ainda não conheciamos.
+			
+				Estava olhando as especificações quando vi que é possível configurar como queremos nosso scroll e já notei que era possível e era esse o 	
+				caminho e era apenas criar objetos que o configurem e olha no que deu.
+			
+				Só em ver esse código funcionando eu já tive um ataque fuminante de alegria mas vamos aos detalhes desse código.
+			
+				Esta função scroll é a que faz com que este elemento seja rolado conforme diz 
+				
+					nesse artigo
+				  da MDN mas a diferença é que as várias vezes que li esse artigo ele não explica nem a possibilidade de acrescentar objetos e isso 
+				justifica a não utilização desse recurso.
+			
+				Agora que você viu na prática como funciona vamos olhar uma forma prática de fazer isso em uma função(no caso um botão de "voltar ao topo")
+				dá uma olhada nesse código
+			See the Pen Scroll efect single page nav by Julio Lira (@Jul10l1r4) on CodePen.
+				Acharei bem natural se você estiver na dúvida para saber o que faz a função offsetTop
+aqui
+				explica bem detalhado o seu funcionamento a grosso modo ela captura a distancia do topo
+			
+				Somos desenvolvedores desenvolvemos como queremos mas muitas vezes devemos abrir mão de coisas que nos parece ótimo e na verdade é um ciclo
+				vicioso de más formas.
+			Efeito de rolagem suave usando apenas seis linhas
+						
+Tenha performance A grande dificuldade de um desenvolvedor Conheça seu inimigo Motor JS Mão na massa Seja performáticoBrunno Pleffken Hosticomo fazer efeito scroll em uma linha de código css79.8%Suissa
+				Nicolas Ramos
+			
+					CSSWG
+				
+					nesse artigo
+				Scroll efect single page nav@Jul10l1r4CodePenaqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+Esse repositório é apenas umas ancora para o site original e para o git originalO site  em questão darkwaves.zone é o site do evento de segurança que ocorrerá no dia 06/10.Para colaborar com esse site basta:E colaborar como pode nosso git oficial é no NotABug (um git livre.).dark.confDarkwaves - Ver no twitterSite :metal:Colaboração.dark.confdarkwaves.zone
+
+				 Olá ✌🏾  estava eu olhando flyers e já a muito tempo me sinto limitado na web por não conseguir colocar uma imagem de fundo em um texto e me lembro que um dia             procurei mesmo fazer isso de todas as formas e não consegui até que nesta semana eu me dediquei e nem que eu precisasse fazer uma gambiarra eu iria fazer e lendo no site da webkit.org  vi  uma possibilidade sim o exemplo estava errado neste artigo mas notei que tinha como "reduzir" o background ao fundo de um texto foi neste artigo oficial.
+				
+					E quando eu olhei eu fiquei triste porque foram apenas esperanças jogadas foras mas estava sem mais o que fazer e pesquisei o que faria o background-clip e olhei na MDN e ainda não acreditando eu resolvi testar e 🤤
+
+					HOJE SOU UMA PESSOA FELIZ 🍃 e após me acalmar eu pensei
+				
+					PNG tudo certo JPEG tudo ok PNGs trasparentes perfeito e entrei em total tensão quando pensei será que pega gif? Então decidi testar e
+				
+					MEU DESUS EU NÃO ACREDITOOO!
+				
+					Basicamente existe uma imagem de fundo e o código que eu já havia dito o background-clip ele fará com que o fundo de fato seja dentro da imagem assim como um papel furado e o fundo será a parte de trás do papel entende? algo assim:
+				
+					E você que não leu o texto e veio logo a este tópico deve está pensando:
+					
+					A imagem que eu utilizei foi esta imagem aqui veja como fica este códigozinho:
+				See the Pen oEWNrZ by Julio Lira (@Jul10l1r4) on CodePen.
+				 Enfim hoje será um dia marcado em minha vida e acredito que na sua também né?! Eu fiquei extremamente alegre depois dessa descoberta
+				
+					Enfim era isso... boas práticas
+				Background em um texto só com três linhas de CSS? Ué sim!
+						
+Sim e eu não acredito ainda que é possível isso!PEGOOOOOUUU AAAAAH!VEJA COMO É_Coloque gif no fundo de um textoartigo oficialMDNaquioEWNrZ@Jul10l1r4CodePen
+					← Efeito Scroll com uma linha CSS3
+				Home
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+
+				 Já ouviu falar em scroll? nossa essa pergunta parece meio idiota ne?! mas é um efeito de deslizamento em rolagem de tela… eu sei como 
+				eu falei pode até bugar sua compreensão mas dá uma sacada nesse site 
+				aqui
+			 ele é uma api que usamos para gerenciar mensagens de erros.
+				
+					Esse efeito viralizou por volta de 2015 em boa parte da web criaram vários artigos bem legais falando do efeito e equipes que trabalham com psicologia cada vez mais apoiava a criação deste efeito e mostrava os seus diversos pontos positivos.
+				
+					Ele é um calculo de medidas através de valores de posições do eixo x e eixo y tem valores em Javascript
+					onde ele ajuda bastante nisso como o valor que captura a posição e retorna o valor em pontos no qual é útil e a função que move o 
+					scroll até determinado ponto 
+					isso causa este efeito mas como notou a grande dificuldade e o nível de complexidade as pessoas optaram por usar bibliotecas e/ou 
+					frameworks para isso como o Jquery
+					ou o Angular-scroll.
+				
+					O uso delas ainda hoje é bastante comum e fácil mas iremos usar aqui apenas css então prepare-se para os bilhões de códigos 
+					😅
+
+					Mas sim concordo que realmente é e sim fica bem simples usar através dessas bibliotecas para criar tanto esse quanto outros efeitos legais no frontend.
+				
+					Acho que pode reduzir um pouco suas linhas de códigos...
+				
+					É eu não estou louco e nem você por acreditar nisso mas é verdade a mozila montou uma documentação bem detalhada de seu funcionamento
+				 aqui na 
+					MDN e em português eu fiquei abismado
+					ao saber disso para usar em seu código basta você colocar algum link na própria página e fim.
+				
+					Eu fiquei full animado com tudo isso mas fui verificar e fazer testes até que me deparei com a informação que o navegador Google Chrome havia tirado o suporte deste recurso em CSS na real… eu esperava isso do Explorer do Edge ou sei lá… mas não do Google Chrome.
+				
+					Espero que ele venha criar um suporte pra isso afinal ele é usado por aproximadamente 58% da internet.
+				Source: StatCounter Global Stats - Browser Market Share
+
+					Mas fiz um outro artigo mostrando como é possível fazer esse efeito usando o JS para o Google chrome (no caso o que não suporta mas 
+					essa forma é funciona em todos os browsers) usando 
+					apenas seis linhas de puro JS veja aqui.
+				Criando efeito de navegação single page scroll apenas com CSS3
+						
+ConheçaComo baseia-se?Show me the code A grande badScroll de forma práticaaquiJqueryAngular-scrollMDNStatCounter Global Stats - Browser Market Shareveja aqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+
+					Para nós que cuidamos muitas vezes da infraestrutura dos servidores sabemos a importância de performance em nossos processos executados principalmente em produção e esse cuidado se torna em vício real
+				
+					É bem natural que qualquer pessoa que seja dessa parte de infraestrutura em geral seja viciado loucamente em performance e baixo consumo de hardware por mais parruda que seja a aplicação sobrar nunca é demais
+				
+					O shell é a coisa mais linda que temos nessa porra de vida e como a nossa vida existem várias formas de fazer a mesma coisa só que uma delas dificilmente dão o mesmo resultado na questão de performance isso é claro né?!
+				
+					E não diferentemente disso acontece com o echo temos algumas alternativas como por exemplo a que chamamos de here-document (<cat (para sair no STDOU) e também o printf que tem uma sintaxe bem parecida com a do echo e ainda também fiz com o printf com here-document direcionando a /dev/stdout.
+				
+					E como qualquer viciado fiquei curioso em saber se eles se diferenciavam em performance nem que seja questão de milissegundos e sei que você só está lendo esse artigo porque também é um viciado como eu 💀.
+				
+					A forma que achei mais style fodastica foi usando o here-document do cat mano cola só na sintaxe:
+				
+					Mas deixei pra lá o meu style super hacker fodão e me liguei na performance então obviamente ele foi o primeiro que eu teste usando o strace pude mapear as requisições feitas ao executar aquele código e tive uma saída um pouco verbosa mas estudaremos as saídas quando formos comparar os diferentes métodos.
+				
+					Mas deixando de conversa mole vamos as paradas primeiramente vamos aos testes.
+				
+					Outra forma de testar foi usando o printf e apontando para escrever em /dev/stdout que é um link simbólico que aponta para outro link simbólico que aponta para outro ele tem tantos links assim pelo simples motivo de identificar qual a TTY logada e coisas do tipo o segundo link se localiza em /proc/self/fd/1 e o primeiro no meu caso estava dentro de /dev/pts/0.
+				
+					Com minha duvida do caralho eu fiz um script afim de medir a porra dessa velocidade e saber qual na prática era que iria executar mais rápido e até que fim pude descobrir meu teste foi simples baseado em quatro funções onde elas exibiam 10000 vezes uma série de caracteres randômicos ("@#$%%&*I&FDFSRWEGsy€®³®ŧŋđðđðŋæ") e sem quebra de linhas ou espaços e nem tabs.
+				
+					Na saída acima vemos que o echo foi mais rápido em questão de milessegundos e o printf direcionando para o stdout foi o segundo mais veloz com 0102s o printf ficou em terceiro lugar por 1 ms e o cat usando here-document ficou com a pior performance com 0174s.
+				
+
+
+WTF o resultado foi totalmente o contrário PQP
+
+
+					O cat na prática e após ser executado cria um espaço dinâmico na memória para a alocação e pra isso é necessário ela chamar também um descritor de arquivo fd (file descriptor) e saber o estado do arquivo se existe ou se pode ou nao pode ser lido conforme estão no padrão do módulo do libc unistd.h pode ser encontrado em /usr/include/unistd.h definindo: STDIN_FILENO STDOUT_FILENO e STDERR_FILENO que é respectivamente o número 1 2 e 3.
+				
+					Outra forma que colabora para que sua execução venha demorar mais é a função read() para que ele imprima é necessário que tenham entrada de dados e o cat não armazenou a entrada a única que ele armazenou foi o primeiro argumento no qual foi ignorado por não ser um arquivo e esse passo faz com que ela receba armazene em uma variável e é aqui que a porca torce o rabo! 
+				
+					Se você executar strace cat ele irá parar e esperar uma entrada em read(0 e após a entrada ele executa o script normalmente.
+				
+					Esses passos fazem com que ele perca o tempo suficiente para que tenha uma maior demanda de tempo e aumenta o tempo de sua execução.
+				
+					Em nosso exemplo foi feito um teste de explosão de carácteres em cada função e foi analisada a performance ok... Mas e se nós tentássemos criar um script que executaria cada função por várias vezes?
+				
+Como assim?
+
+					Notei que diferentes vezes que eu realizava o mesmo teste o resultado do echo era mais rápido e outros mais lento do que o da função no printf isso me incomodou bastante mas se notarmos o embora o resultado seja diferente as duas funções na prática são muito semelhantes mas existem algumas diferenças que acho interessante detalhar.
+				
+					As duas funções são de cara executadas pelo bash e de lá é direcionado a abrir um outro binário que é o correspondente que no caso é o echo e o printf elas duas são invocadas de /usr/bin/binário e é feita toda a alocação definição de leitura e armazenamento de "arquivo" (como é tratado qualquer coisa nos Unix-likes) em um determinado momento que está tudo certo ele chega a criar o arquivo virtual para direcionar ao STDOUT (já citado anteriormente) e em que a nível de sistema ele chama a função fstat do módulo C stat (que pode ser encontrado em /usr/include/(plataforma)-linux-gnu/sys/stat.h) em que é alogo como fstat(1 {st_mode=S_IFCHR|0620 ... o st_mode é o valor de configuração que seta qual será o tipo de arquivo a ser retornado e a opção preenchida foi S_IFCHR que é significa que o arquivo é de caracteres especiais e seguido isso usa-se um pipe ("|" Essse símbolo) no trecho mostra 0620 que se refere a permissão de arquivo no caso ele não terá permissão especial (stickbit suid nem sgid) o usuário dono do arquivo poderá escrever e ler e o grupo do usuário poderá apenas escrever naquele arquvo que você pôs como entrada na função de modo legível a permissão seria wr- w-- ---.
+				
+					E como segundo argumento encapsulado temos st_rdev=makedev(136 2) o st_rdev é uma variável de configuração de Device ID (identifica se o arquivo é caractere ou bloco especial) essa variável retorna um valor inteiro e passam dois argumentos sendo o primeiro o identificador Device ID e nomeado de Major e o segundo é o identificador da instância específica do Device ID esses dois argumentos parecem confusos mas assim essa função faz como o mknod onde é criado um arquivo de relação de kernel no diretório /dev/.
+				
+					Após estudar todos esses padrões que coincidem entre os dois programas notamos a total e unica diferença quase que insignificante na função que é chamada abaixo a write (Módulo pode ser encontrado em /usr/include/unistd.h) em nosso trecho de teste podemos pegar write(1 "trecho de teste\n" 16trecho de teste) sendo usada a função principal afim da execução a função write tem três argumentos sendo o primeiro o __fd(File descriptor) comentado já anteriormente o segundo o texto chamado de __buf e o terceiro e ultimo sendo um valor inteiro da quantidade de bytes chamada de __nbyte. no caso do echo ele acrescenta apenas 1 byte a mais que é a quebra de linha \n (que é identificado como 10 em ascii) já o printf apenas imprime o texto passado sem que haja quebra de linha e assim faz com que seja "mais veloz" a diferença é tão detalhista que nem se quer um teste bem projetado poderia medir tendo em vista que após calcular e terminar o primeiro procedimento o processador já estará quente ou já teria armazenado dados a mais também considerando a temperatura local a corrente de vento e por mínimo que seja a mudança ela surtará efeito no conometro.
+				
+					Sendo isso é possível notar que o printf saiu mais veloz em varias chamadas repetidas e o echo se saiu mais veloz em apenas uma chamada de uma vez mesmo não havendo diferenças relevantes entre as duas. Faça você mesmo teste em sua plataforma verifique você mesmo as vezes nem sempre o printf será aconselhado já que pode ser usado o echo e ele já terminará em uma quebra de linha sem precisar de que digite o \n além de tudo isso os comandos com formatação e coloração são todos suportados por padrão no printf (tanto no bash quanto no C que também pode ser usado o write o que seria mais low-level) já o echo precisaria passar o parâmetro -e.
+				
+					Dada as métricas cabe a você estudar a sua situação e verificar qual o que melhor se encaixa para seu ambiente sabemos que 1 ms faz toda a diferença em nossos servidores :)
+				Shell script e performance psicopata 🔪  stdout
+						
+Veja qual a forma mais performática de saída no bashFaça você mesmo
+					← Ir para a HOME
+				
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+
+				O uso de balanceadores (ou load balancer) passou a ser bem maior pela série de benefícios que nos trás e um dos principais benefícios dele é a segurança tendo um balanceador em uma rede controlará todos os acessos para que sejam centralizados e distribuidos além de que o servdor mod_jk (módulo do apache) receberá toda a requisição e processará como entende ou seja: Mesmo que seu outro servidor interno possua falhas de segurança possibilitando um bypass ou até mesmo um arquivo e PHP sem que tenha o interpretador instalado (o mod_jk impede de que ele seja exibido).	
+				
+				Já um mês atrás o especialista em segurança da informação Alphan YAVAS publicou um bug encontrado no código do mod_jk no qual ele possibilitava ter acesso a rota/jkstatus onde nela possui todas as informações das instâncias balanceadas dando a possibilidade de realizar até mesmo algumas configurações relacionadas a ela!
+				
+				O erro era no próprio código fonte do mod_jk especificamente no arquivo tomcat/jk/trunk/native/apache-2.0/mod_jk.c esse trecho contém a instrução de bloquear com que a entrada ../ seja interpretada como instrução (pois seria possível navegar através dos diretórios) e foi justamente aí que ele encontrou a falha essa instrução não anularia nenhuma forma de concatenação de requisição foi realizado o teste injetando justamente essas instruções reportado como CVE o atuante acrescentou apenas ;
+
+				Acontece que sinais como: & ; e = são instruções aceitas para envio e recebimento e recebimento de dados HTTP então tanto o browser entenderá aquilo como uma rota atuante quanto o servidor também compreenderá da mesma forma uma forma de ver isso em um ambiente real já foi projetada pelo grupo immunIT e está disponível um docker-compose em https://github.com/immunIT/CVE-2018-11759.
+				
+				 O ataque em sua prática é apenas seguir o diretório inicial com /jkstatus& veja a saída em um teste:
+				
+				 E agora após alterar a url apenas o ultimo caracter temos:
+				
+				Verifique se sua aplicação está vulnerável a essa exploração usando esse projeto escrito em shellscript para usar precisa apenas clonar o repositório e em seguida abrir o arquivo então já poderá verificar seus ambientes. Para ser mais produtivo você pode usar todos os ambientes com um here-document no script dessa forma: 
+				
+				O projeto está disponível em https://github.com/Jul10l1r4/Identificador-CVE-2018-11759 (o projeto principal está em notabug.org/Jul10l1r4/Identificador-CVE-2018-11759)
+				
+				  A versão na qual é possível fazer essa exploração dessa forma é da 1.2.0 a 1.2.44 você está usando essa versão afetada? Uma das formas urgentes de solucionar esse problema é alterar a permissão de leitura do arquivo para que bloqueie aquele acesso ou que ele requeira um determinado ip para que seja acessado.
+				Vulnerabilidade em balanceadores mod_jk - [CVE-2018-11759]						
+DescobertaÉ o apocalipsehttps://github.com/Jul10l1r4/Identificador-CVE-2018-11759notabug.org/Jul10l1r4/Identificador-CVE-2018-11759
+					← Shellscript com performance psicopata - stdout
+				
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+It’s a tool of security audit for smart wordlist and Google hacking attackVersion in development
+
+D4N155UseManualImprove this page
+Artigos
+						
+Veja alguns artigos mais recentes
+Seja performático efeito scroll com seis linhas de JS (sem Jquery)
+
+Background em um texto com CSS
+
+Scroll com uma linha de CSS (E a busca continua)
+
+					← Julio Lira 
+				
+					Ir para POP image 🤘 →
+				
+olá https://jul10l1r4.github.io/HTTP_-_Resposta/img/[Seu código de erro]e
+				Olá esta é uma API onde as imagens disponíveis são conformes o número de erro HTTP ❤ veja como usar.
+			
+				Use esta api temos um banco de imagens de resposta de erros para usá-las basta por em qualquer que seja a aplicação https://jul10l1r4.github.io/HTTP_-_Resposta/Código de erro + e lembre-se que não precisa usar a extensão .jpg já reduzimos isso para facilitar 
+				e também observando que tem uma string e após o código de erro pois se refere ao escudo já se não a pôr você acessará a mesma API só que baseada em memes.
+			
+		  	Usamos imagens relacionadas conforme o numero do erro para substituir as mensagens de erro usamos apenas imagens para evitar o trabalho de se criar uma html apenas para uma página de erro o que poderia ser usado para capturar as informações pensando nisso fizemos imagens que você apenas "linka"
+em uma simples tag img com o atributo src="https://jul10l1r4.github.io/HTTP_-_Resposta/img/404e"
+			nesse caso fizemos o erro 404 - Servidor não Encontrado.
+			dê uma olhada neste repositório com o código-fonte comentado em algumas linguagens para você usar
+			aqui e veja como configurar a sua
+			no seu próprio servidor/site acrescentando apenas algumas "linhas"
+			no .htaccess Aqui.
+			
+				Somos uma pequena equipe de devs e devas ajude-nos é designer? dev então fale comigo.
+			
+			Um dos que nos ajudou bastante foi 
+			
+				Kayo Oliveira
+			
+			 desenvolvedor front-end e perfeccionista por qualidade e por causa dele nossa estrutura está bonita.
+		
+			Colabore conosco também você pode nos ajudar de duas formas no desenvolvimento. Você pode fazer um fork e colaborar nesta 
+			página pelo github ou pode colaborar em nossa área de aprendizado
+			em nosso git 💙.
+		
+				Deseja ajuda em um projeto? Adoramos desenvolver alternativas livres e gratuitas fale comigo.
+				Fale comigo no telegram 🚀 @jul10l1r4.
+        Mande-me um email 📫 jul10l1r4@ufrn.edu.br.
+			🛡🤘🏿veja como usaraquiAqui
+				Kayo Oliveira
+			páginagit 💙@jul10l1r4jul10l1r4@ufrn.edu.brGNU GPL-3Veja o código-fonteVeja exemplos de uso em algumas linguagens e se souber alguma que não tenha ainda ajude-nos
+Você pode instala-lo assim.
+					Ou acrescente a âncora (caso não queira copiar manualmente):
+				Tenha fluidez ao abrir uma imagem vejo por aí muitos sites onde apertam na imagem e sim a imagem abre grande mas abre uma nova
+ aba e realmente acho um pé no saco porque tenho sempre que for abrir apertar no botão de voltar do navegador e voltar a página onde
+ eu estava mas este box faz apenas com JS puro um box que abre a imagem suspensa na mesma página(light box) a estilização fica por sua conta mas
+ se for preguiçoso já temos códigos montados é só integrar se quiser ver e criar uma sua faça você mesmo.Temos um respositório no NotABug.org onde falará sobre como integrar em sua aplicação de uma forma que se 
+der uma atualização não venha danificar sua aplicação.Usando este suporte onde se baseia em animação com JS tem suporte em todos os navegadores e cria a animação de deslize 
+até o topo.
+	O efeito é feito com usando JS poupando o máximo de processamentos necessários do lado do cliente então fizemos algo sem a utilização de biblioteca
+	mas de uma forma eficiente veja como você mesmo pode criar um botão assim com a função 
+	scroll em seis linhas
+	usando esses códigos do artigo é que montamos uma estrutura leve e performática para facilitar a utilização.
+POP-IMAGE 
+
+Direto ao ponto "."POP-image 🍺Ele criará um botão de voltar ao topo 🔝Crie um suave box para visualizar imagens porretas 🤘NotABug.orgscroll em seis linhas
+					← Ir para Julio Lira
+				
+					Ir para HTTP Meme resposta →
+				
+
+				 Você já entrou em um site afim de comprar ler algo ou resolver algum problema como sacar dinheiro né?! E eu tenho certeza que se você 
+					estava apressado e se o site era lento você sentiu uma grande vontade de desistir de fazer o que estava fazendo não é isso? Pois é
+					eu mesmo já passei muito por sites lentos por mais util que seja ou por mais excelente que seja o serviço deles a vontade continua 
+					de sair o mais rápido possível do site.
+				
+					Nós que somos desenvolvedores sabemos o quão chato é ter que repetir códigos e mais chato ainda ter que digitar códigos longos
+					isso facilita até o erro da parte do desenvolvedor já que terá que desenvolver complexos códigos e assim a unica saida que teriamos
+					é usando algo que nos facilitasse e isso é o que chamamos de bibliotecas ou usamos frameworks para facilitar o nosso desenvolvimento
+					e isso ajuda muito no desenvolvimento em pouca fração de tempo e criar algo magnifico.
+				
+					Mas você já teve aquela esperiencia de ao desenvolver algo perfeito e ao fim de tudo notar que a sua velocidade não está boa? eu já passei por 
+					isso e basicamente eu ignorei... mas de um tempo notei a responsabilidade que tem um desenvolvedor ele é o responsável por total 
+					sucesso ou total derrota do que vá fazer seja uma empresa uma campanha ou qualquer coisa que precise de seu trebalho e então resolvi
+					mudar minhas atitudes e mesmo depois de mudar minha forma de desenvolver(Sem usar bibliotecas ou framework que tomou muito o meu tempo).
+				
+					Notei uma diferença mas eu questionava ainda assim o tempo ainda era meu grande inimigo meus sites sempre demoravam ao carregar e notei
+					que não é a quantidade de esforço que faz mas sim como os motores gráficos e JS são lidos no frontend então notei que eu era o inimigo
+					do GPU no processamento de imagens e dos diversos motores JS.
+				
+					Vamos iniciar a conhecer o gráfico o que será o motor css? como será que ele processa toda as imagens? Para a interpretação da parte gráfica
+					em sí é bastante organizado e dividido.
+				
+					Ele pega toda a estrutura e cria uma tipagem semelhante a uma arvore dividindo processos filhos e irmãos todo o HTML cria pequenos labels
+					sim e de uma forma bem simples ele transforma assim já para seu CSS atingir a página e fazer alterações este é o mesmo seletor que 
+					você usa quando quer fazer um .center(este código seleciona a classe que está no HTML) sabendo disso fica até facil entender
+					nesta semana li um artigo escrito por Brunno Pleffken Hosti onde explica de uma forma bastante detalhada sobre como é a leitura e a coloração da tela
+					para o cliente eu indico essa leitura mas resumidamente
+				
+					Para a renderização do css são usados variados motores dependendo de qual seja o browser a utiliza-la mas irei pegar o WebRender para 
+					usar aqui como exemplo. O WebRender nem se quer ainda foi lançado mas é o que será mais rápido trazendo novas tecnologias e como estamos
+					falando de modernidade eu não poderia falar de um browser antigo já que após o lançamento do WebRender creio que o Google Chrome e outros
+					grandes browsers farão refatorações nos códigos para que a renderização seja melhor.
+				
+					Ele funciona em diferentes etapas como eu já falei antes ele passa pelo processo de tipagem e entrega tudo mastigado e rápidamente para
+					que ele seja exibido na tela ele envia e é processado pelo GPU nos navegadores atuais é mapeado de uma forma triangular para que seja
+					carregado ele é calculado de uma forma de matriz inversa que seria triangulação até que a parte gráfica esteja pronta e carregue já 
+					atualmente o motor Blink do Google Chrome e o Gecko do Firefox (Cito por serem os mais usados hoje em dia no Brasil) renderizam apenas o
+					calculada pelo tamanho da resolução assim faz com que a máquina venha economizar memória e carregar outros componentes mais rápido e ao
+					descer a página ele calcula da mesma forma dentro da área de visão.
+				
+					Já o WebRender calculará na estrutura de modelo atómico criará como vários objetos como átomos em sí cada qual carregando algo como um
+					json mas levará dessa forma óbvio em valores hexadecimais para que seja processado pelo GPU e só esse processo fará com que a performance
+					dê um enorme salto já que ela não estará sujeita a mudanças de triangulações.
+				
+					Não diferente da renderização dos browsers o motor JS também possui suas singularidades dentro de todos os motores o mais performático
+					é o chamado de V8 ele funciona passando por alguns processos.
+				
+					Como vemos o JS passa por 7 processos o que faz com que seja um pouco mais dificil de fazer com que ele seja executado pelo seu relativamente
+					longo processo e ainda considerando que sua tipagem é relativamente pouca e isso termina fazendo ele não ser tão performático mas
+					tenho certeza que se você desenvolve em JS provavelmente não tenha notado diferença em sua performance já que os browsers priorizam o seu
+					processamento
+				
+					Os outros browsers que não utilizam o V8 são óbviamente menos performático vejamos qual o efeito que uma biblioteca simples causa em 
+					nosso carregamento vejamos o Jquery(Já em que iremos criar uma solução).
+				
+				No caso o processo icluirá mais um nível de abstração que ao invés de sua entrada de códigos será as várias funções contidas no Jquery
+				ficando o sucessivamente assim: 
+				
+			
+
+					(Seus códigos) → (Funções em JS do Jquery) → (Criação de tipagens) → (Arvores de sintaxes) → (Bytecode)
+					→ (Pegar feedback) → (Compilação) → Execução de código otimizado
+				 "UFFAA!!!"
+			
+				Vendo assim notamos que uma forma bastante interessante que poderiamos fazer pra melhorar a nossa performance não é?! Mas antes
+				vamos dar uma uma pequena analizada em como funciona o Jquery então.
+			
+				O Jquery é um biblioteca orientada a objetos que funciona baseada em funções responsávei por facilitar o desenvolvimento e ajuda bastante 
+				no desenvolvimento ágil eu quem o diga! E a função principal dela é invocada usando o $ todos os elementos selecionados usando
+				esta função retorna uma estrutura de objeto jquery(que é algo como um array) mas para que isso aconteça existem várias funções que são invocadas
+				funções dentro de funções fazendo assim com que o browser tenha que execer um maior trabalho para que processe o seu JS.
+			
+				Jquery é tão conhecido quando o JS quando aprendi uma das primeiras coisas foi "Javascript & Jquery" para mim era tudo a mesma coisa e seria
+				impossível largar o Jquery e o eu fiquei tao dependente quando vários outros desenvolvedores para fazer uma conexão XHR sem 
+				o Jquery para mim era algo absurdamente impossível por exemplo e ainda mais impossível fazer efeito de rolagem suave ou efeito scroll
+				mas levando tudo isso em conta vamos aos códigos.
+			
+				Publiquei um artigo onde falava de como fazer efeito scroll em uma linha de código css! Mas ao fazer vários
+				testes notei que funcionou em todos os navegadores exceto no mais usado(que é o Google Chrome com 
+				79.8% de uso no Brasil) e sim somos desenvolvedores
+				mas o nosso cliente não tem culpa de seu browser não possuir suporte a não ser que instale um complemento(o que se eu fosse acessar um site
+				que me pedisse isso eu nunca instalaria este plug só pra acessar seu site) então após muitos estudos cheguei a esse resultado eu e o 
+				Suissa tentamos por muito tempo encontrar algo me juntei com meu amigo 
+				
+				Nicolas Ramos
+			 decidimos então dedicar todo esse tempo de estudo e encontrar qual a forma o Jquery consegue fazer esse efeito.
+			
+				E pesquisando bastante cheguei a esse "rascunho" do 
+				
+					CSSWG
+				
+				que mostrava um json que existia nada  esclarecedor e após procurar bastante vi essa funcionalidade que na verdade já existia a muito tempo
+				que é o scroll porém ela de forma aprofundada é o que ainda não conheciamos.
+			
+				Estava olhando as especificações quando vi que é possível configurar como queremos nosso scroll e já notei que era possível e era esse o 	
+				caminho e era apenas criar objetos que o configurem e olha no que deu.
+			
+				Só em ver esse código funcionando eu já tive um ataque fuminante de alegria mas vamos aos detalhes desse código.
+			
+				Esta função scroll é a que faz com que este elemento seja rolado conforme diz 
+				
+					nesse artigo
+				  da MDN mas a diferença é que as várias vezes que li esse artigo ele não explica nem a possibilidade de acrescentar objetos e isso 
+				justifica a não utilização desse recurso.
+			
+				Agora que você viu na prática como funciona vamos olhar uma forma prática de fazer isso em uma função(no caso um botão de "voltar ao topo")
+				dá uma olhada nesse código
+			See the Pen Scroll efect single page nav by Julio Lira (@Jul10l1r4) on CodePen.
+				Acharei bem natural se você estiver na dúvida para saber o que faz a função offsetTop
+aqui
+				explica bem detalhado o seu funcionamento a grosso modo ela captura a distancia do topo
+			
+				Somos desenvolvedores desenvolvemos como queremos mas muitas vezes devemos abrir mão de coisas que nos parece ótimo e na verdade é um ciclo
+				vicioso de más formas.
+			Efeito de rolagem suave usando apenas seis linhas
+						
+Tenha performance A grande dificuldade de um desenvolvedor Conheça seu inimigo Motor JS Mão na massa Seja performáticoBrunno Pleffken Hosticomo fazer efeito scroll em uma linha de código css79.8%Suissa
+				Nicolas Ramos
+			
+					CSSWG
+				
+					nesse artigo
+				Scroll efect single page nav@Jul10l1r4CodePenaqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+
+				 Olá ✌🏾  estava eu olhando flyers e já a muito tempo me sinto limitado na web por não conseguir colocar uma imagem de fundo em um texto e me lembro que um dia             procurei mesmo fazer isso de todas as formas e não consegui até que nesta semana eu me dediquei e nem que eu precisasse fazer uma gambiarra eu iria fazer e lendo no site da webkit.org  vi  uma possibilidade sim o exemplo estava errado neste artigo mas notei que tinha como "reduzir" o background ao fundo de um texto foi neste artigo oficial.
+				
+					E quando eu olhei eu fiquei triste porque foram apenas esperanças jogadas foras mas estava sem mais o que fazer e pesquisei o que faria o background-clip e olhei na MDN e ainda não acreditando eu resolvi testar e 🤤
+
+					HOJE SOU UMA PESSOA FELIZ 🍃 e após me acalmar eu pensei
+				
+					PNG tudo certo JPEG tudo ok PNGs trasparentes perfeito e entrei em total tensão quando pensei será que pega gif? Então decidi testar e
+				
+					MEU DESUS EU NÃO ACREDITOOO!
+				
+					Basicamente existe uma imagem de fundo e o código que eu já havia dito o background-clip ele fará com que o fundo de fato seja dentro da imagem assim como um papel furado e o fundo será a parte de trás do papel entende? algo assim:
+				
+					E você que não leu o texto e veio logo a este tópico deve está pensando:
+					
+					A imagem que eu utilizei foi esta imagem aqui veja como fica este códigozinho:
+				See the Pen oEWNrZ by Julio Lira (@Jul10l1r4) on CodePen.
+				 Enfim hoje será um dia marcado em minha vida e acredito que na sua também né?! Eu fiquei extremamente alegre depois dessa descoberta
+				
+					Enfim era isso... boas práticas
+				Background em um texto só com três linhas de CSS? Ué sim!
+						
+Sim e eu não acredito ainda que é possível isso!PEGOOOOOUUU AAAAAH!VEJA COMO É_Coloque gif no fundo de um textoartigo oficialMDNaquioEWNrZ@Jul10l1r4CodePen
+					← Efeito Scroll com uma linha CSS3
+				Home
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+
+				 Já ouviu falar em scroll? nossa essa pergunta parece meio idiota ne?! mas é um efeito de deslizamento em rolagem de tela… eu sei como 
+				eu falei pode até bugar sua compreensão mas dá uma sacada nesse site 
+				aqui
+			 ele é uma api que usamos para gerenciar mensagens de erros.
+				
+					Esse efeito viralizou por volta de 2015 em boa parte da web criaram vários artigos bem legais falando do efeito e equipes que trabalham com psicologia cada vez mais apoiava a criação deste efeito e mostrava os seus diversos pontos positivos.
+				
+					Ele é um calculo de medidas através de valores de posições do eixo x e eixo y tem valores em Javascript
+					onde ele ajuda bastante nisso como o valor que captura a posição e retorna o valor em pontos no qual é útil e a função que move o 
+					scroll até determinado ponto 
+					isso causa este efeito mas como notou a grande dificuldade e o nível de complexidade as pessoas optaram por usar bibliotecas e/ou 
+					frameworks para isso como o Jquery
+					ou o Angular-scroll.
+				
+					O uso delas ainda hoje é bastante comum e fácil mas iremos usar aqui apenas css então prepare-se para os bilhões de códigos 
+					😅
+
+					Mas sim concordo que realmente é e sim fica bem simples usar através dessas bibliotecas para criar tanto esse quanto outros efeitos legais no frontend.
+				
+					Acho que pode reduzir um pouco suas linhas de códigos...
+				
+					É eu não estou louco e nem você por acreditar nisso mas é verdade a mozila montou uma documentação bem detalhada de seu funcionamento
+				 aqui na 
+					MDN e em português eu fiquei abismado
+					ao saber disso para usar em seu código basta você colocar algum link na própria página e fim.
+				
+					Eu fiquei full animado com tudo isso mas fui verificar e fazer testes até que me deparei com a informação que o navegador Google Chrome havia tirado o suporte deste recurso em CSS na real… eu esperava isso do Explorer do Edge ou sei lá… mas não do Google Chrome.
+				
+					Espero que ele venha criar um suporte pra isso afinal ele é usado por aproximadamente 58% da internet.
+				Source: StatCounter Global Stats - Browser Market Share
+
+					Mas fiz um outro artigo mostrando como é possível fazer esse efeito usando o JS para o Google chrome (no caso o que não suporta mas 
+					essa forma é funciona em todos os browsers) usando 
+					apenas seis linhas de puro JS veja aqui.
+				Criando efeito de navegação single page scroll apenas com CSS3
+						
+ConheçaComo baseia-se?Show me the code A grande badScroll de forma práticaaquiJqueryAngular-scrollMDNStatCounter Global Stats - Browser Market Shareveja aqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+It’s a tool of security audit for smart wordlist and Google hacking attackVersion in development
+
+D4N155UseManualImprove this page
+Artigos
+						
+Veja alguns artigos mais recentes
+Seja performático efeito scroll com seis linhas de JS (sem Jquery)
+
+Background em um texto com CSS
+
+Scroll com uma linha de CSS (E a busca continua)
+
+					← Julio Lira 
+				
+					Ir para POP image 🤘 →
+				
+   Suportado nos navegadores a partir de 2017 nativas do firefox desde as versões de 2016 veja as relações de suportes.Um chat criado com motor em php no servidor usando o socket protocol 🤘🏿 real-time 🍃 levinho.Veja um artigo que ensina detalhadamente o funcionamento aprofundadamente @rootthingsEstrutura do index.phpEstrutura do respostas.phpEstrutura do sockets.jsEstrutura do arquivi disparar.phpInstruções para usoExecute o chat WebSocket em PHPNesse arquivo tem o necessário para a conexão em javascript e estilização em css como referencia em sí vale lembrar para 
+  permitir as caracterações no arquivo no dentro do headObs.: Sinta-se livre para me mandar pull request e ajeitar esse designer 🙊.Esse arquivo possui 137 linhas de códigos comentadas e explicativas para ajudar a configurar conforme seja o desejo de sua aplicação### 🤘🏿 Disparar.php
+ Seu nome bastante descritivo precisa ser configurado conforme o servidor e  a versão do php colocando a sua      sintaxe. infelizmente esse código de disparo é compatível apenas com Unix-Likes.### 🤘🏿 Sockets.jsScript moderno usando o arrow function (segundo o padrão do codestyle airbnb. Esse script faz um tratamento de funções de socket abre conexão precisa ser configurada a porta e o endereço de onde deseja ser aberta e todas as configurações de saídas👌🏽.Atenção: Não é indicado usa-la em um servidor online antes de configura-la para usar em sua aplicação.Para rodar a aplicação você precisa navegar onde o servidor esta rodando e baixar para isso execute no seu unix-like:ouEdite os arquivos configure-os já que estais no terminal executaremos a nossa aplicaçãoE agora faça a festa abra o browser e navegue até a aplicação e abra:Edite o arquivo disparar.php para não precisar executar através do terminal para fazer isso aperte control + c (isso parará a execução do serviço de socket que foi executado nos códigos anteriores) você pode digitar os seguintes comandos:Copie a informação alí você pode marcar o texto e apertar control + shift + c agora feche o terminal e abra o arquivo disparar.php na pasta do servidor em Chat-Socket-PHP/disparar.php use o editor de sua preferência e no arquivo aberto edite a informação:Cole a informação copiada pelo terminal no lugar indicado salve e fim agora basta identificar o arquivo no seu browser que provavelmente será em http://localhost/Chat-Socket-PHP/disparar.php.Quer mais detalhes? então fiz um artigo falando detalhadamentes sobre a aplicação em sí e seu funcionamento veja em @jul10l1r4Use e abuse cite-me e estará tudo certo 😸. Leia sobre a licença GPL-3Chat-socket🐘 Chat-socket | PHP7🔧 EstruturaVeja o artigoView on GitHubveja as relações de suportes@Jul10l1r4@rootthingsEstrutura do index.phpEstrutura do respostas.phpEstrutura do sockets.jsEstrutura do arquivi disparar.phpInstruções para usoExecute o chat WebSocket em PHParrow functionairbnb@jul10l1r4GPL-3Chat-socketJul10l1r4GitHub Pages
+olá https://jul10l1r4.github.io/HTTP_-_Resposta/img/[Seu código de erro]
+				Veja as imagens de erro pode baixá-las e usar quando quiser ❤ veja como usar e conheça outra API 
+				que utiliza nossos algoritmos conheça escudo ajude-nos em nosso desenvolvimento.
+			
+				Use esta api temos um banco de imagens de resposta de erros para usá-las basta por em qualquer que seja a aplicação https://jul10l1r4.github.io/HTTP_-_Resposta/Código de erro lembre-se que não precisa usar a extensão .jpg já reduzimos isso para facilitar.
+			
+		  	Usamos imagens relacionadas a memes para substituir as mensagens de erro usamos apenas imagens para evitar o trabalho de se criar uma html apenas para uma página de erro o que poderia ser usado para capturar as informações pensando nisso fizemos imagens que você apenas "linka"
+em uma simples tag img com o atributo src="https://jul10l1r4.github.io/HTTP_-_Resposta/img/404"
+			nesse caso fizemos o erro 404 - Servidor não Encontrado.
+			dê uma olhada neste repositório com o código-fonte comentado em algumas linguagens para você usar
+			aqui e veja como configurar a sua
+			no seu próprio servidor/site acrescentando apenas algumas "linhas"
+			no .htaccess Aqui.
+			
+			Sim somos um projeto livre e colaborativo que tem seu foco para melhorar a segurança e conscientizar a outros desenvolvedores
+			a terem uma prática mais segura em qualquer coisa que vá fazer veja esta API criada por
+			
+				Nicolas Ramos
+			
+			desenvolvedor e entusiasta por software livre.
+		
+			Somos um pequeno grupo de desenvolvedores um dos que nos ajudou bastante foi 
+			
+				Kayo Oliveira
+			
+			 desenvolvedor front-end e perfeccionista por qualidade e por causa dele nossa estrutura está bonita.
+		
+			Colabore conosco também você pode nos ajudar de duas formas no desenvolvimento. Você pode fazer um fork e colaborar nesta 
+			página pelo github ou pode colaborar em nossa área de aprendizado
+			em nosso git 💙.
+		
+				Deseja ajuda em um projeto? Adoramos desenvolver alternativas livres e gratuitas fale comigo.
+				Fale comigo no telegram 🚀 @jul10l1r4.
+        Mande-me um email 📫 jul10l1r4@ufrn.edu.br.
+			API - Resposta de estatus http 😏veja como usarescudodesenvolvimentomemesaquiAquiAPI
+				Nicolas Ramos
+			
+				Kayo Oliveira
+			páginagit 💙@jul10l1r4jul10l1r4@ufrn.edu.brGNU GPL-3Veja o código-fonteVeja exemplos de uso em algumas linguagens e se souber alguma que não tenha ainda ajude-nos
+
+						Desenvolvimento Web
+					
+						Infraestrutura
+					
+						Segurança da informação
+					ContatoArtigosProjetosPOP IMAGEE-BOOK SEO sem mistériosHTTP resposta de erros em memes | HTTP meme respostaShellscript e performance psicopata 🔪  STDOUT
+						  Vulnerabilidade em balanceadores mod_jk - [CVE-2018-11759]
+						
+olá https://jul10l1r4.github.io/HTTP_-_Resposta/img/[Seu código de erro]e
+				Olá esta é uma API onde as imagens disponíveis são conformes o número de erro HTTP ❤ veja como usar.
+			
+				Use esta api temos um banco de imagens de resposta de erros para usá-las basta por em qualquer que seja a aplicação https://jul10l1r4.github.io/HTTP_-_Resposta/Código de erro + e lembre-se que não precisa usar a extensão .jpg já reduzimos isso para facilitar 
+				e também observando que tem uma string e após o código de erro pois se refere ao escudo já se não a pôr você acessará a mesma API só que baseada em memes.
+			
+		  	Usamos imagens relacionadas conforme o numero do erro para substituir as mensagens de erro usamos apenas imagens para evitar o trabalho de se criar uma html apenas para uma página de erro o que poderia ser usado para capturar as informações pensando nisso fizemos imagens que você apenas "linka"
+em uma simples tag img com o atributo src="https://jul10l1r4.github.io/HTTP_-_Resposta/img/404e"
+			nesse caso fizemos o erro 404 - Servidor não Encontrado.
+			dê uma olhada neste repositório com o código-fonte comentado em algumas linguagens para você usar
+			aqui e veja como configurar a sua
+			no seu próprio servidor/site acrescentando apenas algumas "linhas"
+			no .htaccess Aqui.
+			
+				Somos uma pequena equipe de devs e devas ajude-nos é designer? dev então fale comigo.
+			
+			Um dos que nos ajudou bastante foi 
+			
+				Kayo Oliveira
+			
+			 desenvolvedor front-end e perfeccionista por qualidade e por causa dele nossa estrutura está bonita.
+		
+			Colabore conosco também você pode nos ajudar de duas formas no desenvolvimento. Você pode fazer um fork e colaborar nesta 
+			página pelo github ou pode colaborar em nossa área de aprendizado
+			em nosso git 💙.
+		
+				Deseja ajuda em um projeto? Adoramos desenvolver alternativas livres e gratuitas fale comigo.
+				Fale comigo no telegram 🚀 @jul10l1r4.
+        Mande-me um email 📫 jul10l1r4@ufrn.edu.br.
+			🛡🤘🏿veja como usaraquiAqui
+				Kayo Oliveira
+			páginagit 💙@jul10l1r4jul10l1r4@ufrn.edu.brGNU GPL-3Veja o código-fonteVeja exemplos de uso em algumas linguagens e se souber alguma que não tenha ainda ajude-nos
+Você pode instala-lo assim.
+					Ou acrescente a âncora (caso não queira copiar manualmente):
+				Tenha fluidez ao abrir uma imagem vejo por aí muitos sites onde apertam na imagem e sim a imagem abre grande mas abre uma nova
+ aba e realmente acho um pé no saco porque tenho sempre que for abrir apertar no botão de voltar do navegador e voltar a página onde
+ eu estava mas este box faz apenas com JS puro um box que abre a imagem suspensa na mesma página(light box) a estilização fica por sua conta mas
+ se for preguiçoso já temos códigos montados é só integrar se quiser ver e criar uma sua faça você mesmo.Temos um respositório no NotABug.org onde falará sobre como integrar em sua aplicação de uma forma que se 
+der uma atualização não venha danificar sua aplicação.Usando este suporte onde se baseia em animação com JS tem suporte em todos os navegadores e cria a animação de deslize 
+até o topo.
+	O efeito é feito com usando JS poupando o máximo de processamentos necessários do lado do cliente então fizemos algo sem a utilização de biblioteca
+	mas de uma forma eficiente veja como você mesmo pode criar um botão assim com a função 
+	scroll em seis linhas
+	usando esses códigos do artigo é que montamos uma estrutura leve e performática para facilitar a utilização.
+POP-IMAGE 
+
+Direto ao ponto "."POP-image 🍺Ele criará um botão de voltar ao topo 🔝Crie um suave box para visualizar imagens porretas 🤘NotABug.orgscroll em seis linhas
+					← Ir para Julio Lira
+				
+					Ir para HTTP Meme resposta →
+				
+Uma simples formatação para texto criando uma boa aparência para caracteres emoticons entre outrasProjeto oficial não é este está em @jul10l1r4Uma simples formatação para texto criando uma boa aparência para caracteres emoticons entre outrasPara utilizar é bem simples veja os exemplos:A fonte foi toda pensada no confordo em diferentes aplicações diferentes temas diferentes lugares com também diferentes cores este é um leve CSS que tenta ser o máximo minimalista e performático ele não possui nenhuma especie de dependencia de alguma lib ou algo relacionado.Sabemos que os emoticons dão aquela mãozinha pra seu artgo chato ser um artigo chato mas interativo né?! Mas pensando nisso passei semanas fazendo buscas e qual seria a melhor forma de possibilitar o uso de emoticons os que achei mais promissores era o uso de emojis em svg PORÉM eles carregavam coordenadas que faria seu peso ser um pouco maior e também o computador leria mais e exigiria mais do cliente então considero e É DE FATO mais econômico porque são caracteres hexadecimais para você que está curioso leia como é aqui.O google chrome carrega os emoticons porém ele não usa coloração todos os emoticons até hoje saem em preto e braco mas prevejo que logo logo funcionará normamente já no Firefox funciona normamente e perfeitamente 😎.Veja essa api que a usa:
+
+
+
+
+
+
+
+Texto-farmatacaoTexto-farmatacao 🍺View On GitHubJul10l1r4mattgraham@jul10l1r4aqui
+
+
+
+
+				 Você já entrou em um site afim de comprar ler algo ou resolver algum problema como sacar dinheiro né?! E eu tenho certeza que se você 
+					estava apressado e se o site era lento você sentiu uma grande vontade de desistir de fazer o que estava fazendo não é isso? Pois é
+					eu mesmo já passei muito por sites lentos por mais util que seja ou por mais excelente que seja o serviço deles a vontade continua 
+					de sair o mais rápido possível do site.
+				
+					Nós que somos desenvolvedores sabemos o quão chato é ter que repetir códigos e mais chato ainda ter que digitar códigos longos
+					isso facilita até o erro da parte do desenvolvedor já que terá que desenvolver complexos códigos e assim a unica saida que teriamos
+					é usando algo que nos facilitasse e isso é o que chamamos de bibliotecas ou usamos frameworks para facilitar o nosso desenvolvimento
+					e isso ajuda muito no desenvolvimento em pouca fração de tempo e criar algo magnifico.
+				
+					Mas você já teve aquela esperiencia de ao desenvolver algo perfeito e ao fim de tudo notar que a sua velocidade não está boa? eu já passei por 
+					isso e basicamente eu ignorei... mas de um tempo notei a responsabilidade que tem um desenvolvedor ele é o responsável por total 
+					sucesso ou total derrota do que vá fazer seja uma empresa uma campanha ou qualquer coisa que precise de seu trebalho e então resolvi
+					mudar minhas atitudes e mesmo depois de mudar minha forma de desenvolver(Sem usar bibliotecas ou framework que tomou muito o meu tempo).
+				
+					Notei uma diferença mas eu questionava ainda assim o tempo ainda era meu grande inimigo meus sites sempre demoravam ao carregar e notei
+					que não é a quantidade de esforço que faz mas sim como os motores gráficos e JS são lidos no frontend então notei que eu era o inimigo
+					do GPU no processamento de imagens e dos diversos motores JS.
+				
+					Vamos iniciar a conhecer o gráfico o que será o motor css? como será que ele processa toda as imagens? Para a interpretação da parte gráfica
+					em sí é bastante organizado e dividido.
+				
+					Ele pega toda a estrutura e cria uma tipagem semelhante a uma arvore dividindo processos filhos e irmãos todo o HTML cria pequenos labels
+					sim e de uma forma bem simples ele transforma assim já para seu CSS atingir a página e fazer alterações este é o mesmo seletor que 
+					você usa quando quer fazer um .center(este código seleciona a classe que está no HTML) sabendo disso fica até facil entender
+					nesta semana li um artigo escrito por Brunno Pleffken Hosti onde explica de uma forma bastante detalhada sobre como é a leitura e a coloração da tela
+					para o cliente eu indico essa leitura mas resumidamente
+				
+					Para a renderização do css são usados variados motores dependendo de qual seja o browser a utiliza-la mas irei pegar o WebRender para 
+					usar aqui como exemplo. O WebRender nem se quer ainda foi lançado mas é o que será mais rápido trazendo novas tecnologias e como estamos
+					falando de modernidade eu não poderia falar de um browser antigo já que após o lançamento do WebRender creio que o Google Chrome e outros
+					grandes browsers farão refatorações nos códigos para que a renderização seja melhor.
+				
+					Ele funciona em diferentes etapas como eu já falei antes ele passa pelo processo de tipagem e entrega tudo mastigado e rápidamente para
+					que ele seja exibido na tela ele envia e é processado pelo GPU nos navegadores atuais é mapeado de uma forma triangular para que seja
+					carregado ele é calculado de uma forma de matriz inversa que seria triangulação até que a parte gráfica esteja pronta e carregue já 
+					atualmente o motor Blink do Google Chrome e o Gecko do Firefox (Cito por serem os mais usados hoje em dia no Brasil) renderizam apenas o
+					calculada pelo tamanho da resolução assim faz com que a máquina venha economizar memória e carregar outros componentes mais rápido e ao
+					descer a página ele calcula da mesma forma dentro da área de visão.
+				
+					Já o WebRender calculará na estrutura de modelo atómico criará como vários objetos como átomos em sí cada qual carregando algo como um
+					json mas levará dessa forma óbvio em valores hexadecimais para que seja processado pelo GPU e só esse processo fará com que a performance
+					dê um enorme salto já que ela não estará sujeita a mudanças de triangulações.
+				
+					Não diferente da renderização dos browsers o motor JS também possui suas singularidades dentro de todos os motores o mais performático
+					é o chamado de V8 ele funciona passando por alguns processos.
+				
+					Como vemos o JS passa por 7 processos o que faz com que seja um pouco mais dificil de fazer com que ele seja executado pelo seu relativamente
+					longo processo e ainda considerando que sua tipagem é relativamente pouca e isso termina fazendo ele não ser tão performático mas
+					tenho certeza que se você desenvolve em JS provavelmente não tenha notado diferença em sua performance já que os browsers priorizam o seu
+					processamento
+				
+					Os outros browsers que não utilizam o V8 são óbviamente menos performático vejamos qual o efeito que uma biblioteca simples causa em 
+					nosso carregamento vejamos o Jquery(Já em que iremos criar uma solução).
+				
+				No caso o processo icluirá mais um nível de abstração que ao invés de sua entrada de códigos será as várias funções contidas no Jquery
+				ficando o sucessivamente assim: 
+				
+			
+
+					(Seus códigos) → (Funções em JS do Jquery) → (Criação de tipagens) → (Arvores de sintaxes) → (Bytecode)
+					→ (Pegar feedback) → (Compilação) → Execução de código otimizado
+				 "UFFAA!!!"
+			
+				Vendo assim notamos que uma forma bastante interessante que poderiamos fazer pra melhorar a nossa performance não é?! Mas antes
+				vamos dar uma uma pequena analizada em como funciona o Jquery então.
+			
+				O Jquery é um biblioteca orientada a objetos que funciona baseada em funções responsávei por facilitar o desenvolvimento e ajuda bastante 
+				no desenvolvimento ágil eu quem o diga! E a função principal dela é invocada usando o $ todos os elementos selecionados usando
+				esta função retorna uma estrutura de objeto jquery(que é algo como um array) mas para que isso aconteça existem várias funções que são invocadas
+				funções dentro de funções fazendo assim com que o browser tenha que execer um maior trabalho para que processe o seu JS.
+			
+				Jquery é tão conhecido quando o JS quando aprendi uma das primeiras coisas foi "Javascript & Jquery" para mim era tudo a mesma coisa e seria
+				impossível largar o Jquery e o eu fiquei tao dependente quando vários outros desenvolvedores para fazer uma conexão XHR sem 
+				o Jquery para mim era algo absurdamente impossível por exemplo e ainda mais impossível fazer efeito de rolagem suave ou efeito scroll
+				mas levando tudo isso em conta vamos aos códigos.
+			
+				Publiquei um artigo onde falava de como fazer efeito scroll em uma linha de código css! Mas ao fazer vários
+				testes notei que funcionou em todos os navegadores exceto no mais usado(que é o Google Chrome com 
+				79.8% de uso no Brasil) e sim somos desenvolvedores
+				mas o nosso cliente não tem culpa de seu browser não possuir suporte a não ser que instale um complemento(o que se eu fosse acessar um site
+				que me pedisse isso eu nunca instalaria este plug só pra acessar seu site) então após muitos estudos cheguei a esse resultado eu e o 
+				Suissa tentamos por muito tempo encontrar algo me juntei com meu amigo 
+				
+				Nicolas Ramos
+			 decidimos então dedicar todo esse tempo de estudo e encontrar qual a forma o Jquery consegue fazer esse efeito.
+			
+				E pesquisando bastante cheguei a esse "rascunho" do 
+				
+					CSSWG
+				
+				que mostrava um json que existia nada  esclarecedor e após procurar bastante vi essa funcionalidade que na verdade já existia a muito tempo
+				que é o scroll porém ela de forma aprofundada é o que ainda não conheciamos.
+			
+				Estava olhando as especificações quando vi que é possível configurar como queremos nosso scroll e já notei que era possível e era esse o 	
+				caminho e era apenas criar objetos que o configurem e olha no que deu.
+			
+				Só em ver esse código funcionando eu já tive um ataque fuminante de alegria mas vamos aos detalhes desse código.
+			
+				Esta função scroll é a que faz com que este elemento seja rolado conforme diz 
+				
+					nesse artigo
+				  da MDN mas a diferença é que as várias vezes que li esse artigo ele não explica nem a possibilidade de acrescentar objetos e isso 
+				justifica a não utilização desse recurso.
+			
+				Agora que você viu na prática como funciona vamos olhar uma forma prática de fazer isso em uma função(no caso um botão de "voltar ao topo")
+				dá uma olhada nesse código
+			See the Pen Scroll efect single page nav by Julio Lira (@Jul10l1r4) on CodePen.
+				Acharei bem natural se você estiver na dúvida para saber o que faz a função offsetTop
+aqui
+				explica bem detalhado o seu funcionamento a grosso modo ela captura a distancia do topo
+			
+				Somos desenvolvedores desenvolvemos como queremos mas muitas vezes devemos abrir mão de coisas que nos parece ótimo e na verdade é um ciclo
+				vicioso de más formas.
+			Efeito de rolagem suave usando apenas seis linhas
+						
+Tenha performance A grande dificuldade de um desenvolvedor Conheça seu inimigo Motor JS Mão na massa Seja performáticoBrunno Pleffken Hosticomo fazer efeito scroll em uma linha de código css79.8%Suissa
+				Nicolas Ramos
+			
+					CSSWG
+				
+					nesse artigo
+				Scroll efect single page nav@Jul10l1r4CodePenaqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+Esse repositório é apenas umas ancora para o site original e para o git originalO site  em questão darkwaves.zone é o site do evento de segurança que ocorrerá no dia 06/10.Para colaborar com esse site basta:E colaborar como pode nosso git oficial é no NotABug (um git livre.).dark.confDarkwaves - Ver no twitterSite :metal:Colaboração.dark.confdarkwaves.zone
+
+				 Olá ✌🏾  estava eu olhando flyers e já a muito tempo me sinto limitado na web por não conseguir colocar uma imagem de fundo em um texto e me lembro que um dia             procurei mesmo fazer isso de todas as formas e não consegui até que nesta semana eu me dediquei e nem que eu precisasse fazer uma gambiarra eu iria fazer e lendo no site da webkit.org  vi  uma possibilidade sim o exemplo estava errado neste artigo mas notei que tinha como "reduzir" o background ao fundo de um texto foi neste artigo oficial.
+				
+					E quando eu olhei eu fiquei triste porque foram apenas esperanças jogadas foras mas estava sem mais o que fazer e pesquisei o que faria o background-clip e olhei na MDN e ainda não acreditando eu resolvi testar e 🤤
+
+					HOJE SOU UMA PESSOA FELIZ 🍃 e após me acalmar eu pensei
+				
+					PNG tudo certo JPEG tudo ok PNGs trasparentes perfeito e entrei em total tensão quando pensei será que pega gif? Então decidi testar e
+				
+					MEU DESUS EU NÃO ACREDITOOO!
+				
+					Basicamente existe uma imagem de fundo e o código que eu já havia dito o background-clip ele fará com que o fundo de fato seja dentro da imagem assim como um papel furado e o fundo será a parte de trás do papel entende? algo assim:
+				
+					E você que não leu o texto e veio logo a este tópico deve está pensando:
+					
+					A imagem que eu utilizei foi esta imagem aqui veja como fica este códigozinho:
+				See the Pen oEWNrZ by Julio Lira (@Jul10l1r4) on CodePen.
+				 Enfim hoje será um dia marcado em minha vida e acredito que na sua também né?! Eu fiquei extremamente alegre depois dessa descoberta
+				
+					Enfim era isso... boas práticas
+				Background em um texto só com três linhas de CSS? Ué sim!
+						
+Sim e eu não acredito ainda que é possível isso!PEGOOOOOUUU AAAAAH!VEJA COMO É_Coloque gif no fundo de um textoartigo oficialMDNaquioEWNrZ@Jul10l1r4CodePen
+					← Efeito Scroll com uma linha CSS3
+				Home
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+
+				 Já ouviu falar em scroll? nossa essa pergunta parece meio idiota ne?! mas é um efeito de deslizamento em rolagem de tela… eu sei como 
+				eu falei pode até bugar sua compreensão mas dá uma sacada nesse site 
+				aqui
+			 ele é uma api que usamos para gerenciar mensagens de erros.
+				
+					Esse efeito viralizou por volta de 2015 em boa parte da web criaram vários artigos bem legais falando do efeito e equipes que trabalham com psicologia cada vez mais apoiava a criação deste efeito e mostrava os seus diversos pontos positivos.
+				
+					Ele é um calculo de medidas através de valores de posições do eixo x e eixo y tem valores em Javascript
+					onde ele ajuda bastante nisso como o valor que captura a posição e retorna o valor em pontos no qual é útil e a função que move o 
+					scroll até determinado ponto 
+					isso causa este efeito mas como notou a grande dificuldade e o nível de complexidade as pessoas optaram por usar bibliotecas e/ou 
+					frameworks para isso como o Jquery
+					ou o Angular-scroll.
+				
+					O uso delas ainda hoje é bastante comum e fácil mas iremos usar aqui apenas css então prepare-se para os bilhões de códigos 
+					😅
+
+					Mas sim concordo que realmente é e sim fica bem simples usar através dessas bibliotecas para criar tanto esse quanto outros efeitos legais no frontend.
+				
+					Acho que pode reduzir um pouco suas linhas de códigos...
+				
+					É eu não estou louco e nem você por acreditar nisso mas é verdade a mozila montou uma documentação bem detalhada de seu funcionamento
+				 aqui na 
+					MDN e em português eu fiquei abismado
+					ao saber disso para usar em seu código basta você colocar algum link na própria página e fim.
+				
+					Eu fiquei full animado com tudo isso mas fui verificar e fazer testes até que me deparei com a informação que o navegador Google Chrome havia tirado o suporte deste recurso em CSS na real… eu esperava isso do Explorer do Edge ou sei lá… mas não do Google Chrome.
+				
+					Espero que ele venha criar um suporte pra isso afinal ele é usado por aproximadamente 58% da internet.
+				Source: StatCounter Global Stats - Browser Market Share
+
+					Mas fiz um outro artigo mostrando como é possível fazer esse efeito usando o JS para o Google chrome (no caso o que não suporta mas 
+					essa forma é funciona em todos os browsers) usando 
+					apenas seis linhas de puro JS veja aqui.
+				Criando efeito de navegação single page scroll apenas com CSS3
+						
+ConheçaComo baseia-se?Show me the code A grande badScroll de forma práticaaquiJqueryAngular-scrollMDNStatCounter Global Stats - Browser Market Shareveja aqui
+					← Background em texto com CSS 
+				Home
+					Ir para POP image 🤘 →
+				
+
+					Para nós que cuidamos muitas vezes da infraestrutura dos servidores sabemos a importância de performance em nossos processos executados principalmente em produção e esse cuidado se torna em vício real
+				
+					É bem natural que qualquer pessoa que seja dessa parte de infraestrutura em geral seja viciado loucamente em performance e baixo consumo de hardware por mais parruda que seja a aplicação sobrar nunca é demais
+				
+					O shell é a coisa mais linda que temos nessa porra de vida e como a nossa vida existem várias formas de fazer a mesma coisa só que uma delas dificilmente dão o mesmo resultado na questão de performance isso é claro né?!
+				
+					E não diferentemente disso acontece com o echo temos algumas alternativas como por exemplo a que chamamos de here-document (<cat (para sair no STDOU) e também o printf que tem uma sintaxe bem parecida com a do echo e ainda também fiz com o printf com here-document direcionando a /dev/stdout.
+				
+					E como qualquer viciado fiquei curioso em saber se eles se diferenciavam em performance nem que seja questão de milissegundos e sei que você só está lendo esse artigo porque também é um viciado como eu 💀.
+				
+					A forma que achei mais style fodastica foi usando o here-document do cat mano cola só na sintaxe:
+				
+					Mas deixei pra lá o meu style super hacker fodão e me liguei na performance então obviamente ele foi o primeiro que eu teste usando o strace pude mapear as requisições feitas ao executar aquele código e tive uma saída um pouco verbosa mas estudaremos as saídas quando formos comparar os diferentes métodos.
+				
+					Mas deixando de conversa mole vamos as paradas primeiramente vamos aos testes.
+				
+					Outra forma de testar foi usando o printf e apontando para escrever em /dev/stdout que é um link simbólico que aponta para outro link simbólico que aponta para outro ele tem tantos links assim pelo simples motivo de identificar qual a TTY logada e coisas do tipo o segundo link se localiza em /proc/self/fd/1 e o primeiro no meu caso estava dentro de /dev/pts/0.
+				
+					Com minha duvida do caralho eu fiz um script afim de medir a porra dessa velocidade e saber qual na prática era que iria executar mais rápido e até que fim pude descobrir meu teste foi simples baseado em quatro funções onde elas exibiam 10000 vezes uma série de caracteres randômicos ("@#$%%&*I&FDFSRWEGsy€®³®ŧŋđðđðŋæ") e sem quebra de linhas ou espaços e nem tabs.
+				
+					Na saída acima vemos que o echo foi mais rápido em questão de milessegundos e o printf direcionando para o stdout foi o segundo mais veloz com 0102s o printf ficou em terceiro lugar por 1 ms e o cat usando here-document ficou com a pior performance com 0174s.
+				
+
+
+WTF o resultado foi totalmente o contrário PQP
+
+
+					O cat na prática e após ser executado cria um espaço dinâmico na memória para a alocação e pra isso é necessário ela chamar também um descritor de arquivo fd (file descriptor) e saber o estado do arquivo se existe ou se pode ou nao pode ser lido conforme estão no padrão do módulo do libc unistd.h pode ser encontrado em /usr/include/unistd.h definindo: STDIN_FILENO STDOUT_FILENO e STDERR_FILENO que é respectivamente o número 1 2 e 3.
+				
+					Outra forma que colabora para que sua execução venha demorar mais é a função read() para que ele imprima é necessário que tenham entrada de dados e o cat não armazenou a entrada a única que ele armazenou foi o primeiro argumento no qual foi ignorado por não ser um arquivo e esse passo faz com que ela receba armazene em uma variável e é aqui que a porca torce o rabo! 
+				
+					Se você executar strace cat ele irá parar e esperar uma entrada em read(0 e após a entrada ele executa o script normalmente.
+				
+					Esses passos fazem com que ele perca o tempo suficiente para que tenha uma maior demanda de tempo e aumenta o tempo de sua execução.
+				
+					Em nosso exemplo foi feito um teste de explosão de carácteres em cada função e foi analisada a performance ok... Mas e se nós tentássemos criar um script que executaria cada função por várias vezes?
+				
+Como assim?
+
+					Notei que diferentes vezes que eu realizava o mesmo teste o resultado do echo era mais rápido e outros mais lento do que o da função no printf isso me incomodou bastante mas se notarmos o embora o resultado seja diferente as duas funções na prática são muito semelhantes mas existem algumas diferenças que acho interessante detalhar.
+				
+					As duas funções são de cara executadas pelo bash e de lá é direcionado a abrir um outro binário que é o correspondente que no caso é o echo e o printf elas duas são invocadas de /usr/bin/binário e é feita toda a alocação definição de leitura e armazenamento de "arquivo" (como é tratado qualquer coisa nos Unix-likes) em um determinado momento que está tudo certo ele chega a criar o arquivo virtual para direcionar ao STDOUT (já citado anteriormente) e em que a nível de sistema ele chama a função fstat do módulo C stat (que pode ser encontrado em /usr/include/(plataforma)-linux-gnu/sys/stat.h) em que é alogo como fstat(1 {st_mode=S_IFCHR|0620 ... o st_mode é o valor de configuração que seta qual será o tipo de arquivo a ser retornado e a opção preenchida foi S_IFCHR que é significa que o arquivo é de caracteres especiais e seguido isso usa-se um pipe ("|" Essse símbolo) no trecho mostra 0620 que se refere a permissão de arquivo no caso ele não terá permissão especial (stickbit suid nem sgid) o usuário dono do arquivo poderá escrever e ler e o grupo do usuário poderá apenas escrever naquele arquvo que você pôs como entrada na função de modo legível a permissão seria wr- w-- ---.
+				
+					E como segundo argumento encapsulado temos st_rdev=makedev(136 2) o st_rdev é uma variável de configuração de Device ID (identifica se o arquivo é caractere ou bloco especial) essa variável retorna um valor inteiro e passam dois argumentos sendo o primeiro o identificador Device ID e nomeado de Major e o segundo é o identificador da instância específica do Device ID esses dois argumentos parecem confusos mas assim essa função faz como o mknod onde é criado um arquivo de relação de kernel no diretório /dev/.
+				
+					Após estudar todos esses padrões que coincidem entre os dois programas notamos a total e unica diferença quase que insignificante na função que é chamada abaixo a write (Módulo pode ser encontrado em /usr/include/unistd.h) em nosso trecho de teste podemos pegar write(1 "trecho de teste\n" 16trecho de teste) sendo usada a função principal afim da execução a função write tem três argumentos sendo o primeiro o __fd(File descriptor) comentado já anteriormente o segundo o texto chamado de __buf e o terceiro e ultimo sendo um valor inteiro da quantidade de bytes chamada de __nbyte. no caso do echo ele acrescenta apenas 1 byte a mais que é a quebra de linha \n (que é identificado como 10 em ascii) já o printf apenas imprime o texto passado sem que haja quebra de linha e assim faz com que seja "mais veloz" a diferença é tão detalhista que nem se quer um teste bem projetado poderia medir tendo em vista que após calcular e terminar o primeiro procedimento o processador já estará quente ou já teria armazenado dados a mais também considerando a temperatura local a corrente de vento e por mínimo que seja a mudança ela surtará efeito no conometro.
+				
+					Sendo isso é possível notar que o printf saiu mais veloz em varias chamadas repetidas e o echo se saiu mais veloz em apenas uma chamada de uma vez mesmo não havendo diferenças relevantes entre as duas. Faça você mesmo teste em sua plataforma verifique você mesmo as vezes nem sempre o printf será aconselhado já que pode ser usado o echo e ele já terminará em uma quebra de linha sem precisar de que digite o \n além de tudo isso os comandos com formatação e coloração são todos suportados por padrão no printf (tanto no bash quanto no C que também pode ser usado o write o que seria mais low-level) já o echo precisaria passar o parâmetro -e.
+				
+					Dada as métricas cabe a você estudar a sua situação e verificar qual o que melhor se encaixa para seu ambiente sabemos que 1 ms faz toda a diferença em nossos servidores :)
+				Shell script e performance psicopata 🔪  stdout
+						
+Veja qual a forma mais performática de saída no bashFaça você mesmo
+					← Ir para a HOME
+				
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
+
+				O uso de balanceadores (ou load balancer) passou a ser bem maior pela série de benefícios que nos trás e um dos principais benefícios dele é a segurança tendo um balanceador em uma rede controlará todos os acessos para que sejam centralizados e distribuidos além de que o servdor mod_jk (módulo do apache) receberá toda a requisição e processará como entende ou seja: Mesmo que seu outro servidor interno possua falhas de segurança possibilitando um bypass ou até mesmo um arquivo e PHP sem que tenha o interpretador instalado (o mod_jk impede de que ele seja exibido).	
+				
+				Já um mês atrás o especialista em segurança da informação Alphan YAVAS publicou um bug encontrado no código do mod_jk no qual ele possibilitava ter acesso a rota/jkstatus onde nela possui todas as informações das instâncias balanceadas dando a possibilidade de realizar até mesmo algumas configurações relacionadas a ela!
+				
+				O erro era no próprio código fonte do mod_jk especificamente no arquivo tomcat/jk/trunk/native/apache-2.0/mod_jk.c esse trecho contém a instrução de bloquear com que a entrada ../ seja interpretada como instrução (pois seria possível navegar através dos diretórios) e foi justamente aí que ele encontrou a falha essa instrução não anularia nenhuma forma de concatenação de requisição foi realizado o teste injetando justamente essas instruções reportado como CVE o atuante acrescentou apenas ;
+
+				Acontece que sinais como: & ; e = são instruções aceitas para envio e recebimento e recebimento de dados HTTP então tanto o browser entenderá aquilo como uma rota atuante quanto o servidor também compreenderá da mesma forma uma forma de ver isso em um ambiente real já foi projetada pelo grupo immunIT e está disponível um docker-compose em https://github.com/immunIT/CVE-2018-11759.
+				
+				 O ataque em sua prática é apenas seguir o diretório inicial com /jkstatus& veja a saída em um teste:
+				
+				 E agora após alterar a url apenas o ultimo caracter temos:
+				
+				Verifique se sua aplicação está vulnerável a essa exploração usando esse projeto escrito em shellscript para usar precisa apenas clonar o repositório e em seguida abrir o arquivo então já poderá verificar seus ambientes. Para ser mais produtivo você pode usar todos os ambientes com um here-document no script dessa forma: 
+				
+				O projeto está disponível em https://github.com/Jul10l1r4/Identificador-CVE-2018-11759 (o projeto principal está em notabug.org/Jul10l1r4/Identificador-CVE-2018-11759)
+				
+				  A versão na qual é possível fazer essa exploração dessa forma é da 1.2.0 a 1.2.44 você está usando essa versão afetada? Uma das formas urgentes de solucionar esse problema é alterar a permissão de leitura do arquivo para que bloqueie aquele acesso ou que ele requeira um determinado ip para que seja acessado.
+				Vulnerabilidade em balanceadores mod_jk - [CVE-2018-11759]						
+DescobertaÉ o apocalipsehttps://github.com/Jul10l1r4/Identificador-CVE-2018-11759notabug.org/Jul10l1r4/Identificador-CVE-2018-11759
+					← Shellscript com performance psicopata - stdout
+				
+					Mantenha a segurança de sua página HTTP Meme resposta →
+				
