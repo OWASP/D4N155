@@ -142,7 +142,7 @@ else
       --b* | -*b*)
         echo "Make custom wordlist"
         __cus "$narg"
-        ;;
+        ;;&
 			--t* | "-t")
 				echo -e "Targets inputed in \e[33m$narg\e[32m"
 				__fwordlist "$narg"

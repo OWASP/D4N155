@@ -152,5 +152,6 @@ __cus(){
   echo "Processing all data..."
   python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }' " >> "_wordlist.txt" && \
     ( echo "[✔] Wordlist been created in _wordlist.txt"; exit 0 ) || \
-    ( echo "[✘] Error fatal, don't create file"; exit 2 )
+    ( echo "[✘] Error fatal, don\'t create file"; exit 2 )
+
 }
