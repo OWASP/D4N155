@@ -6,6 +6,7 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 ```
 git clone https://github.com/Jul10l1r4/D4N155.git
 cd D4N155
+pip3 install -r requirements.txt
 bash main
 ```
 [![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
@@ -32,14 +33,15 @@ bash main
 # HARDWARE REQUIREMENTS:
 ## CPU 
 * Dual Core or Better
-* Native Support to Mull-Thread
+* Native Support to Multi-Thread
 
 ## MEMORY
 * 4 GB or More
-* Higher Clocks Are recomended
 
-## Python
-* PYTHON 3.0 or Latter
+## Dependencies
+* Python 3.6
+* Pip3
+* Bash
 
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
