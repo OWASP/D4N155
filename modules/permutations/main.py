@@ -67,8 +67,5 @@ def comb(allist):
             global_list = global_list + i
         return global_list
 
-    # Mess here
-    mess = lambda x: [x+i for i in allist]
-
     # Mergeds values
-    return parsing(list(map(mess, allist)))
+    return parsing(list(map(lambda x: [x+i for i in allist], allist)))
