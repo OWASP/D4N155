@@ -7,7 +7,7 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 # Use
 Need to: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git),
 [Python3](https://realpython.com/installing-python/),
-[Bash](https://www.gnu.org/software/bash/#download)
+[Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
 
 
 ```bash
