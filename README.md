@@ -6,8 +6,8 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 
 # Use
 [![](https://powdermonkey.ca/wp-content/uploads/2018/11/cropped-git-logo.png)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-[![](http://tiswww.case.edu/php/chet/img/bash-logo-web.png)](https://www.gnu.org/software/bash/#download)
 [![](https://cdn.iconscout.com/icon/free/png-256/python-20-1175115.png)](https://realpython.com/installing-python/)
+[![](http://tiswww.case.edu/php/chet/img/bash-logo-web.png)](https://www.gnu.org/software/bash/#download)
 
 
 ```bash
