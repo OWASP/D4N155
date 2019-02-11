@@ -60,6 +60,8 @@ bash main
 * 4 GB or More
 
 ## Dependencies
+Dependencies that will be installed through pip
+
 * beautifulsoup4==4.6.3
 * google==2.0.1
 * numpy==1.15.4
