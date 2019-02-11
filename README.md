@@ -5,12 +5,26 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 [See some calculations used](https://jul10l1r4.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
-```
+Need to:[Python3](https://realpython.com/installing-python/),
+[Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
+
+Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+```bash
 git clone https://github.com/Jul10l1r4/D4N155.git
 cd D4N155
 pip3 install -r requirements.txt
 bash main
 ```
+Or whithout git
+
+```bash
+wget -qO- https://github.com/Jul10l1r4/D4N155/archive/master.zip | bsdtar -xf-
+cd D4N155-master
+pip3 install -r requirements.txt
+bash main
+```
+
 [![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
 
 # Manual
@@ -46,10 +60,13 @@ bash main
 * 4 GB or More
 
 ## Dependencies
-* Python 3.6
-* Pip3
-* Bash
+> Dependencies that will be installed through pip
 
+* beautifulsoup4==4.6.3
+* google==2.0.1
+* numpy==1.15.4
+* requests==2.20.1
+* mechanicalsoup
      
 <h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
 <h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155</h5>
