@@ -5,9 +5,9 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 [See some calculations used](https://jul10l1r4.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
-Dependencies: [![](https://powdermonkey.ca/wp-content/uploads/2018/11/cropped-git-logo.png)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-[![](https://cdn.iconscout.com/icon/free/png-256/python-20-1175115.png)](https://realpython.com/installing-python/)
-[![](http://tiswww.case.edu/php/chet/img/bash-logo-web.png)](https://www.gnu.org/software/bash/#download)
+Need to: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git),
+[Python3](https://realpython.com/installing-python/),
+[Bash](https://www.gnu.org/software/bash/#download)
 
 
 ```bash
