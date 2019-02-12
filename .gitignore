@@ -4,4 +4,4 @@
 *.un*
 __py*
 *.wordlist.txt
-
+_wordlist.txt

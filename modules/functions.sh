@@ -89,15 +89,15 @@ __wordlist(){
 			while read url
 			do
 				echo "$url";
-				python3 ../objetive/objetive.py "$url" -t -txt -a  \
+				python3 "../objetive/objetive.py" "$url" \
 				>> ../reports/db/$target.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
+				echo ":.........................................[✔]" || \
+				echo -e "\033[31m:.........................................[✘]\033[32m"
 			done && \
 				\
-			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
+			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
 				> ../$dest || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 
 			test "$?" == 0 && \
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
@@ -116,23 +116,20 @@ __wordlist(){
 # This function are main for get targets based in file
 # root directory
 __fwordlist (){
-	All="$url/$1"
-	cat  \
-				>> reports/db/$1.blob.txt && \
-				echo "Get informations..." || \
-				echo -e "\033[31mERROR IN GET ALL INFORMATION\033[32m""$1" | \
+
+	cat  $1 |\
 		while read url
 		do
 			echo "$url";
-			python3 "objetive/objetive.py" "$url" -t -txt -a \
+			python3 "objetive/objetive.py" "$url" \
 				>> reports/db/wordlist.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
+				echo ":.........................................[✔]" || \
+				echo -e "\033[31m:.........................................[✘]\033[32m"
 		done && \
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 	
 		if [ "$?" == "0" ]
 		then
@@ -144,4 +141,20 @@ __fwordlist (){
 			echo -e "\033[31mError in save the wordlist\033[32m"
 			exit 1
 		fi
+}
+# Cus of custom :] | Staps
+# 1 - Get text
+# 2 - send to generator.py
+# 3 - save
+__cus() {
+  # $1 → file base
+  # $2 → file to output
+  echo "$2"
+  [ $2 ] && export save="$2" || export save="_wordlist.txt"
+  echo "$save"
+  echo "Processing all data..."
+  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
+    ( echo "[✔] Wordlist been created in $save"; exit 0 ) || \
+    ( echo -e "\e[31m[✘] Error fatal, don't create file\e[m"; exit 2 )
+
 }

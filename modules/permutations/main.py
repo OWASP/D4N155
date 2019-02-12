@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-
+# Elimine the max. number
+# of variables
+global_list = []
 # Texts to numbers 
 def textnumber (x):
-    blob = x.translate(str.maketrans('aeioAEIOBTbt','431043108787'))
-    return blob
+    return x.translate(str.maketrans('aeioAEIOBTbt','431043108787'))
 
-# make the numbers
+# make the number
+def counting1 (x):
+    return x+"1"
+def counting2 (x):
+    return x+"12"
 def counting3 (x):
     return x+"123"
 def counting4 (x):
     return x+"1234"
 def counting8 (x):
     return x+"12345678"
-def counting1 (x):
+def counting81 (x):
     return x+"87654321"
 # Weaks year
 def year9 (x):
@@ -32,15 +37,18 @@ def uppall (x):
 def lowera (x):
     return x.lower()
 def ullual (x):
-    i=0
-    value = ""
-    for letter in x:
-        if i % 2 == 0:
-            value += letter.upper()
-        else:
-            value += letter.lower()
-        i=i+1
-    return value
+    # k = key
+    # k[0] -> position
+    # k[1] -> value
+    return ''.join(
+        list(
+            map(
+                lambda k: k[1].upper() if k[0] % 2 == 0 else k[1].lower(),
+                enumerate(x)
+                )
+            )
+        )
+
 def luulal (x):
     return ullual(x).swapcase()
 def inverter (x):
@@ -50,31 +58,14 @@ def inverter (x):
 # comb -> mess & ssem -> parsing
 # returning all parsing strings
 def comb(allist):
+
+    # Get value [[1,2,3],[3,2,1]] to
+    # parse [1,2,3,3,2,1] 
     def parsing (x):
-        final=[]
+        global global_list
         for i in x:
-            final = final + i
-        return final
+            global_list = global_list + i
+        return global_list
 
-    # Normal
-    def mess (x):
-        lists = []
-        for i in allist:
-            lists.append(x+i)
-
-        return lists
-    
-    # Invert
-    def ssem (x):
-        lists = []
-        for i in allist:
-            lists.append(i+x)
-    
-        return lists
     # Mergeds values
-    new = parsing(list(map(mess, allist)))
-    old = parsing(list(map(ssem, allist)))
-    fund = new+old
-    return fund
-
-
+    return parsing(list(map(lambda x: [x+i for i in allist], allist)))

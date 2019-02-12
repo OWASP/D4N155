@@ -4569,3 +4569,30 @@ filetype:doc "Answer Key"
 inurl:"ai1wm-backups"
 "dispatch=debugger."
 intitle:Test Page for the Nginx HTTP Server on Fedora
+inurl:/sap/bc/bsp
+inurl:/irj/portal
+inurl:/scripts/wgate
+inurl:infoviewapp
+inurl:"/irj/go/km/docs/"
+inurl:"/irj/go/km/" intext:navigation
+inurl:"/webdynpro/resources/sap.com/"
+filetype:cwr inurl:apstoken
+inurl:apspassword
+intitle:"Index of /" inurl:passport
+intext:" - 2019 Cott Systems, Inc."
+"I have been invoked by servletToJSP"
+inurl:/setup.cgi@next_file=
+inurl:/login.zul
+intitle:"FCKeditor - Uploaders Tests"
+intitle:"FCKeditor - Connectors Tests"
+"Please click here to download and install the latest plug-in. Close your browser before installation."
+inurl:/pwm/public/
+intitle:"index of /" ssh
+intitle:QueryService Web Service
+intitle:"Device(" AND intext:"Network Camera" AND "language:" AND "Password"
+intext:"Any time & Any where" AND "Customer Login"
+intitle:"Screenly OSE" intext:"Schedule Overview" AND "Active Assets" AND "Inactive Assets"
+inurl:"fhem.cfg" AND 'fhem.cfg' -github
+intitle:"InfluxDB - Admin Interface" -github
+intitle:"webcam 7" inurl:'/gallery.html'
+intitle:"Login - Xfinity" AND "Gateway > Login"
