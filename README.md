@@ -2,7 +2,7 @@
 It's a tool of security audit for smart wordlist and Google hacking attack
 > Version in development
 
-[See some calculations used](https://jul10l1r4.github.io/D4N155/theories/#operation-of-d4n155)
+[See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
 Need to:[Python3](https://realpython.com/installing-python/),
