@@ -91,8 +91,8 @@ __wordlist(){
 				echo "$url";
 				python3 "../objetive/objetive.py" "$url" \
 				>> ../reports/db/$target.blob.txt && \
-				echo ":.........................................[✔]" || \
-				echo -e "\033[31m:.........................................[✘]\033[32m"
+				echo -e ":.........................................[\e[92m✔\e[32m]" || \
+				echo -e ":.........................................[\e[31m✘\e[32m]"
 			done && \
 				\
 			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
@@ -103,6 +103,9 @@ __wordlist(){
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
 				exit 1
 			# clear trash files
+      # Call report pdf
+      . ../modules/report/main.sh "../reports/db/$target.txt" "../reports/db/$target.blob.txt" \
+          "../$dest"  "$target"
 			rm -rf ../reports/db/$target.*
 			exit 0
 	else
@@ -123,9 +126,9 @@ __fwordlist (){
 			echo "$url";
 			python3 "objetive/objetive.py" "$url" \
 				>> reports/db/wordlist.blob.txt && \
-				echo ":.........................................[✔]" || \
-				echo -e "\033[31m:.........................................[✘]\033[32m"
-		done && \
+				echo -e ":.........................................[\e[92m✔\e[32m]" || \
+				echo -e ":.........................................[\e[31m✘\e[32m]"
+		done && \   
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" || \
@@ -135,7 +138,10 @@ __fwordlist (){
 		then
 			echo -e "\033[032mWordlist has been saved in\n\033[033m./reports/wordlist/wordlist.txt\033[0m"
 			# clear trash files
-			rm -rf reports/db/$target*
+      # Report in pdf
+      . modules/report/main.sh "$1" "reports/db/wordlist.blob.txt" \
+          "reports/wordlist/wordlist.txt"  "$1"
+			rm -rf reports/db/wordlist.blob.txt
 			exit 0
 		else
 			echo -e "\033[31mError in save the wordlist\033[32m"
@@ -154,7 +160,7 @@ __cus() {
   echo "$save"
   echo "Processing all data..."
   python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
-    ( echo "[✔] Wordlist been created in $save"; exit 0 ) || \
-    ( echo -e "\e[31m[✘] Error fatal, don't create file\e[m"; exit 2 )
+    ( echo -e "[\e[92m✔\e[m] Wordlist been created in $save"; exit 0 ) || \
+    ( echo -e "[\e[31m✘\e[m] Error fatal, don't create file"; exit 2 )
 
 }
