@@ -68,7 +68,7 @@ bash main
 * requests==2.20.1
 * mechanicalsoup
      
-<h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
+<h3 align="center">This project are part of Segmentation fault<br/></h3>
 <h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155</h5>
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
