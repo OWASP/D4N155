@@ -1,6 +1,5 @@
 # It module make the word list
 import sys
-import string
 from permutations.main import *  # All modules for permutations
 from multiprocessing.dummy import Pool as ThreadPool
 details = False
@@ -11,11 +10,10 @@ new = []
 # Alternations
 texts = texts+list(map(inverter, texts))
 pool = ThreadPool(2)
-
-def run(fuction, value):
+def run(fuction,value):
     # Thread will be parameter type flag
     # --------------------| All word > 3
-    return list(filter(lambda x: True if len(x) > 3 else False, list(pool.map(fuction, value))))
+    return list(filter(lambda x: True if len(x) > 3 else False, list(pool.map(fuction,value))))
 
 # Main
 def make():
