@@ -2,7 +2,7 @@
 It's a tool of security audit for smart wordlist and Google hacking attack
 > Version in development
 
-[See some calculations used](https://jul10l1r4.github.io/D4N155/theories/#operation-of-d4n155)
+[See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
 Need to:[Python3](https://realpython.com/installing-python/),
@@ -11,7 +11,7 @@ Need to:[Python3](https://realpython.com/installing-python/),
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ```bash
-git clone https://github.com/Jul10l1r4/D4N155.git
+git clone https://github.com/adasecurity/D4N155.git
 cd D4N155
 pip3 install -r requirements.txt
 bash main
@@ -19,7 +19,7 @@ bash main
 Or whithout git
 
 ```bash
-wget -qO- https://github.com/Jul10l1r4/D4N155/archive/master.zip | bsdtar -xf-
+wget -qO- https://github.com/adasecurity/D4N155/archive/master.zip | bsdtar -xf-
 cd D4N155-master
 pip3 install -r requirements.txt
 bash main
@@ -68,8 +68,8 @@ bash main
 * requests==2.20.1
 * mechanicalsoup
      
-<h3 align="center">This project created by @jul10l1r4 are part of Segmentation fault<br/></h3>
-<h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/Jul10l1r4/D4N155</h5>
+<h3 align="center">This project are part of Segmentation fault<br/></h3>
+<h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/adasecurity/D4N155</h5>
 <p align="center">
 		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
 </p>
