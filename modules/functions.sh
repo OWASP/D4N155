@@ -89,20 +89,23 @@ __wordlist(){
 			while read url
 			do
 				echo "$url";
-				python3 ../objetive/objetive.py "$url" -t -txt -a  \
+				python3 "../objetive/objetive.py" "$url" \
 				>> ../reports/db/$target.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
+				echo -e ":.........................................[\e[92m✔\e[32m]" || \
+				echo -e ":.........................................[\e[31m✘\e[32m]"
 			done && \
 				\
-			python3 ../modules/generator.py "$(cat ../reports/db/$target.blob.txt)" \
+			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
 				> ../$dest || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 
 			test "$?" == 0 && \
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
 				exit 1
 			# clear trash files
+      # Call report pdf
+      . ../modules/report/main.sh "../reports/db/$target.txt" "../reports/db/$target.blob.txt" \
+          "../$dest"  "$target"
 			rm -rf ../reports/db/$target.*
 			exit 0
 	else
@@ -116,32 +119,48 @@ __wordlist(){
 # This function are main for get targets based in file
 # root directory
 __fwordlist (){
-	All="$url/$1"
-	cat  \
-				>> reports/db/$1.blob.txt && \
-				echo "Get informations..." || \
-				echo -e "\033[31mERROR IN GET ALL INFORMATION\033[32m""$1" | \
+
+	cat  $1 |\
 		while read url
 		do
 			echo "$url";
-			python3 "objetive/objetive.py" "$url" -t -txt -a \
+			python3 "objetive/objetive.py" "$url" \
 				>> reports/db/wordlist.blob.txt && \
-				echo ":.........................................[OK]" || \
-				echo -e "\033[31m:.........................................[ER]\033[32m"
-		done && \
+				echo -e ":.........................................[\e[92m✔\e[32m]" || \
+				echo -e ":.........................................[\e[31m✘\e[32m]"
+		done && \   
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" || \
-        { echo -e "\033[031mError fatal\033[32m";exit 2 }
+        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
 	
 		if [ "$?" == "0" ]
 		then
 			echo -e "\033[032mWordlist has been saved in\n\033[033m./reports/wordlist/wordlist.txt\033[0m"
 			# clear trash files
-			rm -rf reports/db/$target*
+      # Report in pdf
+      . modules/report/main.sh "$1" "reports/db/wordlist.blob.txt" \
+          "reports/wordlist/wordlist.txt"  "$1"
+			rm -rf reports/db/wordlist.blob.txt
 			exit 0
 		else
 			echo -e "\033[31mError in save the wordlist\033[32m"
 			exit 1
 		fi
+}
+# Cus of custom :] | Staps
+# 1 - Get text
+# 2 - send to generator.py
+# 3 - save
+__cus() {
+  # $1 → file base
+  # $2 → file to output
+  echo "$2"
+  [ $2 ] && export save="$2" || export save="_wordlist.txt"
+  echo "$save"
+  echo "Processing all data..."
+  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
+    ( echo -e "[\e[92m✔\e[m] Wordlist been created in $save"; exit 0 ) || \
+    ( echo -e "[\e[31m✘\e[m] Error fatal, don't create file"; exit 2 )
+
 }

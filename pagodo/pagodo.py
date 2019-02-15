@@ -25,7 +25,7 @@ class Pagodo:
     """pagodo class object"""
 
     def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
-        """Iniitialize Pagodo class object."""
+        """Initialize Pagodo class object."""
 
         self.domain = domain
         with open(google_dorks) as self.fp:
@@ -76,7 +76,7 @@ class Pagodo:
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
                     print(
-                        f"[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
+                        f"[\033[31m✘\033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
                     )
 
                     # Update query variable.
@@ -86,7 +86,7 @@ class Pagodo:
                     if query.endswith('"'):
                         updated_query = f'{updated_query}"'
 
-                    print(f"[*] New search query: {updated_query}")
+                    print(f"[✔] New search query: {updated_query}")
 
                 pause_time = self.delay + random.choice(self.jitter)
 
@@ -97,7 +97,7 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    f"[*] Search ( {i} / {len(self.google_dorks)} ) for Google dork [ {query} ] and waiting {pause_time} seconds between searches using User-Agent '{user_agent}'"
+                    f"[✔] Search using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -117,7 +117,6 @@ class Pagodo:
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                print(f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
 
                 for found_dork in self.links:
                     print(found_dork)
@@ -134,15 +133,12 @@ class Pagodo:
                 sys.exit(0)
 
             except Exception as e:
-                print(f"[-] Error with dork: {dork}")
-                print(f"[-] EXCEPTION: {e}")
+                print(f"[\033[31m✘\033[m] Error")
+                print(f"[\033[31m✘\033[m] EXCEPTION: {e}")
 
             i += 1
 
         self.fp.close
-
-        print(f"[*] Total dorks found: {self.total_dorks}")
-
 
 def get_timestamp():
     """Retrieve a pre-formated datetimestamp."""
@@ -209,9 +205,6 @@ if __name__ == "__main__":
         print("[!] Delay must be greater than 0")
         sys.exit(0)
 
-    print(f"[*] Initiation timestamp: {get_timestamp()}")
     pgd = Pagodo(**vars(args))
     pgd.go()
-    print(f"[*] Completion timestamp: {get_timestamp()}")
-
-    print("[+] Done!")
+    print("[✔] Done!")
