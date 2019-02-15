@@ -15,7 +15,7 @@ import numpy
 try:
     import googlesearch  # noqa
 except ModuleNotFoundError:
-    print ("\033[31mYou dont install requeriments.txt?\n → googlesearch\033[32m")
+    print("\033[31mYou dont install requeriments.txt?\n → googlesearch\033[32m")
     exit(2)
 
 # Custom Python libraries.
