@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import mechanicalsoup # needed
 #from func_timeout import func_timeout, FunctionTimedOut
 import sys
-import string
+import mechanicalsoup # needed
 
 args = 0
 # Connect to target
@@ -21,9 +20,7 @@ except:
 
 # All functions for get values
 def all():
-    
     value = ""
-
     for p in browser.get_current_page().select('p'):
         value = value + p.text
 
@@ -34,7 +31,7 @@ def all():
         value = value + link.text
 
     if value:
-        return value.translate(str.maketrans('','','–,'))
+        return value.translate(str.maketrans('', '','–, '))
     else:
         exit(2)
 
