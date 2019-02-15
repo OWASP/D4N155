@@ -57,7 +57,7 @@ help="""
 	FILE				File, for save the result or using in wordlist
 
      It's GNU/GPL version 3
-     Project page: https://github.com/Jul10l1r4/D4N155"""
+     Project page: https://github.com/adasecurity/D4N155"""
 
 # All functions
 . modules/functions.sh

@@ -39,9 +39,14 @@ __vul(){
 	python3 pagodo.py -d $target -g google_dorks.txt -l 40 -s -e 1
 	if [ "$?" = "0" ]
 	then
-		mv $target.txt ../reports/ &&
-			echo "Finalized attack to $target, see in reports/$target.txt" || 
-			echo -e "\033[31mThe file dont has been saved\033[32m"
+		mv $target.txt ../reports/
+    if [ "$?" == "0" ]
+    then
+			echo "Finalized attack to $target, see in reports/$target.txt"
+    else
+      echo -e "\033[31mThe file dont has been saved, The result are found?\033[32m"
+      exit 2
+    fi
 	else
 		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
 	fi
@@ -59,9 +64,10 @@ __wordlist(){
 	if [ "$1" ]
 	then
 		echo "Attacking $1"
-		target="$1"
+    target="$(printf $1 | awk '{ gsub("['/',':','-']","");print }')"
 	else
 		printf "Target is: $1"; read target
+    target="$(printf $target | awk '{ gsub("['/',':','-']","");print }')";
 	fi
 
 	test "$#" == "2" && \
@@ -77,9 +83,14 @@ __wordlist(){
 	if [ "$?" = "0" ]
 	then
 		# Check if be ok
-		mv "$target.txt" "../reports/db/" &&
-			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt" || 
-			echo -e "\033[31mThe file dont has been saved\033[32m"
+		mv "$target.txt" "../reports/db/"
+    if [ "$?" == "0" ]
+    then
+			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt"
+    else
+      echo -e "\033[31mThe file dont has been saved, the result are found?\033[32m"
+      exit 2
+    fi
 		# Generate the wordlist
 		#	get all urls and read all text
 		#	Check for equals worlds and remove
@@ -96,8 +107,12 @@ __wordlist(){
 			done && \
 				\
 			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
-				> ../$dest || \
-        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
+				> ../$dest
+        if [ "$?" != "0" ]
+        then
+          echo -e "\033[031mError fatal\033[32m"
+          exit 2
+        fi
 
 			test "$?" == 0 && \
 				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
@@ -131,8 +146,12 @@ __fwordlist (){
 		done && \   
 			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
-				> "reports/wordlist/wordlist.txt" || \
-        ( echo -e "\033[031mError fatal\033[32m";exit 2 )
+				> "reports/wordlist/wordlist.txt" 
+      if [ "$?" != "0" ]
+      then
+        echo -e "\033[031mError fatal\033[32m"
+        exit 2
+      fi
 	
 		if [ "$?" == "0" ]
 		then
@@ -161,6 +180,6 @@ __cus() {
   echo "Processing all data..."
   python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
     ( echo -e "[\e[92m✔\e[m] Wordlist been created in $save"; exit 0 ) || \
-    ( echo -e "[\e[31m✘\e[m] Error fatal, don't create file"; exit 2 )
+    echo -e "[\e[31m✘\e[m] Error fatal, don't create file" && exit 2
 
 }
