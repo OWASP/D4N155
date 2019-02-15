@@ -4,8 +4,7 @@
 global_list = []
 # Texts to numbers 
 def textnumber(x):
-    return x.translate(str.maketrans('aeioAEIOBTbt','431043108787'))
-
+    return x.translate(str.maketrans('aeioAEIOBTbt', '431043108787'))
 # make the number
 def counting1(x):
     return x+"1"
@@ -48,17 +47,14 @@ def ullual(x):
                 )
             )
         )
-
 def luulal(x):
     return ullual(x).swapcase()
 def inverter(x):
     return x.swapcase()
-
 # Combinatories analysis
 # comb -> mess & ssem -> parsing
 # returning all parsing strings
 def comb(allist):
-
     # Get value [[1,2,3],[3,2,1]] to
     # parse [1,2,3,3,2,1] 
     def parsing(x):
