@@ -1,7 +1,7 @@
 # It module make the word list
 import sys
-from permutations.main import *  # All modules for permutations
 from multiprocessing.dummy import Pool as ThreadPool
+from permutations.main import *  # All modules for permutations
 details = False
 
 # Root text
