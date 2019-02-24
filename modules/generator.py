@@ -12,8 +12,8 @@ texts = texts+list(map(inverter, texts))
 pool = ThreadPool(2)
 def run(fuction,value):
     # Thread will be parameter type flag
-    # --------------------| All word > 3
-    return list(filter(lambda x: True if len(x) > 3 else False, list(pool.map(fuction,value))))
+    # --------------------| All word > 3 and < 30
+    return list(filter(lambda x: True if (len(x) > 3 and len(x) < 30) else False, list(pool.map(fuction, value))))
 
 # Main
 def make():

@@ -16,7 +16,7 @@ export name="$(echo $4 | cut -d '.' -f 1)"
 export contentsOfUrls="$(cat $1)"
 
 __make(){
-# Make $report.html
+# Make $report-$name.html
 echo -e """
 <!DOCTYPE html>
 <html>
@@ -38,8 +38,8 @@ echo -e """
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
 
     <script>
-""" > ../report.html
-echo '$(document).ready(function () {var ctx = $("#bar-chartcanvas");' >> ../report.html
+""" > ../report-$name.html
+echo '$(document).ready(function () {var ctx = $("#bar-chartcanvas");' >> ../report-$name.html
 echo -e """ 
 	var data = {
 		datasets : [
@@ -109,11 +109,10 @@ echo -e """
     </div>
 </body>
 </html>
-""" >> ../report.html && \
-  ( echo -e "[\e[92m✔\e[m] The file has been saved in\n\e[33m\t→ report.html\e[m\nOpen with you browser" ) || \
+""" >> ../report-$name.html && \
+  ( echo -e "[\e[92m✔\e[m] The file has been saved in\n\e[33m\t→ report-$name.html\e[m\nOpen with you browser" ) || \
   ( echo -e "[\e[31m✘\e[m] Dont can write in this directory?" )
 
-  # ESSA FUNCAO ESTA FICANDO OBSOLETA, discutir remocao
   # Head default of groff
   # https://www.gnu.org/software/groff/manual/groff.html#Page-Layout
   echo """

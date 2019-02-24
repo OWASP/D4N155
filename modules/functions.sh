@@ -136,7 +136,7 @@ __wordlist(){
 __fwordlist (){
 
 	cat  $1 |\
-		while read url
+		while read url || exit 2
 		do
 			echo "$url";
 			python3 "objetive/objetive.py" "$url" \
@@ -144,7 +144,6 @@ __fwordlist (){
 				echo -e ":.........................................[\e[92m✔\e[32m]" || \
 				echo -e ":.........................................[\e[31m✘\e[32m]"
 		done && \   
-			\
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" 
       if [ "$?" != "0" ]
@@ -158,8 +157,11 @@ __fwordlist (){
 			echo -e "\033[032mWordlist has been saved in\n\033[033m./reports/wordlist/wordlist.txt\033[0m"
 			# clear trash files
       # Report in pdf
-      . modules/report/main.sh "$1" "reports/db/wordlist.blob.txt" \
-          "reports/wordlist/wordlist.txt"  "$1"
+      # pagodo, default of script
+      cd pagodo/ 
+      . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
+          "../reports/wordlist/wordlist.txt"  "custom"
+      cd ..
 			rm -rf reports/db/wordlist.blob.txt
 			exit 0
 		else
@@ -180,6 +182,6 @@ __cus() {
   echo "Processing all data..."
   python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
     ( echo -e "[\e[92m✔\e[m] Wordlist been created in $save"; exit 0 ) || \
-    echo -e "[\e[31m✘\e[m] Error fatal, don't create file" && exit 2
+    echo -e "[\e[31m✘\e[m] Error fatal, don't create file"; exit 2
 
 }
