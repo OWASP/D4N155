@@ -45,7 +45,7 @@ bash main
 	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file>
-		URL				URL target, example: scanme.nmap.org
+	URL				URL target, example: scanme.nmap.org
 	IP				IP address
 	FILE				File, for save the result, get urls or using in
 					wordlist
