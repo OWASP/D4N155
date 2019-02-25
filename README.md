@@ -37,7 +37,7 @@ bash main
 	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
 	-v, --vulners	<url|ip>	Get urls that can cause attacks.
-	-t, --targets	<source>  	Make the smart-wordlist based in your passed
+	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
 	-b, --based	<file>		Analyze texts to generate the
 					custom wordlist
@@ -47,8 +47,8 @@ bash main
      Value: <url | ip | source | file>
 		URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	SOURCE				Source file, contains the host or ips
-	FILE				File, for save the result or using in wordlist
+	FILE				File, for save the result, get urls or using in
+					wordlist
 
 
 # HARDWARE REQUIREMENTS:
