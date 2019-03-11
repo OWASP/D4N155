@@ -61,19 +61,31 @@ __vul(){
 # 5# save and call route of file
 __wordlist(){
 	# Check arguments
-	if [ "$1" ]
+	if [ "$1" != "" ]
 	then
 		echo "Attacking $1"
     target="$(printf $1 | awk '{ gsub("['/',':','-']","");print }')"
+    
+    # Checking time parse
+    [ "$3" != ""  ] && export time="$3" || export time="0"
 	else
 		printf "Target is: $1"; read target
     target="$(printf $target | awk '{ gsub("['/',':','-']","");print }')";
-	fi
 
-	test "$#" == "2" && \
+    # Get time rate
+    printf "Time interval in seconds (Default: 0): ";read settime
+    if [ "$settime" == "" ] || [[ ! "$settime" =~  ^[+-]?([0-9]*[.])?[0-9]+$ ]]
+    then
+      export time="0"
+    elif [[ "$settime" =~ ^[+-]?([0-9]*[.])?[0-9]+$ ]] || [[ "$settime" =~ ^-?[0-9]+$ ]]
+    then
+      export time="$settime"
+    fi
+  fi
+
+	[ "$#" == "2" ] && \
 		export dest="$2" || \
 		export dest="reports/wordlist/$target.wordlist.txt"
-	
 	
 	# Make the attack
 	echo -e "\033[33mBenning attack, with Google indexations\033[32m"
@@ -104,6 +116,7 @@ __wordlist(){
 				>> ../reports/db/$target.blob.txt && \
 				echo -e ":.........................................[\e[92m✔\e[32m]" || \
 				echo -e ":.........................................[\e[31m✘\e[32m]"
+        sleep $time
 			done && \
 				\
 			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
@@ -135,6 +148,8 @@ __wordlist(){
 # root directory
 __fwordlist (){
 
+  [ "$3" != ""  ] && export time="$3" || export time="0"
+
 	cat  $1 |\
 		while read url || exit 2
 		do
@@ -143,6 +158,7 @@ __fwordlist (){
 				>> reports/db/wordlist.blob.txt && \
 				echo -e ":.........................................[\e[92m✔\e[32m]" || \
 				echo -e ":.........................................[\e[31m✘\e[32m]"
+      sleep $time
 		done && \   
 			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
 				> "reports/wordlist/wordlist.txt" 
