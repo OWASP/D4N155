@@ -1,6 +1,7 @@
 # D4N155
 It's a tool of security audit for smart wordlist and Google hacking attack
-> Version in development
+
+[Help us](CONTRIBUTING.md)
 
 [See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
 
@@ -37,18 +38,20 @@ bash main
 	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
 	-v, --vulners	<url|ip>	Get urls that can cause attacks.
-	-t, --targets	<source>  	Make the smart-wordlist based in your passed
+	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
 	-b, --based	<file>		Analyze texts to generate the
 					custom wordlist
+	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
 	-h, --help			Show this mensage.
 
-     Value: <url | ip | source | file>
-		URL				URL target, example: scanme.nmap.org
+     Value: <url | ip | source | file | time>
+	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	SOURCE				Source file, contains the host or ips
-	FILE				File, for save the result or using in wordlist
+	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	FILE				File, for save the result, get urls or using in
+					wordlist
 
 
 # HARDWARE REQUIREMENTS:

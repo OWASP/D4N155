@@ -22,16 +22,16 @@ except:
 def all():
     value = ""
     for p in browser.get_current_page().select('p'):
-        value = value + p.text
+        value = value + p.text + ' '
 
     for h1 in browser.get_current_page().select('h1'):
-        value = value + h1.text
+        value = value + h1.text + ' '
 
     for link in browser.get_current_page().select('a'):
-        value = value + link.text
+        value = value + link.text + ' '
 
     if value:
-        return value.translate(str.maketrans('', '','–, '))
+        return value.translate(str.maketrans('', '','–,'))
     else:
         exit(2)
 

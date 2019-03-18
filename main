@@ -43,18 +43,22 @@ help="""
     	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
 	-v, --vulners	<url|ip>	Get urls that can cause attacks.
-	-t, --targets	<source>  	Make the smart-wordlist based in your passed
+	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
 	-b, --based	<file>		Analyze texts to generate the
 		                        custom wordlist
+	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
     	-h, --help			Show this mensage.
 
-     Value: <url | ip | source | file>
+     Value: <url | ip | source | file | time>
      	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	SOURCE				Source file, contains the host or ips
-	FILE				File, for save the result or using in wordlist
+	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	FILE				File, for save the result, get urls or using in
+					 wordlist
+
+     Version: 0.50 (Dev)
 
      It's GNU/GPL version 3
      Project page: https://github.com/adasecurity/D4N155"""
@@ -62,9 +66,8 @@ help="""
 # All functions
 . modules/functions.sh
 
-#	Menu
-if [ ! "$1" ]
-then
+# menu interative
+__interative(){
 	printf "\033[0m"
 	PS3="D4N155%#~> "
 	select option in "Find vulnerabilities" "Make wordlist"
@@ -80,11 +83,20 @@ then
 		esac
 	done
 	printf "\033[0m"
+}
+
+#	Menu
+if [[ ! "$1" ]]
+then
+  __interative
 else
 	# vars for iterations
 	i=1
 	x=1
+  util=0
 	save=""
+  time=""
+
 	while [ "$i" -le "$#" ]
 	do
 		# arg: argument
@@ -111,7 +123,11 @@ else
 					# export the file for storaged
 					export save="$dest" 
 					;;
+        --r* | "-r")
+          export time="$dest"
+          ;;
 			esac
+
 			# For work in loop
 			x=$(($x+1))
 		done
@@ -126,18 +142,22 @@ else
 				if [[ $narg =~ ^- ]]
 				then
 					test "$save" == "" && \
-					       __wordlist || \
-					       __wordlist "" "$save"
+					       __wordlist "" "" "$time"|| \
+					       __wordlist "" "$save" "$time"
 				else
 					test "$save" == "" && \
-					       __wordlist "$narg" || \
-					       __wordlist "$narg" "$save"
-				fi
+					       __wordlist "$narg" "" "$time"|| \
+					       __wordlist "$narg" "$save" "$time"
+				fi 
+        
+        util=$(($util+1))
 				;;&
 			--v* | -*v*)
         # Exists $narg? Then ok,  go go
 				echo "Find to vulnerabilties"
 			  [ -e "$narg" ] && __vul "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+        
+        util=$(($util+1))
 				;;&
       --b* | -*b*)
         echo "Make custom wordlist"
@@ -147,13 +167,25 @@ else
         else
             [ -e "$narg" ] && __cus "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
         fi
+
+        util=$(($util+1))
         ;;
 			--t* | "-t")
 				echo -e "Targets inputed in \e[33m$narg\e[32m"
-				__fwordlist "$narg"
+				__fwordlist "$narg" "" "$time" 
+
+        
+        util=$(($util+1))
 				;;
 
 		esac
 		i=$(($i+1))
 	done
+
+  if [ $util == 0 ]
+  then
+    echo "Error in flags, see help option: bash main --help"
+    echo "Opening to interative mode..."
+    __interative
+  fi
 fi

@@ -5,3 +5,7 @@
 __py*
 *.wordlist.txt
 _wordlist.txt
+*.html
+*.pdf
+wordlist.txt
+_wordlist.txt
