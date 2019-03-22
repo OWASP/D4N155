@@ -26,6 +26,8 @@ pip3 install -r requirements.txt
 bash main
 ```
 
+> You are advised to use proxychains for scan
+
 [![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
 
 # Manual
