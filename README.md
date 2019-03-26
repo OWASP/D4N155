@@ -6,7 +6,7 @@ It's a tool of security audit for smart wordlist and Google hacking attack
 [See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
-Need to:[Python3](https://realpython.com/installing-python/),
+Need to:[Python3.6](https://realpython.com/installing-python/),
 [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
