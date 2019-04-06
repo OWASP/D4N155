@@ -88,7 +88,7 @@ __wordlist(){
 		export dest="reports/wordlist/$target.wordlist.txt"
 	
 	# Make the attack
-	echo -e "\033[33mBenning attack, with Google indexations\033[32m"
+	echo -e "\033[33mBeginning attack, with Google indexations\033[32m"
 	cd pagodo/
 	# It's good? Then go go go go
 	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
