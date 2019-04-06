@@ -32,7 +32,7 @@ __vul(){
 	esac
 
 	# Make the attack
-	echo -e "\033[33mBenning attack using diferents user agents ;)\033[32m"
+	echo -e "\033[33mBeginning attack using diferents user agents ;)\033[32m"
 	cd pagodo/
 	echo "It will to delay..."
 	# It's good? Then go go go go
