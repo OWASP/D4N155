@@ -184,7 +184,6 @@ else
 
   if [ $util == 0 ]
   then
-    echo "Error in flags, see help option: bash main --help"
     echo "Opening to interative mode..."
     __interative
   fi
