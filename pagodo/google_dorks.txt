@@ -4596,3 +4596,7 @@ inurl:"fhem.cfg" AND 'fhem.cfg' -github
 intitle:"InfluxDB - Admin Interface" -github
 intitle:"webcam 7" inurl:'/gallery.html'
 intitle:"Login - Xfinity" AND "Gateway > Login"
+inurl:nagios/cgi-bin/status.cgi
+inurl:/FxCodeShell.jsp/ "Login Form" "Blog Comments"
+intext:"Portador do CPF"
+inurl:"/sidekiq/busy"
