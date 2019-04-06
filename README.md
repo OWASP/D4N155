@@ -11,6 +11,9 @@ Need to:[Python3.6](https://realpython.com/installing-python/),
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
+
+> You are advised to use proxychains for scan
+
 ```bash
 git clone https://github.com/adasecurity/D4N155.git
 cd D4N155
