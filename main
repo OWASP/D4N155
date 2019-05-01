@@ -5,9 +5,7 @@ here=`dirname "$0"`
 cd "$here"
 
 # colors art
-green='\e[32m'
-bgred='\e[41m'
-red='\e[31m'
+. ./modules/colors.sh
 # Banner
 echo -e """
 $red	               /\ o 
@@ -65,6 +63,7 @@ help="""
 
 # All functions
 . modules/functions.sh
+. modules/load.sh
 
 # menu interative
 __interative(){
