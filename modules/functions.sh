@@ -53,6 +53,30 @@ _checkVul(){
 	cd ../
 }
 
+# Run operations
+_calc(){
+  # 1: Source
+  # 2: Target
+  # 3: Output
+
+  cat  $1 |\
+		while read url || exit 2
+		do
+			echo "$url";
+			python3 "objetive/objetive.py" "$url" \
+				>> "reports/db/$2.blob.txt" && \
+				echo -e ":.........................................$correct" || \
+				echo -e ":.........................................$incorrect"
+      sleep $time
+		done && \   
+			_load "Make operations" "python3 'modules/generator.py' \"reports/db/$2.blob.txt\" > \"$3\"
+      if [ \"$?\" != \"0\" ]
+      then
+        echo -e \"\n$red Error fatal$green\"
+        exit 2
+      fi"
+}
+
 # Get expression and get all dorks of google hacking
 # All vul. pages and routers :]
 __vul(){
@@ -105,57 +129,58 @@ __wordlist(){
 	
 	# Make the attack
 	echo -e "$orange Beginning attack, with Google indexations$green"
-	cd pagodo/
-	# It's good? Then go go go go
+	
+  # Run pagodo for get all urls
+  cd pagodo/
 	_load "$orange$target$green: " "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
+  cd ../
+
+  # If get all ok then:
 	if [ "$?" = "0" ]
 	then
-		# Check if be ok
-		mv "$target.txt" "../reports/db/"
+		mv "pagodo/$target.txt" "reports/db/"
+    
     if [ "$?" == "0" ]
     then
-			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt"
+			echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
     else
       echo -e "$red The file dont has been saved, the result are found?$green"
       exit 2
     fi
-		# Generate the wordlist
-		#	get all urls and read all text
-		#	Check for equals worlds and remove
-		#	remove characters like: , or ?
+
 		echo "Make the wordlist *-*"
-		cat ../reports/db/$target.txt | \
-			while read url
-			do
-				echo "$url";
-				python3 "../objetive/objetive.py" "$url" \
-				>> ../reports/db/$target.blob.txt && \
-				echo -e ":.........................................$correct" || \
-				echo -e ":.........................................$incorrect"
-        sleep $time
-			done && \
-				\
-			_load 'Make operations' "python3 '../modules/generator.py' \"../reports/db/$target.blob.txt\" \
-				> ../$dest
-        if [ \"$?\" != \"0\" ]
-        then
-          echo -e \"$red Error fatal$green\"
-          exit 2
-        fi"
+#		cat reports/db/$target.txt | \
+#			while read url
+#			do
+#				echo "$url";
+#				python3 "objetive/objetive.py" "$url" \
+#				>> reports/db/$target.blob.txt && \
+#				echo -e ":.........................................$correct" || \
+#				echo -e ":.........................................$incorrect"
+#        sleep $time
+#			done && \
+#				\
+#			_load 'Make operations' "python3 'modules/generator.py' \"reports/db/$target.blob.txt\" \
+#				> $dest
+#        if [ \"$?\" != \"0\" ]
+#        then
+#          echo -e \"$red Error fatal$green\"
+#          exit 2
+#        fi"
+    _calc "reports/db/$target.txt" "$target" "$dest"
 
 			test "$?" == 0 && \
 				echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
 				exit 1
 			# clear trash files
       # Call report pdf
-      . ../modules/report/main.sh "../reports/db/$target.txt" "../reports/db/$target.blob.txt" \
-          "../$dest"  "$target"
-			rm -rf ../reports/db/$target.*
+      . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
+          "$dest"  "$target"
+			rm -rf reports/db/$target.*
 			exit 0
 	else
 		echo -e "Error: in$red pagodo.py$orange \nrun: pip3 install -r requirements.txt$green"
 	fi
-	cd ../
 }
 
 # _fwordlist
