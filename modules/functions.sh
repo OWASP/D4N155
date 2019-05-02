@@ -107,11 +107,7 @@ __wordlist(){
 	echo -e "$orange Beginning attack, with Google indexations$green"
 	cd pagodo/
 	# It's good? Then go go go go
-<<<<<<< HEAD
 	_load "$orange$target$green: " "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
-=======
-	_load "Searching with urls of $target" "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
->>>>>>> c4dec09694f952c2372fd5f62335dcb6fb6395cf
 	if [ "$?" = "0" ]
 	then
 		# Check if be ok
@@ -143,11 +139,7 @@ __wordlist(){
 				> ../$dest
         if [ \"$?\" != \"0\" ]
         then
-<<<<<<< HEAD
           echo -e \"$red Error fatal$green\"
-=======
-          echo -e "$red Error fatal$green"
->>>>>>> c4dec09694f952c2372fd5f62335dcb6fb6395cf
           exit 2
         fi"
 

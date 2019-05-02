@@ -5,7 +5,6 @@ from permutations.main import *  # All modules for permutations
 details = False
 
 # Root text
-#texts = sys.argv[1].split()
 texts = open(sys.argv[1], 'r').read().split()
 new = []
 # Alternations
