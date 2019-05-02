@@ -132,7 +132,7 @@ __wordlist(){
 	
   # Run pagodo for get all urls
   cd pagodo/
-	_load "$orange$target$green: " "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
+	_load "" "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
   cd ../
 
   # If get all ok then:

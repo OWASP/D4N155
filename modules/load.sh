@@ -10,8 +10,8 @@ spin() {
 _load(){
   while :;do
     spin "$1"
-  done & trap "kill $!" EXIT 2> /dev/null
+  done & trap "kill $!" EXIT 1> /dev/null
   eval "$2"
-  kill $! && trap " " EXIT 2> /dev/null 
+#  kill $! && trap " " EXIT 1> /dev/null 
 }
 
