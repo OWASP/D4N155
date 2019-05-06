@@ -149,29 +149,13 @@ __wordlist(){
     fi
 
 		echo "Make the wordlist *-*"
-#		cat reports/db/$target.txt | \
-#			while read url
-#			do
-#				echo "$url";
-#				python3 "objetive/objetive.py" "$url" \
-#				>> reports/db/$target.blob.txt && \
-#				echo -e ":.........................................$correct" || \
-#				echo -e ":.........................................$incorrect"
-#        sleep $time
-#			done && \
-#				\
-#			_load 'Make operations' "python3 'modules/generator.py' \"reports/db/$target.blob.txt\" \
-#				> $dest
-#        if [ \"$?\" != \"0\" ]
-#        then
-#          echo -e \"$red Error fatal$green\"
-#          exit 2
-#        fi"
+    
     _calc "reports/db/$target.txt" "$target" "$dest"
 
 			test "$?" == 0 && \
 				echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
 				exit 1
+
 			# clear trash files
       # Call report pdf
       . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
@@ -207,6 +191,8 @@ __fwordlist (){
         echo -e \"\n$red Error fatal$green\"
         exit 2
       fi"
+
+    _calc "reports/db/$target.txt" "$target" "$dest"
 	
 		if [ "$?" == "0" ]
 		then
