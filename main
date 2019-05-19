@@ -64,6 +64,7 @@ help="""
 # All functions
 . modules/functions.sh
 . modules/load.sh
+printf "\033[32m"
 
 # menu interative
 __interative(){

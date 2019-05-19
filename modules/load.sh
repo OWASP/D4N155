@@ -3,15 +3,13 @@
 sp="⡿⣟⣯⣷⣾⣽⣻⢿"
 sc=0
 spin() {
-   printf "\r\b${sp:sc++:1} $1 "
-   ((sc==${#sp})) && sc=0
+  printf "\r${sp:sc++:1} $1 "
+  ((sc==${#sp})) && sc=0
 }
 
 _load(){
   while :;do
     spin "$1"
-  done & trap "kill $!" EXIT
+  done & trap "kill $!" exit 0
   eval "$2"
-#  kill $! && trap " " EXIT 1> /dev/null
 }
-

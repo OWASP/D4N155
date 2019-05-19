@@ -69,12 +69,14 @@ _calc(){
 				echo -e ":.........................................$incorrect"
       sleep $time
 		done && \   
-			_load "Make operations" "python3 'modules/generator.py' \"reports/db/$2.blob.txt\" > \"$3\"
+			_load "Make operations" """python3 'modules/generator.py' reports/db/$2.blob.txt > $3
+      echo $?
       if [ \"$?\" != \"0\" ]
       then
         echo -e \"\n$red Error fatal$green\"
+        [ -e reports/db/$2.blob.txt ] && rm -rf reports/db/$2.*
         exit 2
-      fi"
+      fi"""
 }
 
 # Get expression and get all dorks of google hacking
@@ -132,7 +134,7 @@ __wordlist(){
 	
   # Run pagodo for get all urls
   cd pagodo/
-	_load "" "python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1"
+	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
   cd ../
 
   # If get all ok then:
@@ -152,16 +154,16 @@ __wordlist(){
     
     _calc "reports/db/$target.txt" "$target" "$dest"
 
-			test "$?" == 0 && \
-				echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
-				exit 1
+		test "$?" == 0 && \
+		  echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
+			exit 1
 
 			# clear trash files
       # Call report pdf
-      . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
-          "$dest"  "$target"
-			rm -rf reports/db/$target.*
-			exit 0
+    . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
+      "$dest"  "$target"
+		rm -rf reports/db/$target.*
+		exit 0
 	else
 		echo -e "Error: in$red pagodo.py$orange \nrun: pip3 install -r requirements.txt$green"
 	fi
@@ -174,25 +176,7 @@ __wordlist(){
 __fwordlist (){
 
   [ "$3" != ""  ] && export time="$3" || export time="0"
-
-	cat  $1 |\
-		while read url || exit 2
-		do
-			echo "$url";
-			python3 "objetive/objetive.py" "$url" \
-				>> reports/db/wordlist.blob.txt && \
-				echo -e ":.........................................$correct" || \
-				echo -e ":.........................................$incorrect"
-      sleep $time
-		done && \   
-			_load "Make operations" "python3 'modules/generator.py' \"reports/db/wordlist.blob.txt\" > 'reports/wordlist/wordlist.txt'
-      if [ \"$?\" != \"0\" ]
-      then
-        echo -e \"\n$red Error fatal$green\"
-        exit 2
-      fi"
-
-    _calc "reports/db/$target.txt" "$target" "$dest"
+  _calc "$1" "wordlist" "reports/wordlist/wordlist.txt"
 	
 		if [ "$?" == "0" ]
 		then
@@ -222,7 +206,7 @@ __cus() {
   [ $2 ] && export save="$2" || export save="_wordlist.txt"
   echo "$save"
   echo "Processing all data..."
-  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
+  python3 "modules/generator.py" "$1" >> "$save" && \
     ( echo -e "$correct Wordlist been created in $save"; exit 0 ) || \
     echo -e "$incorrect Error fatal, don't create file"; exit 2
 
