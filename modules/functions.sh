@@ -53,32 +53,6 @@ _checkVul(){
 	cd ../
 }
 
-# Run operations
-_calc(){
-  # 1: Source
-  # 2: Target
-  # 3: Output
-
-  cat  $1 |\
-		while read url || exit 2
-		do
-			echo "$url";
-			python3 "objetive/objetive.py" "$url" \
-				>> "reports/db/$2.blob.txt" && \
-				echo -e ":.........................................$correct" || \
-				echo -e ":.........................................$incorrect"
-      sleep $time
-		done && \   
-			_load "Make operations" """python3 'modules/generator.py' reports/db/$2.blob.txt > $3
-      echo $?
-      if [ \"$?\" != \"0\" ]
-      then
-        echo -e \"\n$red Error fatal$green\"
-        [ -e reports/db/$2.blob.txt ] && rm -rf reports/db/$2.*
-        exit 2
-      fi"""
-}
-
 # Get expression and get all dorks of google hacking
 # All vul. pages and routers :]
 __vul(){
@@ -152,7 +126,7 @@ __wordlist(){
 
 		echo "Make the wordlist *-*"
     
-    _calc "reports/db/$target.txt" "$target" "$dest"
+    . modules/operations/calc.sh "reports/db/$target.txt" "$target" "$dest"
 
 		test "$?" == 0 && \
 		  echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
@@ -176,24 +150,25 @@ __wordlist(){
 __fwordlist (){
 
   [ "$3" != ""  ] && export time="$3" || export time="0"
-  _calc "$1" "wordlist" "reports/wordlist/wordlist.txt"
+
+  . modules/operations/calc.sh "$1" "wordlist" "reports/wordlist/wordlist.txt"
 	
-		if [ "$?" == "0" ]
-		then
-			echo -e "$green Wordlist has been saved in\n$orange./reports/wordlist/wordlist.txt$end"
-			# clear trash files
-      # Report in pdf
-      # pagodo, default of script
-      cd pagodo/ 
-      . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
-          "../reports/wordlist/wordlist.txt"  "custom"
-      cd ..
-			rm -rf reports/db/wordlist.blob.txt
-			exit 0
-		else
-			echo -e "$red Error in save the wordlist $green"
-			exit 1
-		fi
+	if [ "$?" == "0" ]
+	then
+		echo -e "$green Wordlist has been saved in\n$orange./reports/wordlist/wordlist.txt$end"
+		# clear trash files
+    # Report in pdf
+    # pagodo, default of script
+    cd pagodo/ 
+    . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
+        "../reports/wordlist/wordlist.txt" "custom"
+    cd ..
+	  rm -rf reports/db/wordlist.blob.txt
+		exit 0
+	else
+		echo -e "$red Error in save the wordlist $green"
+		exit 1
+	fi
 }
 # Cus of custom :] | Staps
 # 1 - Get text
