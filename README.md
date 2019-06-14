@@ -1,5 +1,5 @@
 # D4N155
-It's a tool of security audit for smart wordlist and Google hacking attack
+It's an information security audit tool that creates intelligent wordlists based on the content of the target page and Google hacking attack
 
 [Help us](CONTRIBUTING.md)
 
