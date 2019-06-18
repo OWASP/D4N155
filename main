@@ -23,7 +23,7 @@ $red	               /\ o
            {{{{{{{;.___.;}}&&&&
             '{{{{{{)   (}}|//&
              ´''''':   :''''´
-	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault\e[m $red]
+	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end  $red]
 """
 
 # ignore lower and uppercase
@@ -156,7 +156,7 @@ else
         # Exists $narg? Then ok,  go go
 				echo "Find to vulnerabilties"
         echo "$narg"
-			  [ "$narg" ] && __vul "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+			  [ "$narg" ] && __vul "$narg" || ( echo -e " $orange → bash main --help$end ";exit 2 )
         
         util=$(($util+1))
 				;;&
@@ -164,15 +164,15 @@ else
         echo "Make custom wordlist"
         if [ $save ]
         then
-            [ "$narg" ] && __cus "$narg" "$save" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2)
+            [ "$narg" ] && __cus "$narg" "$save" || ( echo -e " $orange → bash main --help$end ";exit 2)
         else
-            [ "$narg" ] && __cus "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+            [ "$narg" ] && __cus "$narg" || ( echo -e " $orange → bash main --help$end ";exit 2 )
         fi
 
         util=$(($util+1))
         ;;
 			--t* | "-t")
-				echo -e "Targets inputed in \e[33m$narg\e[32m"
+				echo -e "Targets inputed in  $orange $narg $green "
 				__fwordlist "$narg" "" "$time" 
 
         
