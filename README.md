@@ -1,7 +1,7 @@
 # D4N155 
 [![Documentation Status](https://readthedocs.org/projects/d4n155/badge/?version=documentation)](https://d4n155.readthedocs.io/en/documentation/?badge=documentation) [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE) 
 
-It's a tool of security audit for smart wordlist and Google hacking attack
+It's an information security audit tool that creates intelligent wordlists based on the content of the target page and Google hacking attack
 
 [Help us](CONTRIBUTING.md)
 
