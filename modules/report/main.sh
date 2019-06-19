@@ -110,7 +110,7 @@ echo -e """
 </body>
 </html>
 """ >> ./report-$name.html && \
-  ( echo -e "$correct The file has been saved in\n $orange \t→ report-$name.html $end \nOpen with you browser" ) || \
+  ( echo -e "$correct The file has been saved in\n $orange \t→ report-$name.html $end" ) || \
   ( echo -e "$incorrect Dont can write in this directory?" )
 
   # Head default of groff

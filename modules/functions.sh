@@ -104,7 +104,7 @@ __wordlist(){
 		export dest="reports/wordlist/$target.wordlist.txt"
 	
 	# Make the attack
-	echo -e "$orange Beginning attack, with Google indexations$green"
+	echo -e "$orange Beginning attack, with Google indexations$end"
 	
   # Run pagodo for get all urls
   cd pagodo/
