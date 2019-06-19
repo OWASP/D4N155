@@ -33,7 +33,7 @@ printf "$end"
 # Vars
 bug="""
   You can report new bug or open a issue
-  \t$yellow→ $orange https://github.com/owasp/D4N155/issue$end
+  \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
 """
 help="""
     D4N155: Tool for smart audit security
