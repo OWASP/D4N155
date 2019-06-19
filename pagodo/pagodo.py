@@ -75,7 +75,7 @@ class Pagodo:
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
                     print(
-                        f"[\033[31m✘\033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
+                        f"[\033[31m ✘ \033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
                     )
 
                     # Update query variable.
@@ -85,7 +85,7 @@ class Pagodo:
                     if query.endswith('"'):
                         updated_query = f'{updated_query}"'
 
-                    print(f"[✔] New search query: {updated_query}")
+                    print(f"[ ✔ ] New search query: {updated_query}")
 
                 pause_time = self.delay + random.choice(self.jitter)
 
@@ -96,7 +96,7 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    f"[✔] Search using User-Agent '{user_agent}'"
+                    f"[ ✔ ] Search using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -132,8 +132,8 @@ class Pagodo:
                 sys.exit(0)
 
             except Exception as e:
-                print(f"[\033[31m✘\033[m] Error")
-                print(f"[\033[31m✘\033[m] EXCEPTION: {e}")
+                print(f"[\033[31m ✘ \033[m] Error")
+                print(f"[\033[31m ✘ \033[m] EXCEPTION: {e}")
 
             i += 1
 
@@ -206,4 +206,4 @@ if __name__ == "__main__":
 
     pgd = Pagodo(**vars(args))
     pgd.go()
-    print("[✔] Done!")
+    print("[ ✔ ] Done!")
