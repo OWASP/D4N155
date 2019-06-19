@@ -23,14 +23,18 @@ $red	               /\ o
            {{{{{{{;.___.;}}&&&&
             '{{{{{{)   (}}|//&
              ´''''':   :''''´
-	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end  $red]
+	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end $red]
 """
 
 # ignore lower and uppercase
 shopt -s nocasematch
 # and colors with dont fuck terminal
-printf "\033[0m"
+printf "$end"
 # Vars
+bug="""
+  You can report new bug or open a issue
+  \t$yellow→ $orange https://github.com/owasp/D4N155/issue$end
+"""
 help="""
     D4N155: Tool for smart audit security
 
@@ -66,6 +70,7 @@ help="""
 . modules/load.sh
 printf "\033[32m"
 
+trap -- "printf \"\n$bug\";exit 2" "SIGINT"
 # menu interative
 __interative(){
 	printf "\033[0m"
