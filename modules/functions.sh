@@ -6,6 +6,53 @@
 # _wordlist
 # _fwordlist
 
+# Update db
+_updateDB(){
+	printf "$orange You want update the list Google hacking? (y/n)$green\n → "
+	read typed
+	case $typed in
+		"Yes" | y*)
+			echo "Updating database"
+			echo "`python3 pagodo/ghdb_scraper.py`"
+		;;
+		"No" | n*)
+			echo "OK ..."
+		;;
+	esac
+}
+
+# Check Time format
+_checkTime(){
+  if [ "$1" == "" ] || [[ ! "$1" =~  ^[+-]?([0-9]*[.])?[0-9]+$ ]]
+  then
+    export time="0"
+    elif [[ "$1" =~ ^[+-]?([0-9]*[.])?[0-9]+$ ]] || [[ "$1" =~ ^-?[0-9]+$ ]]
+  then
+    export time="$settime"
+  fi
+}
+
+# Run the pagodo
+_checkVul(){
+  cd pagodo/
+	# It's good? Then go go go go
+	_load "$orange Find vulners urls $green " "python3 pagodo.py -d $target -g google_dorks.txt -l 40 -s -e 1"
+	if [ "$?" = "0" ]
+	then
+		mv $target.txt ../reports/
+    if [ "$?" == "0" ]
+    then
+			echo "Finalized attack to $target, see in reports/$target.txt"
+    else
+      echo -e "$green The file dont has been saved, The result are found?$green"
+      exit 2
+    fi
+	else
+		echo -e "Error: in $green pagodo.py$orange\nrun: pip3 install -r requirements.txt$green"
+	fi
+	cd ../
+}
+
 # Get expression and get all dorks of google hacking
 # All vul. pages and routers :]
 __vul(){
@@ -17,40 +64,14 @@ __vul(){
 	else
 		printf "Target is: $1"; read target
 	fi
-
-	# Update db
-	echo -e "\033[33mYou want update the list Google hacking? (y/n)\033[32m"
-	read typed
-	case $typed in
-		"Yes" | y*)
-			echo "Updating database"
-			echo "`python3 pagodo/ghdb_scraper.py`"
-		;;
-		"No" | n*)
-			echo "OK ..."
-		;;
-	esac
+  # Update list of dork
+  _updateDB
 
 	# Make the attack
-	echo -e "\033[33mBenning attack using diferents user agents ;)\033[32m"
-	cd pagodo/
+	echo -e "$orange Benning attack using diferents user agents ;)$green"
 	echo "It will to delay..."
-	# It's good? Then go go go go
-	python3 pagodo.py -d $target -g google_dorks.txt -l 40 -s -e 1
-	if [ "$?" = "0" ]
-	then
-		mv $target.txt ../reports/
-    if [ "$?" == "0" ]
-    then
-			echo "Finalized attack to $target, see in reports/$target.txt"
-    else
-      echo -e "\033[31mThe file dont has been saved, The result are found?\033[32m"
-      exit 2
-    fi
-	else
-		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
-	fi
-	cd ../
+  # Attack
+  _checkVul  
 }
 
 # Get expression and get all pages indexes of google
@@ -73,73 +94,53 @@ __wordlist(){
     target="$(printf $target | awk '{ gsub("['/',':','-']","");print }')";
 
     # Get time rate
-    printf "Time interval in seconds (Default: 0): ";read settime
-    if [ "$settime" == "" ] || [[ ! "$settime" =~  ^[+-]?([0-9]*[.])?[0-9]+$ ]]
-    then
-      export time="0"
-    elif [[ "$settime" =~ ^[+-]?([0-9]*[.])?[0-9]+$ ]] || [[ "$settime" =~ ^-?[0-9]+$ ]]
-    then
-      export time="$settime"
-    fi
+    printf "Time interval in seconds (Default: -1): ";read settime
+    _checkTime 
   fi
 
+  # Define destination to save
 	[ "$#" == "2" ] && \
 		export dest="$2" || \
 		export dest="reports/wordlist/$target.wordlist.txt"
 	
 	# Make the attack
-	echo -e "\033[33mBeginning attack, with Google indexations\033[32m"
-	cd pagodo/
-	# It's good? Then go go go go
+	echo -e "$orange Beginning attack, with Google indexations$end"
+	
+  # Run pagodo for get all urls
+  cd pagodo/
 	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
+  cd ../
+
+  # If get all ok then:
 	if [ "$?" = "0" ]
 	then
-		# Check if be ok
-		mv "$target.txt" "../reports/db/"
+		mv "pagodo/$target.txt" "reports/db/"
+    
     if [ "$?" == "0" ]
     then
-			echo -e "Finalized search to $target, database\nhas been saved in reports/db/$target.txt"
+			echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
     else
-      echo -e "\033[31mThe file dont has been saved, the result are found?\033[32m"
+      echo -e "$red The file dont has been saved, the result are found?$green"
       exit 2
     fi
-		# Generate the wordlist
-		#	get all urls and read all text
-		#	Check for equals worlds and remove
-		#	remove characters like: , or ?
-		echo "Make the wordlist *-*"
-		cat ../reports/db/$target.txt | \
-			while read url
-			do
-				echo "$url";
-				python3 "../objetive/objetive.py" "$url" \
-				>> ../reports/db/$target.blob.txt && \
-				echo -e ":.........................................[\e[92m✔\e[32m]" || \
-				echo -e ":.........................................[\e[31m✘\e[32m]"
-        sleep $time
-			done && \
-				\
-			python3 "../modules/generator.py" "$(cat ../reports/db/$target.blob.txt)" \
-				> ../$dest
-        if [ "$?" != "0" ]
-        then
-          echo -e "\033[031mError fatal\033[32m"
-          exit 2
-        fi
 
-			test "$?" == 0 && \
-				echo -e "\033[032mWordlist has been saved in\n\033[033m$dest\033[0m" || \
-				exit 1
+		echo "Make the wordlist *-*"
+    
+    . modules/operations/calc.sh "reports/db/$target.txt" "$target" "$dest"
+
+		test "$?" == 0 && \
+		  echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
+			exit 1
+
 			# clear trash files
       # Call report pdf
-      . ../modules/report/main.sh "../reports/db/$target.txt" "../reports/db/$target.blob.txt" \
-          "../$dest"  "$target"
-			rm -rf ../reports/db/$target.*
-			exit 0
+    . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
+      "$dest"  "$target"
+		rm -rf reports/db/$target.*
+		exit 0
 	else
-		echo -e "Error: in \033[31mpagodo.py\033[33m\nrun: pip3 install -r requirements.txt\033[32m"
+		echo -e "Error: in$red pagodo.py$orange \nrun: pip3 install -r requirements.txt$green"
 	fi
-	cd ../
 }
 
 # _fwordlist
@@ -150,40 +151,24 @@ __fwordlist (){
 
   [ "$3" != ""  ] && export time="$3" || export time="0"
 
-	cat  $1 |\
-		while read url || exit 2
-		do
-			echo "$url";
-			python3 "objetive/objetive.py" "$url" \
-				>> reports/db/wordlist.blob.txt && \
-				echo -e ":.........................................[\e[92m✔\e[32m]" || \
-				echo -e ":.........................................[\e[31m✘\e[32m]"
-      sleep $time
-		done && \   
-			python3 "modules/generator.py" "$(cat reports/db/wordlist.blob.txt)" \
-				> "reports/wordlist/wordlist.txt" 
-      if [ "$?" != "0" ]
-      then
-        echo -e "\033[031mError fatal\033[32m"
-        exit 2
-      fi
+  . modules/operations/calc.sh "$1" "wordlist" "reports/wordlist/wordlist.txt"
 	
-		if [ "$?" == "0" ]
-		then
-			echo -e "\033[032mWordlist has been saved in\n\033[033m./reports/wordlist/wordlist.txt\033[0m"
-			# clear trash files
-      # Report in pdf
-      # pagodo, default of script
-      cd pagodo/ 
-      . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
-          "../reports/wordlist/wordlist.txt"  "custom"
-      cd ..
-			rm -rf reports/db/wordlist.blob.txt
-			exit 0
-		else
-			echo -e "\033[31mError in save the wordlist\033[32m"
-			exit 1
-		fi
+	if [ "$?" == "0" ]
+	then
+		echo -e "$green Wordlist has been saved in\n$orange./reports/wordlist/wordlist.txt$end"
+		# clear trash files
+    # Report in pdf
+    # pagodo, default of script
+    cd pagodo/ 
+    . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
+        "../reports/wordlist/wordlist.txt" "custom"
+    cd ..
+	  rm -rf reports/db/wordlist.blob.txt
+		exit 0
+	else
+		echo -e "$red Error in save the wordlist $green"
+		exit 1
+	fi
 }
 # Cus of custom :] | Staps
 # 1 - Get text
@@ -196,8 +181,8 @@ __cus() {
   [ $2 ] && export save="$2" || export save="_wordlist.txt"
   echo "$save"
   echo "Processing all data..."
-  python3 "modules/generator.py" "$(cat $1 | awk '{ gsub("['–',',']","");print }')"  >> "$save" && \
-    ( echo -e "[\e[92m✔\e[m] Wordlist been created in $save"; exit 0 ) || \
-    echo -e "[\e[31m✘\e[m] Error fatal, don't create file"; exit 2
+  python3 "modules/generator.py" "$1" >> "$save" && \
+    ( echo -e "$correct Wordlist been created in $save"; exit 0 ) || \
+    echo -e "$incorrect Error fatal, don't create file"; exit 2
 
 }
