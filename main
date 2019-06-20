@@ -5,9 +5,7 @@ here=`dirname "$0"`
 cd "$here"
 
 # colors art
-green='\e[32m'
-bgred='\e[41m'
-red='\e[31m'
+. ./modules/colors.sh
 # Banner
 echo -e """
 $red	               /\ o 
@@ -25,14 +23,18 @@ $red	               /\ o
            {{{{{{{;.___.;}}&&&&
             '{{{{{{)   (}}|//&
              ´''''':   :''''´
-	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault\e[m $red]
+	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end $red]
 """
 
 # ignore lower and uppercase
 shopt -s nocasematch
 # and colors with dont fuck terminal
-printf "\033[0m"
+printf "$end"
 # Vars
+bug="""
+  You can report new bug or open a issue
+  \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
+"""
 help="""
     D4N155: Tool for smart audit security
 
@@ -65,7 +67,10 @@ help="""
 
 # All functions
 . modules/functions.sh
+. modules/load.sh
+printf "\033[32m"
 
+trap -- "printf \"\n$bug\";exit 2" "SIGINT"
 # menu interative
 __interative(){
 	printf "\033[0m"
@@ -156,7 +161,7 @@ else
         # Exists $narg? Then ok,  go go
 				echo "Find to vulnerabilties"
         echo "$narg"
-			  [ "$narg" ] && __vul "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+			  [ "$narg" ] && __vul "$narg" || ( echo -e " $orange → bash main --help$end ";exit 2 )
         
         util=$(($util+1))
 				;;&
@@ -164,15 +169,15 @@ else
         echo "Make custom wordlist"
         if [ $save ]
         then
-            [ "$narg" ] && __cus "$narg" "$save" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2)
+            [ "$narg" ] && __cus "$narg" "$save" || ( echo -e " $orange → bash main --help$end ";exit 2)
         else
-            [ "$narg" ] && __cus "$narg" || ( echo -e "\e[33m→ bash main --help\e[m";exit 2 )
+            [ "$narg" ] && __cus "$narg" || ( echo -e " $orange → bash main --help$end ";exit 2 )
         fi
 
         util=$(($util+1))
         ;;
 			--t* | "-t")
-				echo -e "Targets inputed in \e[33m$narg\e[32m"
+				echo -e "Targets inputed in  $orange $narg $green "
 				__fwordlist "$narg" "" "$time" 
 
         
