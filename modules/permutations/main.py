@@ -4,7 +4,7 @@
 global_list = []
 # Texts to numbers 
 def textnumber(x):
-    return x.translate(str.maketrans('aeioAEIOBTbt', '431043108787'))
+    return x.translate(str.maketrans('aeioAEIOBTbtsS', '43104310878755'))
 # make the number
 def counting1(x):
     return x+"1"
