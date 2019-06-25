@@ -1,8 +1,8 @@
-FROM alpine
-
-RUN apk update && apk add python3
-WORKDIR /root
+FROM python:3
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt && pip install flask
 COPY . .
-RUN pip3 install -r requirements.txt
-ENTRYPOINT bash main
+CMD [ "python", "./app.py" ]
+EXPOSE 5000
 
