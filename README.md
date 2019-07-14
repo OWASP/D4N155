@@ -1,5 +1,5 @@
-# D4N155 
-[![Documentation Status](https://readthedocs.org/projects/d4n155/badge/?version=documentation)](https://d4n155.readthedocs.io/en/documentation/?badge=documentation) [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE) 
+# D4N155
+[![Documentation Status](https://readthedocs.org/projects/d4n155/badge/?version=documentation)](https://d4n155.readthedocs.io/en/documentation/?badge=documentation) [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE)
 
 It's an information security audit tool that creates intelligent wordlists based on the content of the target page and Google hacking attack
 
@@ -60,7 +60,7 @@ bash main
 
 
 # HARDWARE REQUIREMENTS:
-## CPU 
+## CPU
 * Dual Core or Better
 * Native Support to Multi-Thread
 
@@ -76,18 +76,38 @@ bash main
 * requests==2.20.1
 * mechanicalsoup
 
-## Support Docker
+## Support Docker - DEV
 
-### Create Image Docker
-Create image for D4N155 using Docker
+### D4N155 (CLI)
+#### Create Image Docker
+Go to the **docker** directory, now let's go to the **cli** directory
+
+Create image for **D4N155** using Docker
 ```sh
-docker build -t "D4N155:1" .
+docker build -t "d4n155:1" .
 ```
 
 ### Using Docker
 Using Image
 ```sh
-docker run -it --rm "d4n155:1"
+sudo docker container run -it --rm "d4n155:cli" -h
+```
+
+### Using Volumes
+```sh
+sudo docker run --rm -it --name devtest --mount type=bind,source="$(pwd)",target=/root/d4n155 "d4n155:cli" -w /root/D4N155/teste.txt businesscorp.com.br
+```
+
+### D4N155 (WEB)
+#### Build image
+Create image for **D4N155** using Docker
+```sh
+docker build -t "d4n155:1" .
+```
+
+#### Run image
+```sh
+docker run -p 5000:5000 -it --rm "d4n155:1"
 ```
 
 

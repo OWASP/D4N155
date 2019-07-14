@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: flask
+    container_name: app
+    build: .
+    volumes:
+    - .:/usr/src/app
+    command: bash -c 'python3 app.py'
+    ports:
+    - 80:5000
