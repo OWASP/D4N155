@@ -158,11 +158,8 @@ __fwordlist (){
 		echo -e "$green Wordlist has been saved in\n$orange./reports/wordlist/wordlist.txt$end"
 		# clear trash files
     # Report in pdf
-    # pagodo, default of script
-    cd pagodo/ 
-    . ../modules/report/main.sh "../$1" "../reports/db/wordlist.blob.txt" \
-        "../reports/wordlist/wordlist.txt" "custom"
-    cd ..
+    . ./modules/report/main.sh "$1" "reports/db/wordlist.blob.txt" \
+        "reports/wordlist/wordlist.txt" "custom"
 	  rm -rf reports/db/wordlist.blob.txt
 		exit 0
 	else
