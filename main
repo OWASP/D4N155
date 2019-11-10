@@ -44,7 +44,6 @@ help="""
     Options:
     	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
-	-v, --vulners	<url|ip>	Get urls that can cause attacks.
 	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
 	-b, --based	<file>		Analyze texts to generate the
@@ -71,29 +70,11 @@ help="""
 printf "\033[32m"
 
 trap -- "printf \"\n$bug\";exit 2" "SIGINT"
-# menu interative
-__interative(){
-	printf "\033[0m"
-	PS3="D4N155%#~> "
-	select option in "Find vulnerabilities" "Make wordlist"
-	do
-		case $option in
-			"Find vulnerabilities")
-				__vul
-				;;
-			"Make wordlist")
-				__wordlist
-				;;
-			*) echo -e "\033[31mRFTM\033[0m";exit ;;
-		esac
-	done
-	printf "\033[0m"
-}
 
 #	Menu
 if [[ ! "$1" ]]
 then
-  __interative
+  __wordlist
 else
 	# vars for iterations
 	i=1
@@ -154,14 +135,6 @@ else
 					       __wordlist "$narg" "" "$time"|| \
 					       __wordlist "$narg" "$save" "$time"
 				fi 
-        
-        util=$(($util+1))
-				;;&
-			--v* | -*v*)
-        # Exists $narg? Then ok,  go go
-				echo "Find to vulnerabilties"
-        echo "$narg"
-			  [ "$narg" ] && __vul "$narg" || ( echo -e " $orange → bash main --help$end ";exit 2 )
         
         util=$(($util+1))
 				;;&
