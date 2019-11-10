@@ -32,48 +32,6 @@ _checkTime(){
   fi
 }
 
-# Run the pagodo
-_checkVul(){
-  cd pagodo/
-	# It's good? Then go go go go
-	_load "$orange Find vulners urls $green " "python3 pagodo.py -d $target -g google_dorks.txt -l 40 -s -e 1"
-	if [ "$?" = "0" ]
-	then
-		mv $target.txt ../reports/
-    if [ "$?" == "0" ]
-    then
-			echo "Finalized attack to $target, see in reports/$target.txt"
-    else
-      echo -e "$green The file dont has been saved, The result are found?$green"
-      exit 2
-    fi
-	else
-		echo -e "Error: in $green pagodo.py$orange\nrun: pip3 install -r requirements.txt$green"
-	fi
-	cd ../
-}
-
-# Get expression and get all dorks of google hacking
-# All vul. pages and routers :]
-__vul(){
-	# Check arguments
-	if [ "$1" ]
-	then
-		echo "Attacking $1"
-		target="$1"
-	else
-		printf "Target is: $1"; read target
-	fi
-  # Update list of dork
-  _updateDB
-
-	# Make the attack
-	echo -e "$orange Benning attack using diferents user agents ;)$green"
-	echo "It will to delay..."
-  # Attack
-  _checkVul  
-}
-
 # Get expression and get all pages indexes of google
 # 1# just read page
 # 2# get all texts, alts etc.
@@ -109,18 +67,18 @@ __wordlist(){
   # Run pagodo for get all urls
   cd pagodo/
 	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
-  cd ../
 
   # If get all ok then:
 	if [ "$?" = "0" ]
 	then
-		mv "pagodo/$target.txt" "reports/db/"
-    
+		cd ..
+		mv "pagodo/$target.txt" "reports/db/" 2> /dev/null
+
     if [ "$?" == "0" ]
     then
 			echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
     else
-      echo -e "$red The file dont has been saved, the result are found?$green"
+      echo -e "$red The file dont has been saved, the result was found?$green"
       exit 2
     fi
 
@@ -139,7 +97,7 @@ __wordlist(){
 		rm -rf reports/db/$target.*
 		exit 0
 	else
-		echo -e "Error: in$red pagodo.py$orange \nrun: pip3 install -r requirements.txt$green"
+		echo -e "Error: in$red pagodo.py$green\n"
 	fi
 }
 
