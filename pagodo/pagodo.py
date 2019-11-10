@@ -7,14 +7,12 @@ import random
 import sys
 import time
 
-# google == 2.0.1, module author changed import name to googlesearch
-# https://github.com/MarioVilas/googlesearch/commit/92309f4f23a6334a83c045f7c51f87b904e7d61d
 try:
     import googlesearch  # noqa
     import numpy
 
 except ModuleNotFoundError:
-    print("\033[31mYou dont install requeriments.txt?\n → googlesearch\033[32m")
+    print("\033[31mYou dont install requeriments.txt?\n → pip3 install -r requirements.txt\033[32m")
     exit(2)
 
 # Custom Python libraries.
@@ -134,7 +132,6 @@ class Pagodo:
             except Exception as e:
                 print(f"[\033[31m ✘ \033[m] Error")
                 print(f"[\033[31m ✘ \033[m] EXCEPTION: {e}")
-
             i += 1
 
         self.fp.close
