@@ -8,8 +8,7 @@ It's an information security audit tool that creates intelligent wordlists based
 [See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
 
 # Use
-Need to:[Python3.6](https://realpython.com/installing-python/),
-[Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
+Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
@@ -42,7 +41,6 @@ bash main
     Options:
 	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
 					on website.
-	-v, --vulners	<url|ip>	Get urls that can cause attacks.
 	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
 	-b, --based	<file>		Analyze texts to generate the
