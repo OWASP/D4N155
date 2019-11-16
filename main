@@ -62,7 +62,7 @@ help="""
      Version: 0.50 (Dev)
 
      It's GNU/GPL version 3
-     Project page: https://github.com/adasecurity/D4N155"""
+     Project page: https://github.com/owasp/D4N155"""
 
 # All functions
 . modules/functions.sh
