@@ -16,14 +16,14 @@ $red	               /\ o
                 .{{}}}}}}.
                {{{{{}}}}}}}.
               {{{{    {}{{}}}}
-             }}}}} _   _ {{{{{
-             }}}}  a   a  }}}&
-            {{{{{    ^    {{{&
-           }}}}}}\  .=.  /}}&&&
-           {{{{{{{;.___.;}}&&&&
-            '{{{{{{)   (}}|//&
+             }}}}} -   - {{{{{
+             }}}}  0   0  }}}&
+            {{{{{---~^~---{{{&
+           }}}}}}\   ☭   /}}&&&
+           {{{{{{{;._  .;}}&&&&
+            '{{{{{{) \_(}}|//&
              ´''''':   :''''´
-	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end $red]
+             [ \e[5m$bgred\033[38;5;232mOWASP D4N155$end $red]
 """
 
 # ignore lower and uppercase
@@ -31,6 +31,7 @@ shopt -s nocasematch
 # and colors with dont fuck terminal
 printf "$end"
 # Vars
+export agressive="0"
 bug="""
   You can report new bug or open a issue
   \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
@@ -50,16 +51,17 @@ help="""
 		                        custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
+        -a, --agressive                 Read agressive with JS
     	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
      	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	TIME				Time, example: 2.5. I.e: 00:00:02:30. 0 are default
 	FILE				File, for save the result, get urls or using in
 					 wordlist
 
-     Version: 0.50 (Dev)
+     Version: 1.0
 
      It's GNU/GPL version 3
      Project page: https://github.com/owasp/D4N155"""
@@ -112,6 +114,10 @@ else
         --r* | "-r")
           export time="$dest"
           ;;
+        --a* | -*a*)
+          export agressive="1"
+          _checkGecko
+          ;;
 			esac
 
 			# For work in loop
@@ -149,7 +155,7 @@ else
 
         util=$(($util+1))
         ;;
-			--t* | "-t")
+			--t* | -*t*)
 				echo -e "Targets inputed in  $orange $narg $green "
 				__fwordlist "$narg" "" "$time" 
 
