@@ -61,7 +61,7 @@ help="""
 	FILE				File, for save the result, get urls or using in
 					 wordlist
 
-     Version: 1.0
+     Version: 0.9
 
      It's GNU/GPL version 3
      Project page: https://github.com/owasp/D4N155"""
