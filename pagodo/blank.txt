@@ -1,2 +1,1 @@
-site:
-filetype:html,php,asp
+filetype:html|php|txt|asp|aspx
