@@ -9,7 +9,7 @@
   cat "$1" | while read url 
 		do
 			echo "$url";
-			python3 "objetive/objetive.py" "$url" \
+			bash "modules/operations/read.sh" "$url" \
 				>> "reports/db/$2.blob.txt" && \
 				echo -e ":.........................................$correct" || \
 			  echo -e ":.........................................$incorrect"
