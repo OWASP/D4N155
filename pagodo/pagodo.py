@@ -61,7 +61,7 @@ class Pagodo:
                 # Search for the links to collect.
                 if self.domain:
                     # site: must be at the beginning of the query.
-                    query = f"site:{self.domain} {dork}"
+                    query = f"site:{self.domain}"
                 else:
                     query = dork
 
