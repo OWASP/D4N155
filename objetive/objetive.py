@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-#from func_timeout import func_timeout, FunctionTimedOut
-import sys
+from sys import argv
 import mechanicalsoup # needed
 
 args = 0
@@ -8,7 +7,7 @@ args = 0
 browser = mechanicalsoup.StatefulBrowser()
 
 try:
-    status = browser.open(sys.argv[1]) # func_timeout(15, browser.open, args=sys.argv[1])
+    status = browser.open(argv[1])
 
     if 'text/' in status.headers['Content-Type']:
         pass

@@ -1,12 +1,12 @@
 # It module make the word list
-import sys 
+from sys import argv
 from multiprocessing.dummy import Pool as ThreadPool
 from permutations.main import *  # All modules for permutations
 details = False
 
 
 # Root text
-texts = open(sys.argv[1], 'r').read().split()
+texts = open(argv[1], 'r').read().split()
 new = []
 # Alternations
 texts = texts+list(map(inverter, texts))
