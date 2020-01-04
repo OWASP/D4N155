@@ -21,12 +21,10 @@ except ModuleNotFoundError:
 class Pagodo:
     """pagodo class object"""
 
-    def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
+    def __init__(self, domain, search_max, save_links, delay, jitter, randomize_user_agent):
         """Initialize Pagodo class object."""
 
         self.domain = domain
-        with open(google_dorks) as self.fp:
-            self.google_dorks = self.fp.read().splitlines()
         self.search_max = search_max
         self.save_links = save_links
         if save_links:
@@ -43,98 +41,81 @@ class Pagodo:
             with open("user_agents.txt") as fp:
                 self.random_user_agents = fp.readlines()
 
-        self.total_dorks = 0
 
     def go(self):
-        """Start pagodo Google dork scraping."""
 
-        # Initialize starting dork number.
-        i = 1
+        try:
 
-        for dork in self.google_dorks:
-            try:
-                dork = dork.strip()
+            self.links = []
 
-                # Stores URLs with files, clear out for each dork.
-                self.links = []
+            # Search for the links to collect.
+            if self.domain:
+                # site: must be at the beginning of the query.
+                query = f"site:{self.domain}"
 
-                # Search for the links to collect.
-                if self.domain:
-                    # site: must be at the beginning of the query.
-                    query = f"site:{self.domain}"
-                else:
-                    query = dork
-
-                """
-                Google search web GUI message for large search string queries:
-                    "the" (and any subsequent words) was ignored because we limit queries to 32 words.
-                """
-                # Search string is longer than 32 words.
-                if len(query.split(" ")) > 32:
-                    ignored_string = " ".join(query.split(" ")[32:])
-                    print(
-                        f"[\033[31m ✘ \033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
-                    )
-
-                    # Update query variable.
-                    updated_query = " ".join(query.split(" ")[0:32])
-
-                    # If original query is in quotes, append a double quote to new truncated updated_query.
-                    if query.endswith('"'):
-                        updated_query = f'{updated_query}"'
-
-                    print(f"[ ✔ ] New search query: {updated_query}")
-
-                pause_time = self.delay + random.choice(self.jitter)
-
-                # Determine User-Agent based off user preference.
-                if self.randomize_user_agent is False:
-                    user_agent = None
-                else:
-                    user_agent = random.choice(self.random_user_agents).strip()
-
+            """
+            Google search web GUI message for large search string queries:
+                "the" (and any subsequent words) was ignored because we limit queries to 32 words.
+            """
+            # Search string is longer than 32 words.
+            if len(query.split(" ")) > 32:
+                ignored_string = " ".join(query.split(" ")[32:])
                 print(
-                    f"[ ✔ ] Search using User-Agent '{user_agent}'"
+                    f"[\033[31m ✘ \033[m] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
                 )
 
-                for url in googlesearch.search(
-                    query,
-                    start=0,
-                    stop=self.search_max,
-                    num=100,
-                    pause=pause_time,
-                    extra_params={"filter": "0"},
-                    user_agent=user_agent,
-                    tbs="li:1",  # Verbatim mode.  Doesn't return suggested results with other domains.
-                ):
-                    self.links.append(url)
+                # Update query variable.
+                updated_query = " ".join(query.split(" ")[0:32])
 
-                # Since googlesearch.search method retreives URLs in batches of 100, ensure the file list only contains
-                # the requested amount.
-                if len(self.links) > self.search_max:
-                    self.links = self.links[: -(len(self.links) - self.search_max)]
+                # If original query is in quotes, append a double quote to new truncated updated_query.
+                if query.endswith('"'):
+                    updated_query = f'{updated_query}"'
+
+                print(f"[ ✔ ] New search query: {updated_query}")
+
+            pause_time = self.delay + random.choice(self.jitter)
+
+            # Determine User-Agent based off user preference.
+            if self.randomize_user_agent is False:
+                user_agent = None
+            else:
+                user_agent = random.choice(self.random_user_agents).strip()
+
+            print(
+                f"[ ✔ ] Search using User-Agent '{user_agent}'"
+            )
+
+            for url in googlesearch.search(
+                query,
+                start=0,
+                stop=self.search_max,
+                num=100,
+                pause=pause_time,
+                extra_params={"filter": "0"},
+                user_agent=user_agent,
+                tbs="li:1",  # Verbatim mode.  Doesn't return suggested results with other domains.
+            ):
+                self.links.append(url)
+
+            # Since googlesearch.search method retreives URLs in batches of 100, ensure the file list only contains
+            # the requested amount.
+            if len(self.links) > self.search_max:
+                self.links = self.links[: -(len(self.links) - self.search_max)]
 
 
-                for found_dork in self.links:
-                    print(found_dork)
+            # Only save links with valid results to an output file.
+            if self.save_links and (self.links):
+                with open(args.domain+".txt", "a") as fh:
+                    for link in self.links:
+                        fh.write(f"{link}\n")
 
-                self.total_dorks += len(self.links)
+        except KeyboardInterrupt:
+            sys.exit(0)
 
-                # Only save links with valid results to an output file.
-                if self.save_links and (self.links):
-                    with open(args.domain+".txt", "a") as fh:
-                        for link in self.links:
-                            fh.write(f"{link}\n")
+        except Exception as e:
+            print(f"[\033[31m ✘ \033[m] Error")
+            print(f"[\033[31m ✘ \033[m] EXCEPTION: {e}")
 
-            except KeyboardInterrupt:
-                sys.exit(0)
-
-            except Exception as e:
-                print(f"[\033[31m ✘ \033[m] Error")
-                print(f"[\033[31m ✘ \033[m] EXCEPTION: {e}")
-            i += 1
-
-        self.fp.close
 
 def get_timestamp():
     """Retrieve a pre-formated datetimestamp."""
@@ -150,9 +131,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork")
     parser.add_argument(
         "-d", dest="domain", action="store", required=False, help="Domain to search for Google dork hits."
-    )
-    parser.add_argument(
-        "-g", dest="google_dorks", action="store", required=True, help="File containing Google dorks, 1 per line."
     )
     parser.add_argument(
         "-j",
@@ -192,11 +170,7 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
-    if not os.path.exists(args.google_dorks):
-        print("[!] Specify a valid file containing Google dorks with -g")
-        sys.exit(0)
-
+ 
     if args.delay < 0:
         print("[!] Delay must be greater than 0")
         sys.exit(0)
