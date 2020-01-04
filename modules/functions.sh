@@ -93,7 +93,7 @@ __wordlist(){
 	
   # Run pagodo for get all urls
   cd pagodo/
-	python3 pagodo.py -d $target -g blank.txt -l 300 -s -e 1
+	python3 pagodo.py -d $target -l 300 -s -e 1
 
   # If get all ok then:
 	if [ "$?" = "0" ]
