@@ -74,9 +74,29 @@ printf "\033[32m"
 trap -- "printf \"\n$bug\";exit 2" "SIGINT"
 
 #	Menu
+__interative(){
+	printf "\033[0m"
+	PS3="D4N155%#~> "
+	select option in "Make wordlist tradicional" "Make wordlist agressive"
+	do
+		case $option in
+			"Make wordlist tradicional")
+        export agressive="0"
+				__wordlist
+				;;
+			"Make wordlist agressive")
+        export agressive="1"
+				__wordlist
+				;;
+			*) echo -e "\033[31mRFTM\033[0m";exit ;;
+		esac
+	done
+	printf "\033[0m"
+}
+
 if [[ ! "$1" ]]
 then
-  __wordlist
+  __interative
 else
 	# vars for iterations
 	i=1
