@@ -2,24 +2,9 @@
 
 # This file contains
 # Functions in order by
-# _vul
 # _wordlist
 # _fwordlist
 
-# Update db
-_updateDB(){
-	printf "$orange You want update the list Google hacking? (y/n)$green\n → "
-	read typed
-	case $typed in
-		"Yes" | y*)
-			echo "Updating database"
-			echo "`python3 pagodo/ghdb_scraper.py`"
-		;;
-		"No" | n*)
-			echo "OK ..."
-		;;
-	esac
-}
 
 # Check Time format
 _checkTime(){
