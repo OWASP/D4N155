@@ -27,7 +27,7 @@ pip3 install -r requirements.txt
 bash main
 ```
 
-[![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
+[![asciicast](https://asciinema.org/a/294029.svg)](https://asciinema.org/a/294029)
 
 # Manual
     D4N155: Tool for smart audit security
