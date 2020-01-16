@@ -59,58 +59,48 @@ __wordlist(){
     
     # Checking time parse
     [ "$3" != ""  ] && export time="$3" || export time="0"
-	else
-		printf "Target is: $1"; read target
+  else
+    printf "Target is: $1"; read target
     target="$(printf $target | awk '{ gsub("['/',':','-']","");print }')";
 
     # Get time rate
     printf "Time interval in seconds (Default: -1): ";read settime
     _checkTime 
-  fi
-
-  # Define destination to save
-	[ "$#" == "2" ] && \
-		export dest="$2" || \
-		export dest="reports/wordlist/$target.wordlist.txt"
-	
-	# Make the attack
-	echo -e "$orange Beginning attack, with Google indexations$end"
-	
-  # Run pagodo for get all urls
-  cd pagodo/
-	python3 pagodo.py -d $target -l 300 -s -e 1
-
-  # If get all ok then:
-	if [ "$?" = "0" ]
-	then
-		cd ..
-		mv "pagodo/$target.txt" "reports/db/" 2> /dev/null
-
-    if [ "$?" == "0" ]
-    then
-			echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
-    else
-      echo -e "$red The file dont has been saved, the result was found?$green"
-      exit 2
     fi
 
-		echo "Make the wordlist *-*"
-    
-    . modules/operations/calc.sh "reports/db/$target.txt" "$target" "$dest"
+  # Define destination to save
+  [ "$#" == "2" ] && \
+    export dest="$2" || \
+    export dest="reports/wordlist/$target.wordlist.txt"
 
-		test "$?" == 0 && \
-		  echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
-			exit 1
+  # Make the attack
+  echo -e "$orange Beginning attack, with Google indexations$end"
 
-			# clear trash files
-      # Call report pdf
-    . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
-      "$dest"  "$target"
-		rm -rf reports/db/$target.*
-		exit 0
-	else
-		echo -e "Error: in$red pagodo.py$green\n"
-	fi
+  # Run GeTrails
+  python3 getrails/search.py "site: $target" > reports/db/$target.txt
+
+  if [ "$?" == "0" ]
+  then
+    echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
+  else
+    echo -e "$red The file dont has been saved, the result was found?$green"
+    exit 2
+  fi
+
+  echo "Make the wordlist *-*"
+
+  . modules/operations/calc.sh "reports/db/$target.txt" "$target" "$dest"
+
+  test "$?" == 0 && \
+    echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
+    exit 1
+
+  # clear trash files
+  # Call report pdf
+  . modules/report/main.sh "reports/db/$target.txt" "reports/db/$target.blob.txt" \
+    "$dest"  "$target"
+  rm -rf reports/db/$target.*
+  exit 0
 }
 
 # _fwordlist
