@@ -45,7 +45,7 @@ bash main
 					custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
-  -?a, --aggressive      Aggressive reading with headless
+  	-?a, --aggressive      Aggressive reading with headless
 	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
