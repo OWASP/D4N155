@@ -31,7 +31,7 @@ shopt -s nocasematch
 # and colors with dont fuck terminal
 printf "$end"
 # Vars
-export agressive="0"
+export aggressive="0"
 bug="""
   You can report new bug or open a issue
   \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
@@ -51,7 +51,7 @@ help="""
 		                        custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
-        -?a, --agressive                Aggressive reading with headless
+        -?a, --aggressive                Aggressive reading with headless
     	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
@@ -77,15 +77,15 @@ trap -- "printf \"\n$bug\";exit 2" "SIGINT"
 __interative(){
 	printf "\033[0m"
 	PS3="D4N155%#~> "
-	select option in "Make wordlist tradicional" "Make wordlist agressive"
+	select option in "Make wordlist tradicional" "Make wordlist aggressive"
 	do
 		case $option in
 			"Make wordlist tradicional")
-        export agressive="0"
+        export aggressive="0"
 				__wordlist
 				;;
-			"Make wordlist agressive")
-        export agressive="1"
+			"Make wordlist aggressive")
+        export aggressive="1"
 				__wordlist
 				;;
 			*) echo -e "\033[31mRFTM\033[0m";exit ;;
@@ -135,7 +135,7 @@ else
           export time="$dest"
           ;;
         --a* | -*a*)
-          export agressive="1"
+          export aggressive="1"
           _checkGecko
           ;;
 			esac
