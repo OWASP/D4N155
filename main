@@ -51,7 +51,7 @@ help="""
 		                        custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
-        -?a, --agressive                Read agressive with JS 
+        -?a, --agressive                Aggressive reading with headless
     	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
