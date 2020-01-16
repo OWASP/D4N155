@@ -7,7 +7,7 @@ args = 0
 browser = mechanicalsoup.StatefulBrowser()
 
 try:
-    status = browser.open(argv[1])
+    status = browser.open(f'http://{argv[1]}')
 
     if 'text/' in status.headers['Content-Type']:
         pass
