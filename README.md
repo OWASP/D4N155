@@ -7,7 +7,7 @@ It's an information security audit tool that creates intelligent wordlists based
 
 [See some calculations used](https://www2.owasp.org/www-project-d4n155/#div-operations)
 
-# Use
+# Install
 Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Groff](https://www.gnu.org/software/groff/)
@@ -30,6 +30,7 @@ bash main
 [![asciicast](https://asciinema.org/a/294029.svg)](https://asciinema.org/a/294029)
 
 # Manual
+```
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
@@ -53,4 +54,4 @@ bash main
 	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
 	FILE				File, for save the result, get urls or using in
 					wordlist
-
+```
