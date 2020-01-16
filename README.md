@@ -51,7 +51,7 @@ bash main
      Value: <url | ip | source | file | time>
 	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	TIME				Time, example: 2.5. I.e: 00:00:02:30.. 0 are default
 	FILE				File, for save the result, get urls or using in
 					wordlist
 ```
