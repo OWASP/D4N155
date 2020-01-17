@@ -1,0 +1,15 @@
+remote_theme: "owasp/www--site-theme"
+
+# main text of home
+name: OWASP D4N155
+bio: Make smart wordlist with OSINT
+
+picture: assets/img/logo.jpg
+
+url: http://d4n155.spks.cc/
+
+# if you don't have any of social below, comment the line
+#facebook: myfacebook
+#twitter: mytwitter
+github: owasp
+email: julio.lira@owasp.org
