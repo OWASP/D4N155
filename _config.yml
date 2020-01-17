@@ -1,5 +1,3 @@
-remote_theme: sergiokopplin/violet
-
 # main text of home
 name: OWASP D4N155
 bio: Make smart wordlist with OSINT
@@ -15,3 +13,4 @@ github: owasp
 email: julio.lira@owasp.org
 
 #theme: jekyll-theme-slate
+remote_theme: sergiokopplin/violet
