@@ -13,3 +13,5 @@ url: http://d4n155.spks.cc/
 #twitter: mytwitter
 github: owasp
 email: julio.lira@owasp.org
+
+theme: jekyll-theme-slate
