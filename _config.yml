@@ -1,4 +1,4 @@
-#remote_theme: "sergiokopplin/violet"
+remote_theme: "sergiokopplin/violet"
 
 # main text of home
 name: OWASP D4N155
@@ -6,7 +6,7 @@ bio: Make smart wordlist with OSINT
 
 picture: assets/img/logo.jpg
 
-url: http://d4n155.spks.cc/
+url: http://d4n155.spks.cc
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
@@ -14,4 +14,4 @@ url: http://d4n155.spks.cc/
 github: owasp
 email: julio.lira@owasp.org
 
-theme: jekyll-theme-slate
+#theme: jekyll-theme-slate
