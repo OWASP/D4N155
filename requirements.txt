@@ -1,6 +1,0 @@
-beautifulsoup4==4.6.3
-google==2.0.3
-numpy==1.15.4
-requests==2.20.1
-mechanicalsoup==0.12.0
-selenium==3.14.1
