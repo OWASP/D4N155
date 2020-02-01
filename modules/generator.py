@@ -1,15 +1,14 @@
 # It module make the word list
-import sys 
+from sys import argv
 from multiprocessing.dummy import Pool as ThreadPool
 from permutations.main import *  # All modules for permutations
 details = False
 
-
-# Root text
-#texts = open(sys.argv[1], 'r').read().split()
 def main(texts):
+    # Root text
+    texts = texts.split()
     # Alternations
-    texts = [texts] + list(map(inverter, texts))
+    texts = texts+list(map(inverter, texts))
     pool = ThreadPool(2)
     def run(fuction,value):
         # Thread will be parameter type flag
@@ -42,11 +41,15 @@ def main(texts):
         blob = blob + run(inverter, texts)
         blob = blob + run(uppall, texts)
         blob = blob + run(lowera, texts)
+        # EX
+        # New Yeah : → "YeahNew"
+        blob = blob + comb(texts)
         
         # Are finals test details
         if details == True:
             blob = blob + pool.comb(blob)
 
         return blob
+
     # Reduce all output for best precision
     return '\n'.join(set(texts+make()))
