@@ -4,6 +4,7 @@ import os
 os.sys.path.append('modules/')
 from generator import main
 
+port = int(os.environ.get("PORT", 5000))
 app = Flask(__name__)
     
 # See all report
@@ -11,7 +12,7 @@ app = Flask(__name__)
 def index():
     # Get all registers in DB
     return jsonify(result = "Get all registers")
-
+# See report {id}
 @app.route('/<param>')
 def show(param):
     # Get id in DB
@@ -26,4 +27,4 @@ def gen(param):
     return resp
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0', port=5000)
+    app.run(debug=True,host='0.0.0.0', port=port)
