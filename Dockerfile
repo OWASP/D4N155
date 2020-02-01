@@ -3,5 +3,4 @@ WORKDIR /usr/src/app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt && pip install flask
 CMD [ "python", "./app.py" ]
-EXPOSE 5000
 
