@@ -19,6 +19,8 @@ def counting8(x):
 def counting81(x):
     return x+"87654321"
 # Weaks year
+def year20(x):
+    return x+"2020"
 def year9(x):
     return x+"2019"
 def year8(x):
