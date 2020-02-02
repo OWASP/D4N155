@@ -26,7 +26,8 @@ def main(texts):
         blob = blob + run(counting8, texts)
         blob = blob + run(counting81, texts)
         #   EX
-        # year9 : → x+"2019"
+        # year9 : → x+"2020"
+        blob = blob + run(year20, texts)
         blob = blob + run(year9, texts)
         blob = blob + run(year8, texts)
         blob = blob + run(year7, texts)
@@ -52,4 +53,5 @@ def main(texts):
         return blob
 
     # Reduce all output for best precision
-    return '\n'.join(set(texts+make()))
+    result = set(texts+make())
+    return { "data": ', '.join(result), "length": len(result) }
