@@ -14,6 +14,7 @@ msg = "Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, b
 @app.route('/')
 def index():
     # Get all registers in DB
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return jsonify(result = "Get all data", helpus = "{}".format(msg))
 
 # See all urls of domain
@@ -22,12 +23,14 @@ def domain(param):
     # Get id in DB
     get_urls = search_now("site:{}".format(param))
     response = jsonify(result = get_urls, helpus = "{}".format(msg))
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 # Make new analyze
 @app.route('/make/<param>')
 def make(param):
     response = jsonify(result = main(param), helpus = "{}".format(msg))
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 if __name__ == '__main__':
