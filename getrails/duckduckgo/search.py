@@ -27,6 +27,6 @@ def go_duck(query):
             list1.append(link.text.replace('\n',''))
 
         check()
-        return '\n'.join(filter(bool, list1))
+        return ', '.join(filter(bool, list1))
 
     return read_urls().replace(' ','')

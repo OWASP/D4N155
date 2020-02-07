@@ -14,4 +14,4 @@ def go_gle (query):
                    ):
         my_results_list.append(i)
 
-    return '\n'.join(my_results_list)
+    return ', '.join(my_results_list)
