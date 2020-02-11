@@ -29,4 +29,4 @@ def go_duck(query):
         check()
         return ', '.join(filter(bool, list1))
 
-    return read_urls().replace(' ','')
+    return read_urls().replace(' ','').split(",")

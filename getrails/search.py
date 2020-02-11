@@ -9,5 +9,5 @@ def search_now (query):
         result = go_duck(query)
     except:
         result = go_duck(query)
-    return result
+    return { "data": result, "length": len(result) }
 
