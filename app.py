@@ -1,6 +1,8 @@
+import os
+from objetive import objetive
 from flask import Flask
 from flask import jsonify
-import os
+from flask import request
 os.sys.path.append('getrails/')
 from getrails.search import search_now
 os.sys.path.append('modules/')
@@ -15,6 +17,15 @@ msg = "Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, b
 def index():
     # Get all registers in DB
     response = jsonify(result = "Get all data", helpus = "{}".format(msg)) 
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
+
+# Read url contents
+@app.route('/domain/')
+def read_page():
+    # Get id in DB
+    read_url = objetive.main(request.args['url'])
+    response = jsonify(result = read_url, helpus = "{}".format(msg))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
