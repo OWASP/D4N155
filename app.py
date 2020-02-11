@@ -16,8 +16,7 @@ def index():
     # Get all registers in DB
     response = jsonify(result = "Get all data", helpus = "{}".format(msg)) 
     response.headers['Access-Control-Allow-Origin'] = '*'
-    return response 
-
+    return response
 
 # See all urls of domain
 @app.route('/domain/<param>')
