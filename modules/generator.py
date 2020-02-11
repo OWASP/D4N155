@@ -53,5 +53,5 @@ def main(texts):
         return blob
 
     # Reduce all output for best precision
-    result = set(texts+make())
-    return { "data": ', '.join(result), "length": len(result) }
+    result = texts+make()
+    return { "data": result, "length": len(result) }
