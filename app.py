@@ -24,7 +24,7 @@ def index():
 @app.route('/domain/')
 def read_page():
     # Get id in DB
-    read_url = objetive.main(request.args['url'])
+    read_url = main(objetive.main(request.args['url']))
     response = jsonify(result = read_url, helpus = "{}".format(msg))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
@@ -46,4 +46,5 @@ def make(param):
     return response
 
 if __name__ == '__main__':
+    app.config['JSON_AS_ASCII'] = False
     app.run(debug=True,host='0.0.0.0', port=port)
