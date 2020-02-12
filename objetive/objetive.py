@@ -30,7 +30,7 @@ def main(url):
         for link in browser.get_current_page().select('a'):
             value = value + link.text + ' '
 
-        return value.translate(str.maketrans('', '','–,'))
+        return value.translate(str.maketrans(' ', ' ', '\n\t')).replace('—','').replace(',','').replace('|','')
     # All texts
     try:
         return all()
