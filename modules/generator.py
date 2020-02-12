@@ -53,6 +53,6 @@ def main(texts, limit = 500):
         return blob
 
     # Reduce all output for best precision
-    result = make()+text
+    result = make()+texts
     result = result[:limit]
     return { "data": result, "length": len(result) }
