@@ -21,10 +21,10 @@ def index():
     return response
 
 # Read url contents
-@app.route('/domain/')
-def read_page():
+@app.route('/domain/<limit>')
+def read_page(limit):
     # Get id in DB
-    read_url = main(objetive.main(request.args['url']))
+    read_url = main(objetive.main(request.args['url']), int(limit))
     response = jsonify(result = read_url, helpus = "{}".format(msg))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
