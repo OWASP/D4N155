@@ -1,5 +1,5 @@
 import os
-from objetive import objetive
+import objetive
 from flask import Flask
 from flask import jsonify
 from flask import request
@@ -24,7 +24,7 @@ def index():
 @app.route('/domain/<limit>')
 def read_page(limit):
     # Get id in DB
-    read_url = main(objetive.main(request.args['url']), int(limit))
+    read_url = main(objetive.text(request.args['url']), int(limit))
     response = jsonify(result = read_url, helpus = "{}".format(msg))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
