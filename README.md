@@ -8,7 +8,12 @@ Test: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%2
 |:--------:|:----:|:--------:|
 |   GET    |/make/:word|Operations|
 |   GET    |/domain/:domain|Get all urls of Domain|
+|   GET    |/domain/:number-limit:url|Get wordlist|
 
+# Example
+* [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%20param) `// Limit: 500 :(`
+* [d4n155.herokuapp.com/domain/scanme.nmap.org](https://d4n155.herokuapp.com/make/scanme.nmap.org)
+* [d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/](https://d4n155.herokuapp.com/make/test%20param)
 
 # Run local
 ```sh
