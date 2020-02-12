@@ -4,7 +4,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 from permutations.main import *  # All modules for permutations
 details = False
 
-def main(texts):
+def main(texts, limit = 500):
     # Root text
     texts = texts.split()
     # Alternations
@@ -53,5 +53,6 @@ def main(texts):
         return blob
 
     # Reduce all output for best precision
-    result = texts+make()
+    result = make()+text
+    result = result[:limit]
     return { "data": result, "length": len(result) }
