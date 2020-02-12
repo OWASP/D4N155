@@ -1,5 +1,6 @@
 # It module make the word list
 from sys import argv
+from ix import ix_api
 from multiprocessing.dummy import Pool as ThreadPool
 from permutations.main import *  # All modules for permutations
 details = False
@@ -53,6 +54,13 @@ def main(texts, limit = 500):
         return blob
 
     # Reduce all output for best precision
-    result = make()+texts
-    result = result[:limit]
-    return { "data": result, "length": len(result) }
+    all_result = make()+texts
+    result = all_result[:limit]
+    return { 
+            "wordlist": { 
+                "url": ix_api('\n'.join(all_result)), 
+                "length": len(all_result)
+                }, 
+            "data": result, 
+            "length": len(result) 
+            }
