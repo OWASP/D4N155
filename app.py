@@ -3,8 +3,7 @@ import objetive
 from flask import Flask
 from flask import jsonify
 from flask import request
-os.sys.path.append('getrails/')
-from getrails.search import search_now
+from getrails import search
 os.sys.path.append('modules/')
 from generator import main
 
@@ -21,7 +20,7 @@ def index():
     return response
 
 # Read url contents
-@app.route('/domain/<limit>')
+@app.route('/domain/<int:limit>')
 def read_page(limit):
     # Get id in DB
     read_url = main(objetive.text(request.args['url']), int(limit))
@@ -33,8 +32,8 @@ def read_page(limit):
 @app.route('/domain/<param>')
 def domain(param):
     # Get id in DB
-    get_urls = search_now("site:{}".format(param))
-    response = jsonify(result = get_urls, helpus = "{}".format(msg))
+    get_urls = search("site:{}".format(param))
+    response = jsonify({ "result": { "data": get_urls, "length": len(get_urls) }, "helpus": msg })
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
