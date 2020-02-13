@@ -2,5 +2,6 @@ beautifulsoup4==4.6.3
 google==2.0.1
 requests==2.20.1
 objetive==0.5
+getrails==1.4
 mechanicalsoup
 Flask
