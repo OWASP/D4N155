@@ -1,4 +1,3 @@
-# It module make the word list
 from sys import argv
 from multiprocessing.dummy import Pool as ThreadPool
 from permutations.main import *  # All modules for permutations
@@ -11,7 +10,7 @@ new = []
 # Alternations
 texts = texts+list(map(inverter, texts))
 pool = ThreadPool(2)
-def run(fuction,value):
+def run(fuction, value):
     # Thread will be parameter type flag
     # --------------------| All word > 3 and < 30
     return list(filter(lambda x: True if (len(x) > 3 and len(x) < 30) else False, list(pool.map(fuction, value))))
@@ -28,6 +27,7 @@ def make():
     blob = blob + run(counting81, texts)
     #   EX
     # year9 : → x+"2019"
+    blob = blob + run(year20, texts)
     blob = blob + run(year9, texts)
     blob = blob + run(year8, texts)
     blob = blob + run(year7, texts)
@@ -45,7 +45,7 @@ def make():
     # EX
     # New Yeah : → "YeahNew"
     blob = blob + comb(texts)
-    
+
     # Are finals test details
     if details == True:
         blob = blob + pool.comb(blob)
