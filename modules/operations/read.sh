@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-# $1 = url
 
-if [  "$aggressive" == "0" ] 
-then
-  printf "$(python3 objetive/objetive.py "$1")"
-else
-  printf "$(python3 modules/aggressive-read.py "$1")"
-fi
+# $1 = url
+_set_method(){
+  if [ "$aggressive" == "0" ]
+  then
+    printf '0'
+  else
+    printf '1'
+  fi
+}
+
+printf "$(python3 'modules/read.py' "$1" $(_set_method))"
