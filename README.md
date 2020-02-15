@@ -12,8 +12,8 @@ Test: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%2
 
 # Example
 * [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%20param) `// Limit: 500 :(`
-* [d4n155.herokuapp.com/domain/scanme.nmap.org](https://d4n155.herokuapp.com/make/scanme.nmap.org)
-* [d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/](https://d4n155.herokuapp.com/make/test%20param)
+* [d4n155.herokuapp.com/domain/scanme.nmap.org](https://d4n155.herokuapp.com/domain/scanme.nmap.org)
+* [d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/](https://d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/)
 
 # Run local
 ```sh
