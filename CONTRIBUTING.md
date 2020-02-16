@@ -7,8 +7,5 @@ There are mutliple ways to help beyond just writing code:
 
 # Contributing to D4N155
 If you want help for undestand the code contact us:
- * jul10l1r4@disroot.org (Julio Lira)
- * matheusoliveiratux4me@gmail.com (Matheus Oliveira)
- * x4fUz_K39z@tutanota.com (@sophiesch0ll)
-## Understand the code
-[![UML at D4N155](theories/uml.svg)](https://framindmap.org/c/maps/655325/public)
+ * julio.lira@owasp.org (Julio Lira)
+ * matheus.oliveira@owasp.org (Matheus Oliveira)
