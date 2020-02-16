@@ -1,6 +1,5 @@
-FROM python:3
-WORKDIR /usr/src/app
-COPY . .
-RUN pip install --no-cache-dir -r requirements.txt && pip install flask
-CMD [ "python", "./app.py" ]
-
+FROM debian:9-slim
+WORKDIR /root/
+RUN apt update && apt-get install python3-pip git -y
+RUN git clone https://github.com/OWASP/D4N155.git && cd D4N155 && pip3 install -r requirements.txt
+ENTRYPOINT ["bash"]
