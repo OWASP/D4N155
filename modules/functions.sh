@@ -77,7 +77,7 @@ __wordlist(){
   echo -e "$orange Beginning attack, with Google indexations$end"
 
   # Run GeTrails
-  python3 getrails/search.py "site: $target" > reports/db/$target.txt
+  python3 modules/search.py "site:$target" > reports/db/$target.txt
 
   if [ "$?" == "0" ]
   then

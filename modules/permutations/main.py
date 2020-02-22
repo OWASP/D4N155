@@ -27,6 +27,9 @@ def year7(x):
     return x+"2017"
 def year6(x):
     return x+"2016"
+def year20(x):
+    return x+"2020"
+
 
 # Variant, all uppercase or lowercase
 # Up, Low, and upper lower lower up

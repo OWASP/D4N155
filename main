@@ -71,7 +71,7 @@ help="""
 . modules/load.sh
 printf "\033[32m"
 
-trap -- "printf \"\n$bug\";exit 2" "SIGINT"
+trap -- "printf \"\n$bug\";kill $! &> /dev/null;exit 2" "SIGINT"
 
 #	Menu
 __interative(){
