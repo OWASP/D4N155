@@ -5,9 +5,9 @@ It's an information security audit tool that creates intelligent wordlists based
 
 [![asciicast](https://asciinema.org/a/294029.svg)](https://asciinema.org/a/294029)
 
-[Help us](https://www2.owasp.org/www-project-d4n155/#div-contributing) [See some calculations used](https://www2.owasp.org/www-project-d4n155/#div-operations)
+[Help us](https://www2.owasp.org/www-project-d4n155/#div-contributing), [See some calculations used](https://www2.owasp.org/www-project-d4n155/#div-operations)
 
-Ongoing projects :construction_worker:: [D4N155 in docker](https://github.com/OWASP/D4N155/tree/docker), [Web API D4N155](https://github.com/OWASP/D4N155/tree/api)
+Ongoing projects :construction_worker:: [D4N155 in docker :gift:](https://github.com/OWASP/D4N155/tree/docker), [Web API D4N155 :cloud:](https://github.com/OWASP/D4N155/tree/api)
 
 ## Install
 Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
