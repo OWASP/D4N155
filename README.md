@@ -1,5 +1,5 @@
 # D4N155
-![](https://img.shields.io/badge/Documentation-OFF-%23f00) [![made-with-bash](https://img.shields.io/badge/Made%20with-Flask-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE)
+![](https://img.shields.io/badge/Documentation-ON-%0f0) [![made-with-bash](https://img.shields.io/badge/Made%20with-Flask-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE)
 
 ## API project of D4N155
 See test app: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/param)
@@ -30,12 +30,44 @@ All response is `JSON` format.
   * `result`
   * * `result.data`: Result of wordlist __limit 500 :(__
   * * `result.length`: Length of wordlist returned in `result.data`
-  * * `wordlist`:
-  * * * `length`: Length of complete wordlist
-  * * * `url`: Link of wordlist
+  * * `result.wordlist`:
+  * * * `result.wordlist.length`: Length of complete wordlist
+  * * * `result.wordlist.url`: Link of wordlist
   
 ### localhost/domain/scanme.nmap.org
-### localhost/domain/500?url=http://scanme.nmap.org
+```JSON
+{
+  "helpus":"Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, branch: api",
+  "result":{
+    "data":["scanme.nmap.org","..."],
+    "length":4
+  }
+}
+```
+  * `result`
+  * * `result.data`: Result of domains
+  * * `result.length`: Number of domains
+  
+### localhost/domain/500?url=https://jul10l1r4.github.io
+```JSON
+{
+  "helpus":"Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, branch: api",
+  "result":{
+    "data":["mEDIUM/vAULcYBERsEC1","..."],
+    "length":500,
+    "wordlist":{
+      "length":48132,
+      "url":"http://ix.io/2bx9\n"
+    }
+  }
+}
+```
+  * `result`
+  * * `result.data`: Result of wordlist __limit 500 :(__
+  * * `result.length`: Length of wordlist returned in `result.data`
+  * * `result.wordlist`:
+  * * * `result.wordlist.length`: Length of complete wordlist
+  * * * `result.wordlist.url`: Link of wordlist
 
 ## Run local
 ```sh
