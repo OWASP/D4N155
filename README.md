@@ -2,18 +2,34 @@
 ![](https://img.shields.io/badge/Documentation-OFF-%23f00) [![made-with-bash](https://img.shields.io/badge/Made%20with-Flask-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE)
 
 ## API project of D4N155
-Test: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%20param)
+See test app: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/param)
 
-| PROTOCOL | PATH | FUNCTION |
-|:--------:|:----:|:--------:|
-|   GET    |/make/:word|Operations|
-|   GET    |/domain/:domain|Get all urls of Domain|
-|   GET    |/domain/:number-limit:url|Get wordlist|
+| PROTOCOL | PATH | FUNCTION | EXAMPLE |
+|:--------:|:----:|:--------:|:--------:|
+|   GET    |/make/:word|Operations|localhost/make/moscou%201918|
+|   GET    |/domain/:domain|Get all urls of Domain|localhost/domain/nmap.org|
+|   GET    |/domain/:number-limit:url|Get wordlist|localhost/domain/30?url=nmap.org|
 
-## Example
-* [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/test%20param) `// Limit: 500 :(`
-* [d4n155.herokuapp.com/domain/scanme.nmap.org](https://d4n155.herokuapp.com/domain/scanme.nmap.org)
-* [d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/](https://d4n155.herokuapp.com/domain/500?url=http://scanme.nmap.org/)
+### Response
+All response is `JSON` format.
+#### localhost/make/<param>
+  * `result.data`: limit 500 :(
+  ```JSON
+  {
+  "helpus": "Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, branch: api",
+  "result":
+    {
+      "data": ["<PARAm>1",...],
+      "length": 40,
+      "wordlist":{
+        "length": 40,
+        "url": "http://ix.io/2cEW\n"
+      }
+    }
+  }
+  ```
+### localhost/domain/scanme.nmap.org
+### localhost/domain/500?url=http://scanme.nmap.org
 
 ## Run local
 ```sh
