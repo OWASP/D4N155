@@ -13,13 +13,12 @@ See test app: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/mak
 ### Response
 All response is `JSON` format.
 #### localhost/make/<param>
-  * `result.data`: limit 500 :(
   ```JSON
   {
   "helpus": "Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, branch: api",
   "result":
     {
-      "data": ["<PARAm>1",...],
+      "data": ["<PARAm>1", "..."],
       "length": 40,
       "wordlist":{
         "length": 40,
@@ -28,6 +27,13 @@ All response is `JSON` format.
     }
   }
   ```
+  * `result`
+  * * `result.data`: Result of wordlist __limit 500 :(__
+  * * `result.length`: Length of wordlist returned in `result.data`
+  * * `wordlist`:
+  * * * `length`: Length of complete wordlist
+  * * * `url`: Link of wordlist
+  
 ### localhost/domain/scanme.nmap.org
 ### localhost/domain/500?url=http://scanme.nmap.org
 
