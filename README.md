@@ -10,6 +10,13 @@ See test app: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/mak
 |   GET    |/domain/:domain|Get all urls of Domain|localhost/domain/nmap.org|
 |   GET    |/domain/:number-limit:url|Get wordlist|localhost/domain/30?url=nmap.org|
 
+## Run local
+```sh
+git clone https://github.com/owasp/D4N155.git
+git checkout api
+docker-compose up
+```
+
 ### Response
 All response is `JSON` format.
 #### localhost/make/<param>
@@ -69,12 +76,6 @@ All response is `JSON` format.
   * * * `result.wordlist.length`: Length of complete wordlist
   * * * `result.wordlist.url`: Link of wordlist
 
-## Run local
-```sh
-git clone https://github.com/owasp/D4N155.git
-git checkout api
-docker-compose up
-```
 
 ## API-CLIENT
 * [Telegram bot: OWASP D4N155](https://github.com/Jul10l1r4/D4N155_bot)
