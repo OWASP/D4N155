@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  background-color:#eee;
+  padding: 30px;
+}
+
+a#header{
+  text-align: center;
+  display:block;
+  margin-bottom: 20px;
+  text-shadow: 4px 1px 0px #F012BE;
+  color: #4de;
+  font-family: 'Cantarell', monospace;
+  font-weight: Bold;
+  font-size: 42px;
+  text-decoration: none;
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 344px;
+  height: 48px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+input {
+  text-align:center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 40px;
+  left: 172px;
+  margin: 4px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.result {
+  padding: auto;
+  color: #555;
+  text-align: center;
+  font-style: italic;
+}
+ul#wrapper {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%
+}
+
+ul#wrapper>textarea {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  background: #673ab7;
+  display: inline-block;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 3px #4de;
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  text-align: center;
+  font-size: 24px;
+  color: #4de;
+  line-height: 100px;
+  font-family: monospace;
+  resize: none;
+  cursor: pointer;
+}
