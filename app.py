@@ -15,7 +15,12 @@ msg = "Its OWASP D4N155 project for API, see: https://github.com/OWASP/D4N155, b
 @app.route('/')
 def index():
     # Get all registers in DB
-    response = jsonify(result = "Get all data", helpus = "{}".format(msg))
+    helper = {
+        "Query URL": "/domain/<max_num_of_response:int>?url=<url:str>",
+        "Query domain": "/domain/<domain:str>",
+        "Query words": "/make/<words_with_space:str>"
+              }
+    response = jsonify(result = helper, helpus = "{}".format(msg))
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
