@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Documentation-ON-%0f0) [![made-with-bash](https://img.shields.io/badge/Made%20with-Flask-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE)
 
 ## API project of D4N155
-See test app: [d4n155.herokuapp.com/make/param](https://d4n155.herokuapp.com/make/param)
+See test app: [d4n155.herokuapp.com/](https://d4n155.herokuapp.com/)
 
 | PROTOCOL | PATH | FUNCTION | EXAMPLE |
 |:--------:|:----:|:--------:|:--------:|
