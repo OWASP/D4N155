@@ -46,7 +46,7 @@ def main(texts, limit = 500):
         # EX
         # New Yeah : → "YeahNew"
         blob = blob + comb(texts)
-        
+
         # Are finals test details
         if details == True:
             blob = blob + pool.comb(blob)
@@ -56,11 +56,11 @@ def main(texts, limit = 500):
     # Reduce all output for best precision
     all_result = make()+texts
     result = all_result[:limit]
-    return { 
-            "wordlist": { 
-                "url": ix_api('\n'.join(all_result)), 
+    return {
+            "wordlist": {
+                "url": ix_api('\n'.join(all_result)),
                 "length": len(all_result)
-                }, 
-            "data": result, 
-            "length": len(result) 
+                },
+            "data": result,
+            "length": len(result)
             }
