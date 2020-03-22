@@ -27,20 +27,20 @@ _getGecko(){
 		$(wget "https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux32.tar.gz" --progress=bar \
       -O "modules/geckodriver/Geckodriver.tar") 
 	fi
-  [ -e "modules/geckodriver/geckodriver" ] || echo -e "$incorrect Dont downloaded, check you conection"
+  test -e "modules/geckodriver/Geckodriver.tar" || echo -e "$incorrect Dont downloaded, check you conection"
   # Extract file to geckodriver
   tar -C "modules/geckodriver/" -xf "modules/geckodriver/Geckodriver.tar" || exit 1
 }
 
 # Check if gecko are install
 _checkGecko(){
-	if [ -e "modules/geckodriver/geckodriver" ]
+	if test -e "modules/geckodriver/geckodriver"
 	then
 		echo -e "$correct Gecko file exists"
 	else
 		echo "Download Geckodriver"
 		_getGecko
-		[ -e "modules/geckodriver/GeckoDriver" ] && echo -e "$correct Geckodriver downloaded" || echo -e "$incorrect Geckodriver error"
+		test -e "modules/geckodriver/geckodriver" && echo -e "$correct Geckodriver downloaded" || echo -e "$incorrect Geckodriver error"
 	fi
 }
 
