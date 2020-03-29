@@ -81,18 +81,18 @@ __wordlist(){
 
   if [ "$?" == "0" ]
   then
-    echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$green"
+    echo -e "Finalized search to $target, database\nhas been saved in$orange reports/db/$target.txt$end"
   else
-    echo -e "$red The file dont has been saved, the result was found?$green"
+    echo -e "$red The file dont has been saved, the result was found?$end"
     exit 2
   fi
 
-  echo "Make the wordlist *-*"
+  echo "Reading urls content 0-0"
 
   . modules/operations/calc.sh "reports/db/$target.txt" "$target" "$dest"
 
   test "$?" == 0 && \
-    echo -e "$green Wordlist has been saved in\n$orange$dest$end" || \
+    echo -e "\n$green Wordlist has been saved in\n→ $orange$dest$end" || \
     exit 1
 
   # clear trash files
@@ -138,7 +138,7 @@ __cus() {
   [ $2 ] && export save="$2" || export save="_wordlist.txt"
   echo "$save"
   echo "Processing all data..."
-  python3 "modules/generator.py" "$1" >> "$save" && \
+  ./modules/GoMutation "$1" "$save" && \
     ( echo -e "$correct Wordlist been created in $save"; exit 0 ) || \
     echo -e "$incorrect Error fatal, don't create file"; exit 2
 
