@@ -10,7 +10,7 @@ It's an information security audit tool that creates intelligent wordlists based
 Ongoing projects :construction_worker:: [D4N155 in docker :gift:](https://github.com/OWASP/D4N155/tree/docker), [Web API D4N155 :cloud:](https://github.com/OWASP/D4N155/tree/api)
 
 ## Install
-Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
+Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download), [Go](https://golang.org/dl/)
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ## Source
