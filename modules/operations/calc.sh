@@ -14,7 +14,7 @@
 				echo -e ":.........................................$correct" || \
 			  echo -e ":.........................................$incorrect"
       sleep $time
-		done && _load "Make operations:" """python3 'modules/generator.py' reports/db/$2.blob.txt > $3
+		done && _load "Make operations" """./modules/GoMutation reports/db/$2.blob.txt $3
       if [ \"$?\" != \"0\" ]
       then
         echo -e \"\n$red Error fatal$green\"
@@ -22,5 +22,5 @@
         exit 2
       fi
       """
-      kill -9 $! &> /dev/null
+      kill $! 1> /dev/null
 }

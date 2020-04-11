@@ -61,7 +61,7 @@ help="""
 	FILE				File, for save the result, get urls or using in
 					 wordlist
 
-     Version: 0.9
+     Version: 1.3
 
      It's GNU/GPL version 3
      Project page: https://github.com/owasp/D4N155"""
@@ -72,6 +72,13 @@ help="""
 printf "\033[32m"
 
 trap -- "printf \"\n$bug\";kill $! &> /dev/null;exit 2" "SIGINT"
+
+__compile(){
+  go build -o modules/GoMutation modules/GoMutation.go && \
+  echo "$success Compiled GoMutation" || echo "$error Golang dont installed"
+}
+
+test -x "modules/GoMutation" || __compile
 
 #	Menu
 __interative(){
