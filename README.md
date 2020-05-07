@@ -8,7 +8,7 @@ See test app: [d4n155.herokuapp.com/](https://d4n155.herokuapp.com/)
 |:--------:|:----:|:--------:|:--------:|
 |   GET    |/make/:word|Operations|localhost/make/moscou%201918|
 |   GET    |/domain/:domain|Get all urls of Domain|localhost/domain/nmap.org|
-|   GET    |/domain/:number-limit:url|Get wordlist|localhost/domain/30?url=nmap.org|
+|   GET    |/domain/:number-limit:url|Get wordlist|localhost/domain/30?url=https://nmap.org|
 
 ## Run local
 ```sh
