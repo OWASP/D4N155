@@ -10,3 +10,4 @@ _wordlist.txt
 *.log
 wordlist.txt
 _wordlist.txt
+env/
