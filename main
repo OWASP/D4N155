@@ -37,6 +37,7 @@ bug="""
   \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
 """
 help="""
+    Or use the Telegram bot https://t.me/D4N155_bot
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
