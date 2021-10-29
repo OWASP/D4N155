@@ -7,5 +7,7 @@ __py*
 _wordlist.txt
 *.html
 *.pdf
+*.log
 wordlist.txt
 _wordlist.txt
+env/

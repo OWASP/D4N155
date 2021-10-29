@@ -16,14 +16,14 @@ $red	               /\ o
                 .{{}}}}}}.
                {{{{{}}}}}}}.
               {{{{    {}{{}}}}
-             }}}}} _   _ {{{{{
-             }}}}  a   a  }}}&
-            {{{{{    ^    {{{&
-           }}}}}}\  .=.  /}}&&&
-           {{{{{{{;.___.;}}&&&&
-            '{{{{{{)   (}}|//&
+             }}}}} -   - {{{{{
+             }}}}  0   0  }}}&
+            {{{{{---~^~---{{{&
+           }}}}}}\   ☭   /}}&&&
+           {{{{{{{;._  .;}}&&&&
+            '{{{{{{) \_(}}|//&
              ´''''':   :''''´
-	[ \e[5m$bgred\033[38;5;232mAt Segmentation Fault$end $red]
+             [ \e[5m$bgred\033[38;5;232mOWASP D4N155$end $red]
 """
 
 # ignore lower and uppercase
@@ -31,11 +31,13 @@ shopt -s nocasematch
 # and colors with dont fuck terminal
 printf "$end"
 # Vars
+export aggressive="0"
 bug="""
   You can report new bug or open a issue
   \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
 """
 help="""
+    Or use the Telegram bot https://t.me/D4N155_bot
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
@@ -50,16 +52,17 @@ help="""
 		                        custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
+        -?a, --aggressive                Aggressive reading with headless
     	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
      	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	TIME				Time, example: 2.5. I.e: 00:00:02:30. 0 are default
 	FILE				File, for save the result, get urls or using in
 					 wordlist
 
-     Version: 0.50 (Dev)
+     Version: 1.3
 
      It's GNU/GPL version 3
      Project page: https://github.com/owasp/D4N155"""
@@ -69,12 +72,40 @@ help="""
 . modules/load.sh
 printf "\033[32m"
 
-trap -- "printf \"\n$bug\";exit 2" "SIGINT"
+trap -- "printf \"\n$bug\";kill $! &> /dev/null;exit 2" "SIGINT"
+
+__compile(){
+  go build -o modules/GoMutation modules/GoMutation.go && \
+  echo "$success Compiled GoMutation" || echo "$error Golang dont installed"
+}
+
+test -x "modules/GoMutation" || __compile
 
 #	Menu
+__interative(){
+	printf "\033[0m"
+	PS3="D4N155%#~> "
+	select option in "Make wordlist tradicional" "Make wordlist aggressive"
+	do
+		case $option in
+			"Make wordlist tradicional")
+        export aggressive="0"
+				__wordlist
+				;;
+			"Make wordlist aggressive")
+        export aggressive="1"
+				_checkGecko
+				__wordlist
+				;;
+			*) echo -e "\033[31mRFTM\033[0m";exit ;;
+		esac
+	done
+	printf "\033[0m"
+}
+
 if [[ ! "$1" ]]
 then
-  __wordlist
+  __interative
 else
 	# vars for iterations
 	i=1
@@ -111,6 +142,10 @@ else
 					;;
         --r* | "-r")
           export time="$dest"
+          ;;
+        --a* | -*a*)
+          export aggressive="1"
+          _checkGecko
           ;;
 			esac
 
@@ -149,7 +184,7 @@ else
 
         util=$(($util+1))
         ;;
-			--t* | "-t")
+			--t* | -*t*)
 				echo -e "Targets inputed in  $orange $narg $green "
 				__fwordlist "$narg" "" "$time" 
 

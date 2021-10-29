@@ -1,22 +1,22 @@
-# D4N155 
-[![Documentation Status](https://readthedocs.org/projects/d4n155/badge/?version=documentation)](https://d4n155.readthedocs.io/en/documentation/?badge=documentation) [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE) 
+# OWASP D4N155 
+[![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://github.com/OWASP/D4N155/search?l=shell) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/OWASP/D4N155/blob/master/LICENSE) [![OWASP project](https://img.shields.io/badge/Project-OWASP-1f425f)](https://github.com/OWASP)
 
-It's an information security audit tool that creates intelligent wordlists based on the content of the target page and Google hacking attack
+It's an information security audit tool that creates intelligent wordlists based on the content of the target page.
 
-[Help us](CONTRIBUTING.md)
+[![asciicast](https://asciinema.org/a/294029.svg)](https://asciinema.org/a/294029)
 
-[See some calculations used](https://adasecurity.github.io/D4N155/theories/#operation-of-d4n155)
+[Help us](https://www2.owasp.org/www-project-d4n155/#div-contributing), [See some calculations used](https://www2.owasp.org/www-project-d4n155/#div-operations)
 
-# Use
-Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download)
+Ongoing projects :construction_worker:: [D4N155 in docker :gift:](https://github.com/OWASP/D4N155/tree/docker), [Web API D4N155 :cloud:](https://github.com/OWASP/D4N155/tree/api), [Telegram bot :robot:](https://t.me/D4N155_bot)
+
+## Install
+Need to: [Python3.6](https://realpython.com/installing-python/), [Bash (GNU Bourne-Again SHell)](https://www.gnu.org/software/bash/#download), [Go](https://golang.org/dl/)
 
 Optional: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-
-> You are advised to use proxychains for scan
+## Source
 
 ```bash
-git clone https://github.com/adasecurity/D4N155.git
+git clone https://github.com/owasp/D4N155.git
 cd D4N155
 pip3 install -r requirements.txt
 bash main
@@ -24,15 +24,25 @@ bash main
 Or whithout git
 
 ```bash
-wget -qO- https://github.com/adasecurity/D4N155/archive/master.zip | bsdtar -xf-
+wget -qO- https://github.com/owasp/D4N155/archive/master.zip | bsdtar -xf-
 cd D4N155-master
 pip3 install -r requirements.txt
 bash main
 ```
+## Docker
 
-[![asciicast](https://asciinema.org/a/222527.svg)](https://asciinema.org/a/222527)
+In image:
+```docker
+FROM docker.pkg.github.com/owasp/d4n155/d4n155:latest
+```
+Cli:
+```docker
+docker pull docker.pkg.github.com/owasp/d4n155/d4n155:latest
+docker run -it d4n155
+```
 
-# Manual
+## Manual
+```
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
@@ -47,35 +57,13 @@ bash main
 					custom wordlist
 	-r, --rate	<time>		Defines time interval between requests
 	-o, --output	<file>		For to store the all wordlist.
+  	-?a, --aggressive      Aggressive reading with headless
 	-h, --help			Show this mensage.
 
      Value: <url | ip | source | file | time>
 	URL				URL target, example: scanme.nmap.org
 	IP				IP address
-	TIME				Time, example: 2.5. I.e: 0:02:30. 0 are default
+	TIME				Time, example: 2.5. I.e: 00:00:02:30.. 0 are default
 	FILE				File, for save the result, get urls or using in
 					wordlist
-
-
-# HARDWARE REQUIREMENTS:
-## CPU 
-* Dual Core or Better
-* Native Support to Multi-Thread
-
-## MEMORY
-* 4 GB or More
-
-## Dependencies
-> Dependencies that will be installed through pip
-
-* beautifulsoup4==4.6.3
-* google==2.0.1
-* numpy==1.15.4
-* requests==2.20.1
-* mechanicalsoup
-     
-<h3 align="center">This project are part of Segmentation fault<br/></h3>
-<h5 align="center">It's GNU/GPL version 3 Project page: https://github.com/owasp/D4N155</h5>
-<p align="center">
-		<img src="https://jul10l1r4.github.io/assets/segmentation-fault.png" alt="Segmentation fault">
-</p>
+```
