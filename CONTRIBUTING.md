@@ -2,7 +2,7 @@
 * FORK THIS REPOSITORY
 * CLONE YOUR FORK 
 * MAKE YOUR CONTRIBUTIONS 
-* MAKE A PULL REQUEST![https://opensource.com/article/19/7/create-pull-request-github]
+* MAKE A [PULL REQUEST](https://opensource.com/article/19/7/create-pull-request-github)
 
 # RULES
 * DONT USE USE OBSENE OR OFFENSIVE WORDS IN YOUR HEADLINES OR COMMENTS 
