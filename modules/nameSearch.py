@@ -65,6 +65,9 @@ def generateWordlists(names, affiliations, requestDelay, parentDirectory, isAggr
 				try:
 					intermediateResult = intermediateResult + reverseImageSearch.getURLsForImages(url,2, name.split(), driver)
 				except:
+					headers = {
+						'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0',
+					}
 					response = requests.request("GET", url, headers=headers)
 					time.sleep(int(response.headers["Retry-After"]))
 					intermediateResult = intermediateResult + reverseImageSearch.getURLsForImages(url,2,name.split(),driver)
