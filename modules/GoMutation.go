@@ -28,7 +28,8 @@ func unique(intSlice []string) []string {
 
 // Pure functions
 func leet(word string) string {
-	return strings.NewReplacer("A","4", "E", "3", "I", "1", "O", "0", "S", "5", "T", "7", "B", "8").Replace(word)
+	return strings.NewReplacer("A","4", "E", "3", "I", "1", "O", "0", "S", "5", "T", "7", "B", "8",
+                                    "a","4", "e", "3", "i", "1", "o", "0", "s", "5", "t", "7", "b", "8").Replace(word)
 }
 func count1to8(word string) []string {
         list := []string {word}
