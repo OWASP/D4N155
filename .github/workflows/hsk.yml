@@ -15,8 +15,8 @@ jobs:
 
       - name: Download huskyci-client
         run: 
-          wget https://github.com/globocom/huskyCIL/huskyci-client
-          chmod +x huskyci-client
+          wget https://github.com/globocom/huskyCI/blob/main/client/cmd/main.go
+          chmod +x main.go
 
       - name: Run huskyci-client
-        run: ./huskyci-client
+        run: ./main.go
