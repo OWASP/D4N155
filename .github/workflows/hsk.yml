@@ -1,0 +1,22 @@
+name: huskyCI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  huskyCI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download huskyci-client
+        run: |
+          wget https://github.com/globocom/huskyCIL/huskyci-client
+          chmod +x huskyci-client
+
+      - name: Run huskyci-client
+        run: ./huskyci-client
