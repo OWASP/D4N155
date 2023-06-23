@@ -1,0 +1,22 @@
+name: huskyCI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  huskyCI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download huskyci-client
+        run: 
+          wget https://github.com/globocom/huskyCI/blob/main/client/cmd/main.go
+          chmod +x main.go
+
+      - name: Run huskyci-client
+        run: ./main.go
