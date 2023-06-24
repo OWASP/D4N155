@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 #These functions will be used to generate personalized wordlists.
 
 import spacy
@@ -9,18 +8,22 @@ import sys
 import requests
 import reverseImageSearch
 import time
+
 #Only load this once for multiuse of parseLanguage function.
 nlp = spacy.load('en_core_web_sm')
+
 #Get names, organizations people are affiliated with, and dates from About Us or Contact Us pages to generate personalized word lists.
 #Aggressive means that this will perform a reverse image search on any images found on the page (in case there are pictures of people that they reuse).
 def personalizedList(isAggressive, url, nameLimit=2, keepCookies=0, profilePath="", binaryPath=""):
 	from selenium import webdriver
 	from selenium.webdriver.firefox.options import Options
+    from selenium.webdriver.common.by import By
+
 	options = Options()
 	options.headless = True                                                                                        
 	driver = webdriver.Firefox(options=options, executable_path='./modules/geckodriver/geckodriver')                                        
 	driver.get(url)                                                                                             
-	textInput = driver.find_element_by_tag_name('body').text
+	textInput = driver.find_element(By.CSS_SELECTOR, 'body').text
 	driver.quit()
 	parsedLanguage = nlp(textInput)
 	humanNames = []
