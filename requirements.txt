@@ -1,7 +1,7 @@
 beautifulsoup4==4.6.3
 google==2.0.3
 requests==2.20.1
-mechanicalsoup==0.12.0
+mechanicalsoup==1.3.0
 selenium==3.14.1
 getrails==3.3
 objetive==0.6
