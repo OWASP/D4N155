@@ -1,0 +1,52 @@
+name: D4N155 CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    name: Tests & Quality
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio bandit pip-audit
+
+      - name: Install lxml system deps
+        run: sudo apt-get install -y libxml2-dev libxslt1-dev
+
+      - name: Run unit tests
+        run: pytest tests/ -v --tb=short
+
+      - name: Security analysis (Bandit)
+        run: bandit -r modules/ -ll --skip B603,B607
+
+      - name: Dependency vulnerability scan (pip-audit)
+        run: pip-audit -r requirements.txt
+
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck on bash files
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: "."
+          additional_files: "main modules/functions.sh modules/load.sh"
