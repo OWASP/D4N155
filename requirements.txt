@@ -1,7 +1,22 @@
-beautifulsoup4==4.6.3
-google==2.0.3
-requests==2.20.1
-mechanicalsoup==0.12.0
-selenium==3.14.1
-getrails==3.3
-objetive==0.6
+# D4N155 — requirements.txt (improved)
+# Gerado em 2026-03 como parte das melhorias de desempenho e segurança
+
+# ── HTTP assíncrono (substitui requests sequencial) ──────────────────
+aiohttp>=3.9.3
+
+# ── Parser HTML rápido (C-based, até 10x mais rápido que html.parser) ─
+lxml>=5.1.0
+beautifulsoup4>=4.12.3
+
+# ── Headless moderno (pool de browser, substitui geckodriver direto) ──
+playwright>=1.43.0
+
+# ── Selenium legado (fallback --use-gecko) ───────────────────────────
+selenium>=4.20.0
+
+# ── Segurança: urllib3 atualizado (fix CVE PR #45) ───────────────────
+urllib3>=1.26.19
+
+# ── Utilitários ──────────────────────────────────────────────────────
+requests>=2.31.0        # usado por getrails e módulos de OSINT legados
+python-dotenv>=1.0.1    # suporte ao .env do bot Telegram
