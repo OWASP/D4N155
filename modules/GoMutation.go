@@ -7,12 +7,14 @@ import (
 	"os"
 	"strconv"
 )
+
 // Check if err
 func check(e error) {
     if e != nil {
         panic(e)
     }
 }
+
 // Removing duplicated items
 func unique(intSlice []string) []string {
     keys := make(map[string]bool)
@@ -47,7 +49,7 @@ func year90(word string) []string {
 }
 func year2000(word string) []string {
         list := []string {word}
-        for i := 2020; i > 1999; i-- {
+        for i := 2024; i > 1999; i-- {
                 list = append(list,word+strconv.Itoa(i))
         }
         return list
@@ -92,11 +94,17 @@ func main() {
 	blob, err := ioutil.ReadFile(os.Args[1])
 	check(err)
 	content := strings.Fields(string(blob))
+
+  // Combinatory expression out context of loop. But work finalContent
 	finalContent = append(content, combine(content)...)
+
+  // Leet after input in loop
+  for _, word:= range finalContent {
+    content = append(finalContent, leet(word))
+  }
 
 	// Running functions for make wordlist
 	for _, word := range content {
-		finalContent = append(finalContent, leet(word))
 		finalContent = append(finalContent, count1to8(word)...)
 		finalContent = append(finalContent, year90(word)...)
 		finalContent = append(finalContent, year2000(word)...)
