@@ -37,14 +37,14 @@ bug="""
   \t$yellow→ $orange https://github.com/owasp/D4N155/issues$end
 """
 help="""
-    Or use the Telegram bot https://t.me/D4N155_bot
+    Or use the Telegram bot https://t.me/D4N155_bot (Deactivated: whithout VPS)
     D4N155: Tool for smart audit security
 
     Usage: bash main <option> <value>
     All options are optionals
 
     Options:
-    	-w, --wordlist	<url|ip>	Make the smartwordlist based in informations
+        -w, --wordlist*	<domain|ip>	Make the smartwordlist based in informations
 					on website.
 	-t, --targets	<file>  	Make the smart-wordlist based in your passed
 					source informations in urls.
@@ -55,15 +55,16 @@ help="""
         -?a, --aggressive                Aggressive reading with headless
     	-h, --help			Show this mensage.
 
-     Value: <url | ip | source | file | time>
-     	URL				URL target, example: scanme.nmap.org
+     Value: <domain | ip | source | file | time>
+     	DOMAIN	                        Domain target, example: scanme.nmap.org
 	IP				IP address
 	TIME				Time, example: 2.5. I.e: 00:00:02:30. 0 are default
 	FILE				File, for save the result, get urls or using in
 					 wordlist
 
      Version: 1.3
-
+    
+     * Deactivated: Google crawler dont work :(
      It's GNU/GPL version 3
      Project page: https://github.com/owasp/D4N155"""
 
@@ -105,7 +106,11 @@ __interative(){
 
 if [[ ! "$1" ]]
 then
-  __interative
+  # Deactivated: Google crawler dont work :(
+  #__interative
+  #
+  echo "$help"
+  exit 0
 else
 	# vars for iterations
 	i=1
