@@ -17,31 +17,19 @@ _checkTime(){
   fi
 }
 
-# Download Gecko with arch
-_getGecko(){
-	if [ "$(uname -m) | grep 64 -q" ]
-	then	
-		$(wget "https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz" -q \
-      -O "modules/geckodriver/Geckodriver.tar")
-	else
-		$(wget "https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux32.tar.gz" --progress=bar \
-      -O "modules/geckodriver/Geckodriver.tar") 
-	fi
-  test -e "modules/geckodriver/Geckodriver.tar" || echo -e "$incorrect Dont downloaded, check you conection"
-  # Extract file to geckodriver
-  tar -C "modules/geckodriver/" -xf "modules/geckodriver/Geckodriver.tar" || exit 1
+# Download Playwright with arch
+_getPlay(){
+  playwright install
+  if [ "$?" =! "0" ]
+  then
+    echo "$incorrect playwright error"
+    exit 1
+  fi
 }
 
-# Check if gecko are install
-_checkGecko(){
-	if test -e "modules/geckodriver/geckodriver"
-	then
-		echo -e "$correct Gecko file exists"
-	else
-		echo "Download Geckodriver"
-		_getGecko
-		test -e "modules/geckodriver/geckodriver" && echo -e "$correct Geckodriver downloaded" || echo -e "$incorrect Geckodriver error"
-	fi
+# Check if play are install
+_checkPlay(){
+ [ -d ~/.cache/ms-playwright ] || _getPlay 
 }
 
 # Get expression and get all pages indexes of google
