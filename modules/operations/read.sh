@@ -10,4 +10,4 @@ _set_method(){
   fi
 }
 
-printf "$(python3 'modules/read.py' "$1" $(_set_method))"
+printf "%s" "$(python3 'modules/read.py' "$1" $(_set_method))"

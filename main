@@ -95,7 +95,7 @@ __interative(){
 				;;
 			"Make wordlist aggressive")
         export aggressive="1"
-				_checkGecko
+				_checkPlay
 				__wordlist
 				;;
 			*) echo -e "\033[31mRFTM\033[0m";exit ;;
@@ -150,7 +150,7 @@ else
           ;;
         --a* | -*a*)
           export aggressive="1"
-          _checkGecko
+          _checkPlay
           ;;
 			esac
 
