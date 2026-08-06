@@ -5,3 +5,4 @@ mechanicalsoup==0.12.0
 selenium==3.14.1
 getrails==3.3
 objetive==0.6
+urllib3>=1.26.17 # not directly required, pinned by Snyk to avoid a vulnerability
